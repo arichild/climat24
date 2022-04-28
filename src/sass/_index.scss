@@ -158,6 +158,14 @@
         outline: none;
         text-align: center;
 
+        &:hover {
+          border: 1px solid #000;
+        }
+
+        &:focus {
+          border: 1px solid #000;
+        }
+
         @media (max-width: 1024px) {
           height: 36px;
         }
@@ -181,8 +189,9 @@
         font-weight: 500;
         font-size: 15px;
         cursor: pointer;
-
+        
         &:hover {
+          border: none;
           opacity: .85;
         }
       }
@@ -266,11 +275,10 @@
       &-headline {
         font-size: 25px;
         font-weight: 600;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
 
         @media (max-width: 1024px) {
           font-size: 15px;
-          margin-bottom: 20px;
         }
       }
 
@@ -344,6 +352,10 @@
       padding: 60px 0;
       background-color: #0D19A3;
       color: #fff;
+
+      .row {
+        align-items: center;
+      }
 
       @media (max-width: 1024px) {
         padding: 20px 0;
