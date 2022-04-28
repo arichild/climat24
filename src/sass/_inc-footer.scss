@@ -51,15 +51,11 @@
     flex-direction: column;
     margin-top: 20px;
 
-    @media (max-width: 1024px) {
-      display: none;
+    @media (max-width: 340px) {
+      margin: 0;
     }
 
     &.catalog {
-      @media (max-width: 1024px) {
-        display: flex;
-      }
-
       a {
         color: #0D19A3;
 
