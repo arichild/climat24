@@ -13,8 +13,8 @@
   flex-flow: row wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  margin-left: -12px;
-  margin-right: -12px;
+  margin-left: -33px;
+  margin-right: -33px;
 }
 
 .flex {
@@ -58,8 +58,8 @@
 
 [class*="col-"] {
   width: 100%;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 33px;
+  padding-right: 33px;
 }
 
 .clear {
@@ -146,7 +146,7 @@
   max-width: 100%;
 }
 
-@media (min-width: 320px) {
+@media (min-width: 300px) {
   .col-ss-0 {
     display: none;
   }
@@ -598,6 +598,59 @@
   }
 }
 
+// 10 COLONAK 🔥🔥🔥🔥🔥🔥🔥
+@media (min-width: 1170px) {
+  .col-xl-1 {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+
+  .col-xl-2 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  .col-xl-3 {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  .col-xl-4 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .col-xl-5 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .col-xl-6 {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+
+  .col-xl-7 {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+
+  .col-xl-8 {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  .col-xl-9 {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+
+  .col-xl-10 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 1330px) {
   .col-l-1 {
     -ms-flex: 0 0 8.33333%;
@@ -667,59 +720,6 @@
 
   .col-l-12 {
     -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-// 10 COLONAK 🔥🔥🔥🔥🔥🔥🔥
-@media (min-width: 1170px) {
-  .col-xl-1 {
-    flex: 0 0 10%;
-    max-width: 10%;
-  }
-
-  .col-xl-2 {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-
-  .col-xl-3 {
-    flex: 0 0 30%;
-    max-width: 30%;
-  }
-
-  .col-xl-4 {
-    flex: 0 0 40%;
-    max-width: 40%;
-  }
-
-  .col-xl-5 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .col-xl-6 {
-    flex: 0 0 60%;
-    max-width: 60%;
-  }
-
-  .col-xl-7 {
-    flex: 0 0 70%;
-    max-width: 70%;
-  }
-
-  .col-xl-8 {
-    flex: 0 0 80%;
-    max-width: 80%;
-  }
-
-  .col-xl-9 {
-    flex: 0 0 90%;
-    max-width: 90%;
-  }
-
-  .col-xl-10 {
     flex: 0 0 100%;
     max-width: 100%;
   }
