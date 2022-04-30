@@ -1,5 +1,7 @@
 const swiper = new Swiper('.swiper', {
   loop: false,
+  setWrapperSize: true,
+  slideShadows: true,
 
   // If we need pagination
   pagination: {

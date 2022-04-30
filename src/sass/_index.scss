@@ -390,6 +390,7 @@
       }
 
       @media (max-width: 576px) {
+        padding-top: 0;
         margin-bottom: 52px;
         position: relative;
       }
@@ -863,10 +864,27 @@
     &-cart {
       position: relative;
       margin-bottom: 50px;
+      display: inline-block; /* Строчно-блочный элемент */
+      overflow: hidden; 
+
+      @media (max-width: 1024px) {
+        overflow: visible;
+      }
+
+      &:hover {
+        .section-article-img {
+          transform: scale(1.2);
+        }
+      }
 
       @media (max-width: 552px) {
         margin-bottom: 25px;
       }
+    }
+
+    &-img {
+      transition: 1s; /* Время эффекта */
+      display: block;
     }
 
     .col-none {
@@ -1010,6 +1028,13 @@
         position: relative;
         max-width: 318px;
         height: 100%;
+        transition: 1s; /* Время эффекта */
+        display: block;
+        overflow: hidden; 
+
+        &:hover {
+          transform: scale(1.05);
+        }
 
         @media (max-width: 750px) {
           max-width: 100%;
@@ -1536,6 +1561,11 @@
 .swiper-pagination {
   position: relative;
   display: block;
+  padding-top: 38px;
+
+  @media (max-width: 768px) {
+    padding-top: 16px;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -1561,4 +1591,9 @@ h3 {
 h4 {
   font-weight: 500;
   font-size: 25px;
+}
+
+span.error {
+  font-weight: 400;
+  color: #FA3C1B;
 }
