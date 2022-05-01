@@ -1,4 +1,8 @@
 .header {
+  @media(max-width: 1024px) {
+    margin-bottom: 65px;
+  }
+  
   &-top {
     height: 50px;
     background-color: #F3F2F2;
