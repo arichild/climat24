@@ -10,7 +10,6 @@ $(".section-questions-validate").validate({
 
     tel: {
       required: true,
-      maxlength: 15,
       minlength: 6,
     },
   },
@@ -24,7 +23,6 @@ $(".section-questions-validate").validate({
     tel: {
       required: "Пожалуйста, введите ваш номер телефона",
       minlength: "Минимальная длина 6 символов",
-      maxlength: "Максимальная длина 14 символов",
     },
   }
 });

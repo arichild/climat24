@@ -436,7 +436,7 @@
         }
       }
 
-      @media (max-width: 576px) {
+      @media (max-width: 1024px) {
         padding-top: 0;
         margin-bottom: 52px;
         position: relative;
@@ -1039,9 +1039,10 @@
       padding: 68px 0;
       background-color: #f4f4f4;
       
-      @media(max-width: 576px) {
+      @media(max-width: 768px) {
         padding-top: 39px;
         padding-bottom: 24px;
+        margin-bottom: 25px;
       }
 
       &-title {
@@ -1091,7 +1092,6 @@
         display: inline-block;
         max-width: 318px;
         height: 100%;
-        // overflow: hidden; 
         
         &:hover {
           .section-object-items-img {
@@ -1184,9 +1184,10 @@
     &-text {
       &-desc {
         h2 {
+          margin-top: 0;
+
           @media (max-width: 768px) {
             font-size: 20px;
-            margin-top: 25px;
           }
         }
 
