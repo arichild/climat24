@@ -5,15 +5,6 @@ const burgerMenu = document.querySelector('.header-mob-menu');
 btnBurger.addEventListener('click', openMenuBurger);
 
 function openMenuBurger() {
-  const srcBtn = btnBurger.children[0].src.split('/icons')[1];
-  const srcImgBurger = '../images/icons/header-burger.svg';
-  const srcImgClose = '../images/icons/closeBurger.svg';
-
-  if (srcBtn === '/header-burger.svg') {
-    btnBurger.children[0].src = srcImgClose;
-  } else {
-    btnBurger.children[0].src = srcImgBurger;
-  }
-
+  btnBurger.classList.toggle('active-toggler');
   burgerMenu.classList.toggle('active');
 }

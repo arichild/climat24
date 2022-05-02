@@ -112,12 +112,14 @@
 
     <div class="section-serv">
       <div class="container">
-        <div class="section-serv-block"></div>
         <div class="section-serv-title">Наши услуги</div>
         <div class="row">
           <div class="col-7 col-none">
-            <div class="section-serv-img">
-              <img src="./images/serv.png" alt="alt">
+            <div class="section-serv-img-content">
+              <div class="section-serv-block"></div>
+              <div class="section-serv-img">
+                <img src="./images/serv.png" alt="alt">
+              </div>
             </div>
           </div>
           <div class="col-md-5">
@@ -171,6 +173,11 @@
     <div class="section-choice">
       <div class="container">
         <div class="flex">
+          <div class="section-choice-sidebar">
+            <div class="section-choice-sidebar-txt">
+              Почему TURKOV?
+            </div>
+          </div>
           <div class="section-choice-carts">
             <div class="section-choice-cart">
               <div class="section-choice-block">
@@ -213,11 +220,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="section-choice-sidebar">
-            <div class="section-choice-sidebar-txt">
-              Почему TURKOV?
             </div>
           </div>
         </div>
@@ -279,9 +281,11 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide"><img src="./images/slider.png" alt=""></div>
-              <div class="swiper-slide"><img src="https://via.placeholder.com/1178x507" alt=""></div>
-              <div class="swiper-slide"><img src="https://via.placeholder.com/1178x507/FF0000/FFFFFF" alt=""></div>
+              <div class="swiper-slide">
+                <img src="./images/slider.png" alt="alt">
+              </div>
+              <div class="swiper-slide"><img src="https://via.placeholder.com/1178x507" alt="alt"></div>
+              <div class="swiper-slide"><img src="https://via.placeholder.com/1178x507/FF0000/FFFFFF" alt="alt"></div>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -289,13 +293,13 @@
         </div>
       </div>
       <div class="section-design-bg-main">
-        <img src="./images/bgs/circle-design.svg" alt="">
+        <img src="./images/bgs/circle-design.svg" alt="alt">
       </div>
       <div class="section-design-bg-rg">
-        <img src="./images/bgs/left.svg" alt="">
+        <img src="./images/bgs/left.svg" alt="alt">
       </div>
       <div class="section-design-bg-lft">
-        <img src="./images/bgs/right.svg" alt="">
+        <img src="./images/bgs/right.svg" alt="alt">
       </div>
     </div>
 
@@ -309,7 +313,7 @@
               <a href="#" class="setion-article-link">
                 <div class="section-article-cart">
                   <div class="section-article-img">
-                    <img src="./images/article1.png" alt="">
+                    <img src="./images/article1.png" alt="alt">
                   </div>
                   
                   <div class="section-article-txt">
@@ -327,7 +331,7 @@
               <a href="#" class="article-section-link">
                 <div class="section-article-cart">
                   <div class="section-article-img">
-                    <img src="./images/article2.png" alt="">
+                    <img src="./images/article2.png" alt="alt">
                   </div>
                   <div class="section-article-txt">
                     <div class="section-article-caption">
@@ -344,7 +348,7 @@
               <a href="#" class="article-section-link">
                 <div class="section-article-cart">
                   <div class="section-article-img">
-                    <img src="./images/article3.png" alt="">
+                    <img src="./images/article3.png" alt="alt">
                   </div>
                   <div class="section-article-txt">
                     <div class="section-article-caption">
@@ -381,7 +385,7 @@
                 <a href="#" class="section-items-link-cart">
                   <div class="section-object-items-cart">
                     <div class="section-object-items-img">
-                      <img src="./images/cart.png" alt="">
+                      <img src="./images/cart.png" alt="alt">
                     </div>
                     <div class="section-object-items-txt">
                       <div class="section-object-items-headline">
@@ -403,7 +407,7 @@
                 <a href="#" class="section-items-link-cart">
                   <div class="section-object-items-cart">
                     <div class="section-object-items-img">
-                      <img src="./images/cart2.png" alt="">
+                      <img src="./images/cart2.png" alt="alt">
                     </div>
                     <div class="section-object-items-txt">
                       <div class="section-object-items-headline">
@@ -424,7 +428,7 @@
                 <a href="#" class="section-items-link-cart">
                   <div class="section-object-items-cart">
                     <div class="section-object-items-img">
-                      <img src="./images/cart3.png" alt="">
+                      <img src="./images/cart3.png" alt="alt">
                     </div>
                     <div class="section-object-items-txt">
                       <div class="section-object-items-headline">
@@ -672,13 +676,19 @@
           <form action="#" class="section-questions-validate">
             <div class="row">
               <div class="col-md-4 col-sm-4 col-xs-6">
-                <input type="text" name="name" id="name" placeholder="Ваше имя">
+                <div class="section-questions-form-cell">
+                  <input type="text" name="name" id="name" placeholder="Ваше имя">
+                </div>
               </div>
               <div class="col-md-4 col-sm-4 col-xs-6">
-                <input type="tel" name="tel" id="tel" placeholder="Ваш номер">
+                <div class="section-questions-form-cell">
+                  <input type="tel" name="tel" id="tel" placeholder="Ваш номер">
+                </div>
               </div>
               <div class="col-md-4 col-sm-4 col-xs-12">
-                <input type="submit" name="submit" id="submit">
+                <div class="section-questions-form-cell">
+                  <input type="submit" name="submit" id="submit">
+                </div>
               </div>
             </div>
           </form>

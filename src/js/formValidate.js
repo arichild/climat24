@@ -10,31 +10,24 @@ $(".section-questions-validate").validate({
 
     tel: {
       required: true,
+      maxlength: 15,
+      minlength: 6,
     },
   },
 
   messages: {
     name: {
       required: "Пожалуйста, введите ваше Имя",
-      name: "Ваше имя не может состоять из цифр",
+      lettersonly: "Ваше имя не может состоять из цифр",
     },
 
     tel: {
       required: "Пожалуйста, введите ваш номер телефона",
-      name: "Введите номер мобильного телефона",
+      minlength: "Минимальная длина 6 символов",
+      maxlength: "Максимальная длина 14 символов",
     },
   }
 });
-
-jQuery.validator.addMethod(
-  "tel",
-  function (value, element) {
-    return (
-      this.optional(element) ||
-      /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){6,14}(\s*)?$/i.test(value)
-    );
-  }, "Введите номер мобильного телефона"
-);
 
 jQuery.validator.addMethod(
   "lettersonly",
@@ -42,3 +35,11 @@ jQuery.validator.addMethod(
     return this.optional(element) || /^[a-zA-ZА-Яа-я\s]+$/i.test(value);
   }, "Ваше имя не может состоять из цифр"
 );
+
+var elementZ = document.getElementById('tel');
+
+var maskOptions = {
+  mask: '+{000}(00)000-00-00'
+};
+
+var mask = IMask(elementZ, maskOptions);
