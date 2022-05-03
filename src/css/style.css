@@ -299,9 +299,7 @@ img { max-width: 100%; height: auto; }
 
 .section-possibility { background-color: #0d19a3; position: relative; z-index: 1; margin-bottom: 68px; }
 
-@media (max-width: 576px) { .section-possibility { background-color: #fff; } }
-
-@media (max-width: 576px) { .section-possibility { margin-bottom: 28px; } }
+@media (max-width: 576px) { .section-possibility { background-color: #fff; margin-bottom: 28px; } }
 
 @media (max-width: 1024px) { .section-possibility .flex { -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; } }
 
@@ -351,6 +349,16 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1024px) { .section-serv [class*="col-"] { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; } }
 
+.section-serv-link { margin-bottom: 58px; position: relative; padding-left: 35px; }
+
+@media (max-width: 1024px) { .section-serv-link { padding-left: 60px; } }
+
+@media (max-width: 576px) { .section-serv-link { margin-bottom: 24px; padding-left: 40px; } }
+
+.section-serv-link a { text-decoration: underline; }
+
+.section-serv-link a:hover { color: #0d19a3; }
+
 .section-serv-link-inner { position: relative; font-size: 25px; color: #000; -webkit-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; transition: all 0.2s ease-out; }
 
 .section-serv-link-inner::before { content: ""; position: absolute; background-image: url(../images/our-serv.png); background-repeat: no-repeat; left: -60px; display: inline-block; width: 40px; height: 40px; opacity: 1; }
@@ -397,24 +405,10 @@ img { max-width: 100%; height: auto; }
 
 .section-serv-links { padding-top: 52px; display: block; }
 
-@media (max-width: 1024px) { .section-serv-links { padding-top: 28px; padding-bottom: 28px; }
+@media (max-width: 1024px) { .section-serv-links { padding-bottom: 28px; padding-top: 0; margin-bottom: 52px; position: relative; }
   .section-serv-links::before { content: ""; position: absolute; bottom: 0; left: -15px; right: -15px; background-color: #f4f4f4; z-index: -1; top: -200px; } }
 
-@media (max-width: 1024px) { .section-serv-links { padding-top: 0; margin-bottom: 52px; position: relative; } }
-
 .section-serv-links .flex { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
-
-.section-serv-link { margin-bottom: 58px; position: relative; padding-left: 35px; }
-
-@media (max-width: 576px) { .section-serv-link { margin-bottom: 24px; } }
-
-@media (max-width: 1024px) { .section-serv-link { padding-left: 60px; } }
-
-@media (max-width: 576px) { .section-serv-link { padding-left: 40px; } }
-
-.section-serv-link a { text-decoration: underline; }
-
-.section-serv-link a:hover { color: #0d19a3; }
 
 .section-choice { background-color: #0d19a3; position: relative; z-index: 1; }
 
@@ -428,9 +422,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1024px) { .section-choice-sidebar { padding: 12px 0; font-size: 25px; width: 44%; top: -30%; text-align: end; padding-right: 10px; } }
 
-@media (max-width: 576px) { .section-choice-sidebar { font-size: 18px; } }
-
-@media (max-width: 576px) { .section-choice-sidebar { top: -55%; } }
+@media (max-width: 576px) { .section-choice-sidebar { font-size: 18px; top: -55%; } }
 
 @media (max-width: 400px) { .section-choice-sidebar { top: -25%; } }
 
@@ -587,7 +579,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1024px) { .section-article-txt { bottom: 20px; left: 15px; right: 15px; height: 100%; max-height: calc(100% - 35px); } }
 
-@media (max-width: 576px) { .section-article-txt { max-height: calc(100% - 87px); } }
+@media (max-width: 575px) { .section-article-txt { max-height: calc(100% - 87px); } }
 
 @media (max-width: 440px) { .section-article-txt { max-height: calc(100% - 28px); } }
 
@@ -713,7 +705,7 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 1024px) { .section-box-text-desc p { font-size: 12px; margin-bottom: 0; }
   .section-box-text-desc p br { display: none; } }
 
-@media (max-width: 1024px) { .section-box-text-img { text-align: center; margin-bottom: 20px; } }
+@media (max-width: 768px) { .section-box-text-img { text-align: center; margin-bottom: 20px; } }
 
 .section-box-link { background-color: #fa3c1b; text-align: center; padding: 20px 0; }
 
