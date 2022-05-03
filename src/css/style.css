@@ -428,7 +428,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 576px) { .section-choice-sidebar { font-size: 18px; } }
 
-@media (max-width: 576px) { .section-choice-sidebar { top: -60%; } }
+@media (max-width: 576px) { .section-choice-sidebar { top: -55%; } }
 
 @media (max-width: 400px) { .section-choice-sidebar { top: -25%; } }
 
@@ -485,6 +485,10 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 576px) { .section-choice-txt-slogan { font-size: 12px; } }
 
 .section-design { position: relative; z-index: 1; overflow: hidden; }
+
+.section-design-slider { line-height: 0; -webkit-box-shadow: 0px 0px 49px 9px rgba(0, 0, 0, 0.15); box-shadow: 0px 0px 49px 9px rgba(0, 0, 0, 0.15); margin-bottom: 38px; }
+
+@media (max-width: 768px) { .section-design-slider { margin-bottom: 16px; } }
 
 .section-design-decision { padding: 68px 0 0 0; margin-bottom: 65px; }
 
@@ -771,8 +775,9 @@ img { max-width: 100%; height: auto; }
 
 .section-content-text { background-color: #f4f4f4; padding-bottom: 58px; }
 
-@media (max-width: 1023px) { .section-content-text { padding-bottom: 20px; }
-  .section-content-text.reverse .row { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; } }
+@media (max-width: 1024px) { .section-content-text { padding-bottom: 20px; } }
+
+@media (max-width: 1023px) { .section-content-text.reverse .row { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; } }
 
 @media (max-width: 768px) { .section-content-text-desc h3 { font-size: 15px; margin-top: 25px; margin-bottom: 20px; } }
 
@@ -840,9 +845,9 @@ img { max-width: 100%; height: auto; }
 
 .section-questions-form input[type="submit"]:hover { background-color: #19d8c5; }
 
-.swiper-pagination { position: relative; display: block; padding-top: 38px; }
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction { bottom: 0; }
 
-@media (max-width: 768px) { .swiper-pagination { padding-top: 16px; } }
+.swiper-pagination { position: relative; display: block; }
 
 .swiper-pagination-bullet { border-radius: 0; width: 17px; height: 17px; }
 
