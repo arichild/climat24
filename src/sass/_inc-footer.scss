@@ -3,6 +3,12 @@
   padding: 20px 0;
   background-color: #F4F4F4;
 
+  @media(max-width: 576px) {
+    br {
+      display: none;
+    }
+  }
+
   &-logo {
     margin-bottom: 10px;
 
@@ -62,11 +68,6 @@
     &.catalog {
       a {
         color: #0D19A3;
-
-        @media (max-width: 1024px) {
-          margin-bottom: 10px;
-          font-size: 12px;
-        }
       }
     }
 
@@ -79,6 +80,11 @@
 
       &:hover {
         opacity: .35;
+      }
+
+      @media (max-width: 1024px) {
+        margin-bottom: 10px;
+        font-size: 12px;
       }
     }
   }
