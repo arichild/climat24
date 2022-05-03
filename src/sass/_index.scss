@@ -86,6 +86,7 @@
         font-weight: 500;
         border: none;
         cursor: pointer;
+        transition: all 0.2s ease-out;
 
         &:hover {
           background-color: #ffb133;
@@ -271,6 +272,7 @@
         position: relative;
         font-size: 25px;
         color: #000;
+        transition: all 0.2s ease-out;
 
         &::before {
           content: "";
@@ -789,6 +791,7 @@
         background-color: #07bca9;
         cursor: pointer;
         border: none;
+        transition: all 0.2s ease-out;
 
         &:hover {
           background-color: #18d1bf;
@@ -1007,10 +1010,11 @@
       font-size: 25px;
       border: none;
       background-color: #07bca9;
+      transition: all 0.2s ease-out;
       cursor: pointer;
 
       &:hover {
-        background-color: #11c7b5;
+        background-color: #18d1bf;
       }
     }
   }
@@ -1088,8 +1092,10 @@
         position: absolute;
         bottom: 5px;
         right: 10px;
-
+        
         img {
+          transition: all 0.3s ease-out;
+
           &:hover {
             opacity: 0.35;
           }
@@ -1161,6 +1167,7 @@
         text-align: center;
         max-width: 362px;
         margin: 0px auto;
+        transition: all 0.2s ease-out;
 
         &:hover {
           background-color: #ffb133;
@@ -1326,6 +1333,7 @@
         color: #fff;
         font-weight: 500;
         font-size: 25px;
+        transition: all 0.2s ease-out;
 
         @media (max-width: 1024px) {
           font-size: 20px;
@@ -1639,6 +1647,7 @@
       font-family: "Montserrat", sans-serif;
       background-color: #f4f4f4;
       border: 2px solid #f4f4f4;
+      transition: all 0.2s ease-out;
 
       &:hover {
         border-color: rgb(60, 216, 255);
@@ -1677,7 +1686,7 @@
       border: none;
 
       &:hover {
-        background-color: #19d8c5;
+        background-color: #18d1bf;
       }
     }
     }

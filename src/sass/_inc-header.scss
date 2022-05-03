@@ -25,6 +25,7 @@
         font-size: 18px;
         font-weight: 500;
         color: #000;
+        transition: all 0.2s ease-out;
 
         &:hover {
           opacity: .45;
@@ -97,14 +98,16 @@
         color: #fff;
         margin-right: 48px;
         cursor: pointer;
+        transition: all 0.2s ease-out;
 
         &:hover {
-          opacity: .45;
+          background-color: #18d1bf;
         }
       }
 
       &-tel {
         color: #000;
+        transition: all 0.2s ease-out;
         &:hover {
           opacity: .35;
         }
@@ -186,6 +189,7 @@
         font-size: 18px;
         font-weight: 600;
         border-right: 1px solid #fff;
+        transition: all 0.2s ease-in-out;
 
         &:nth-child(1) {
           border-left: 1px solid #fff;
