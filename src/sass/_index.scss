@@ -940,7 +940,7 @@
     &-txt {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
       position: absolute;
       bottom: 23px;
       left: 15px;
@@ -955,7 +955,7 @@
         max-height: calc(100% - 35px);
       }
 
-      @media (max-width: 575px) {
+      @media (max-width: 576px) {
         max-height: calc(100% - 87px);
       }
 
@@ -973,8 +973,11 @@
       font-weight: 700;
       font-size: 15px;
 
-      @media (max-width: 705px) {
+      @media(max-width: 992px) {
         font-size: 12px;
+      }
+
+      @media (max-width: 768px) {
         bottom: 80px;
       }
     }
