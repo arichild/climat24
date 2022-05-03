@@ -263,9 +263,9 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1024px) { .section-info-bgs-left { display: none; } }
 
-.section-info-bgs-right { position: absolute; top: 0; left: 50%; }
+.section-info-bgs-right { position: absolute; top: -50px; left: 50%; }
 
-@media (max-width: 1024px) { .section-info-bgs-right { right: -50px; top: 10%; } }
+@media (max-width: 1024px) { .section-info-bgs-right { right: -30px; top: 20%; } }
 
 .section-info .row { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
@@ -309,11 +309,13 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1024px) { .section-possibility-carts:nth-child(1) { border-bottom: 5px solid #fff; position: relative; } }
 
-.section-possibility-cart { max-width: 294px; width: 100%; border-right: 1px solid #fff; }
+.section-possibility-carts:nth-child(1) .section-possibility-cart:nth-child(1) { border-left: 3px solid #fff; }
+
+@media (max-width: 1024px) { .section-possibility-carts:nth-child(1) .section-possibility-cart:nth-child(1) { border-left: none; } }
+
+.section-possibility-cart { max-width: 294px; width: 100%; border-right: 3px solid #fff; }
 
 @media (max-width: 1024px) { .section-possibility-cart { background-color: #0d19a3; } }
-
-.section-possibility-cart:nth-child(1) { border-left: 1px solid #fff; }
 
 @media (max-width: 1024px) { .section-possibility-cart:nth-child(1) { border: none; }
   .section-possibility-cart:nth-child(1)::before { content: ""; position: absolute; left: -1000px; right: 0; bottom: -5px; height: 5px; background: #fff; }
@@ -702,9 +704,9 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 767px) { .section-box-text { padding: 20px 0; }
   .section-box-text.up .row { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; } }
 
-.section-box-text-desc h3 { color: #fff; }
+.section-box-text-desc h3 { color: #fff; margin-top: 0px; }
 
-@media (max-width: 1024px) { .section-box-text-desc h3 { font-size: 15px; margin-top: 0px; } }
+@media (max-width: 1024px) { .section-box-text-desc h3 { font-size: 15px; } }
 
 .section-box-text-desc p { font-weight: 400; font-size: 15px; }
 
