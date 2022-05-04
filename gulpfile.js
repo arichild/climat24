@@ -18,7 +18,6 @@ function styles(cb) {
   cb();
 }
 
-
 function svg(cb) {
   return src('src/images/svg/*.svg')
     .pipe(svgSprite({
@@ -72,7 +71,6 @@ const copyAll = async () => {
   )
     .pipe(dest('./public'));
 }
-
 
 exports.styles = styles;
 exports.svg = svg;

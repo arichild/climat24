@@ -525,6 +525,8 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 576px) { .section-design-decision-btn { width: 65%; } }
 
+@media (max-width: 370px) { .section-design-decision-btn { width: 100%; } }
+
 .section-design-decision-desc { font-size: 15px; }
 
 @media (max-width: 576px) { .section-design-decision-desc { font-size: 12px; } }
@@ -629,13 +631,11 @@ img { max-width: 100%; height: auto; }
 
 .section-object-items-btn { position: absolute; bottom: 5px; right: 10px; }
 
-.section-object-items-btn img { -webkit-transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
-
-.section-object-items-btn img:hover { opacity: 0.35; }
-
 .section-object-items-cart { background-color: #0d19a3; position: relative; display: inline-block; max-width: 318px; height: 100%; }
 
 .section-object-items-cart:hover .section-object-items-img img { -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
+
+.section-object-items-cart:hover .section-object-items-btn img { -webkit-transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out; opacity: 0.35; }
 
 @media (max-width: 768px) { .section-object-items-cart { max-width: 100%; } }
 
@@ -745,7 +745,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 768px) { .section-list-text-desc li::before { top: 8px; width: 2px; height: 2px; } }
 
-.section-content { background-image: url("../images/bgs/circleB.svg"); background-repeat: no-repeat; }
+.section-content { background-image: url("../images/bgs/circleB.svg"); background-repeat: no-repeat; background-position: left; }
 
 @media (max-width: 1024px) { .section-content { background-image: none; } }
 

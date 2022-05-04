@@ -795,6 +795,10 @@
         @media(max-width: 576px) {
           width: 65%;
         }
+
+        @media(max-width: 370px) {
+          width: 100%;
+        }
       }
 
       &-desc {
@@ -1087,14 +1091,6 @@
         position: absolute;
         bottom: 5px;
         right: 10px;
-        
-        img {
-          transition: all 0.3s ease-out;
-
-          &:hover {
-            opacity: 0.35;
-          }
-        }
       }
 
       &-cart {
@@ -1108,6 +1104,13 @@
           .section-object-items-img {
             img {
               transform: scale(1.05);
+            }
+          }
+
+          .section-object-items-btn {
+            img {
+              transition: all 0.3s ease-out;
+              opacity: 0.35;
             }
           }
         }
@@ -1420,6 +1423,7 @@
   &-content {
     background-image: url("../images/bgs/circleB.svg");
     background-repeat: no-repeat;
+    background-position: left;
 
     @media (max-width: 1024px) {
       background-image: none;
