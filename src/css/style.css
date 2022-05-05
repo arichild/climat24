@@ -353,6 +353,8 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1024px) { .section-serv-text { max-width: 100%; } }
 
+@media (max-width: 576px) { .section-serv-txt:last-child { display: none; } }
+
 .section-serv-link { margin-bottom: 58px; position: relative; padding-left: 35px; }
 
 @media (max-width: 1024px) { .section-serv-link { padding-left: 60px; } }
@@ -500,7 +502,9 @@ img { max-width: 100%; height: auto; }
 
 .section-design-decision p { font-weight: 600; font-size: 35px; }
 
-@media (max-width: 576px) { .section-design-decision p { font-size: 20px; margin-bottom: 15px; } }
+@media (max-width: 576px) { .section-design-decision p { font-size: 20px; margin-bottom: 0; } }
+
+@media (max-width: 576px) { .section-design-decision span { font-size: 12px; } }
 
 .section-design-decision-img { text-align: center; }
 
@@ -683,7 +687,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 768px) { .section-object-text-desc h2 { font-size: 20px; } }
 
-@media (max-width: 768px) { .section-object-text-desc h4 { font-size: 15px; margin-bottom: 0px; } }
+@media (max-width: 768px) { .section-object-text-desc h4 { font-size: 15px; margin-bottom: 0px; word-spacing: -1px; } }
 
 .section-object-text-desc p { font-weight: 400; font-size: 25px; }
 
@@ -759,6 +763,10 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1024px) { .section-content { background-image: none; } }
 
+.section-content .flex { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+@media (max-width: 1024px) { .section-content .flex { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; } }
+
 .section-content-list { padding: 57px 0; }
 
 @media (max-width: 768px) { .section-content-list { padding: 25px 0; } }
@@ -787,7 +795,9 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1024px) { .section-content-text { padding-bottom: 20px; } }
 
-@media (max-width: 1023px) { .section-content-text.reverse .row { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; } }
+.section-content-text-desc { max-width: 601px; }
+
+@media (max-width: 1024px) { .section-content-text-desc { max-width: 100%; } }
 
 @media (max-width: 768px) { .section-content-text-desc h3 { font-size: 15px; margin-top: 25px; margin-bottom: 20px; } }
 
