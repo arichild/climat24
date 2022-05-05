@@ -36,8 +36,10 @@ jQuery.validator.addMethod(
 
 var elementZ = document.getElementById('tel');
 
-var maskOptions = {
-  mask: '+{000}(00)000-00-00'
-};
-
-var mask = IMask(elementZ, maskOptions);
+if (elementZ) {
+  var maskOptions = {
+    mask: '+{000}(00)000-00-00'
+  };
+  
+  var mask = IMask(elementZ, maskOptions);
+}
