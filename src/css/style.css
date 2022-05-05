@@ -729,7 +729,7 @@ img { max-width: 100%; height: auto; }
 
 .section-box-link:hover { background-color: #FE9D02; }
 
-.section-box-link a { color: #fff; font-weight: 500; font-size: 25px; -webkit-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; transition: all 0.2s ease-out; }
+.section-box-link a { display: block; width: 100%; color: #fff; font-weight: 500; font-size: 25px; -webkit-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; transition: all 0.2s ease-out; }
 
 @media (max-width: 1024px) { .section-box-link a { font-size: 20px; } }
 
