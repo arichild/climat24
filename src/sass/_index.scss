@@ -110,7 +110,7 @@
         max-width: 100%;
         text-align: center;
       }
-      
+
       @media(max-width: 768px) {
         padding: 0 68px;
       }
@@ -129,7 +129,7 @@
 
     @media (max-width: 576px) {
       background-color: #fff;
-      margin-bottom: 28px;  
+      margin-bottom: 28px;
     }
 
     .flex {
@@ -192,7 +192,7 @@
       }
 
       &:nth-child(2) {
-        @media(max-width: 1024px) {            
+        @media(max-width: 1024px) {
           &::before {
             content: "";
             position: absolute;
@@ -312,7 +312,7 @@
           color: #0d19a3;
         }
       }
-      
+
       &-inner {
         position: relative;
         font-size: 25px;
@@ -797,7 +797,7 @@
         @media (max-width: 576px) {
           display: flex;
           margin-bottom: 4px;
-          gap: 12px;
+          gap: 5px;
 
           p {
             font-size: 15px;
@@ -952,7 +952,7 @@
       position: relative;
       margin-bottom: 50px;
       display: inline-block;
-      overflow: hidden; 
+      overflow: hidden;
 
       &:hover {
         .section-article-img {
@@ -1089,7 +1089,7 @@
     &-items {
       padding: 68px 0;
       background-color: #f4f4f4;
-      
+
       @media(max-width: 768px) {
         padding-top: 39px;
         padding-bottom: 24px;
@@ -1137,7 +1137,7 @@
         display: inline-block;
         max-width: 318px;
         height: 100%;
-        
+
         &:hover {
           .section-object-items-img {
             img {
@@ -1189,7 +1189,7 @@
         line-height: 0;
         display: block;
         overflow: hidden;
-        
+
         img {
           transition: 0.3s;
           max-width: 363px;
@@ -1565,9 +1565,9 @@
         max-width: 601px;
 
         @media(max-width: 1024px) {
-          max-width: 100%; 
+          max-width: 100%;
         }
-        
+
         h3 {
           @media (max-width: 768px) {
             font-size: 15px;
