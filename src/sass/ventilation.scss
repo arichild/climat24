@@ -1,5 +1,52 @@
 .ventilation {
   .section {
+    &-possibility {
+      margin-top: 300px;
+      margin-bottom: 0;
+
+      &-item {
+        padding: 38px 0 18px 0;
+        height: 100%;
+
+        @media(max-width: 576px) {
+          padding: 27px 0 27px 0;
+        }
+      }
+
+      &-txt {
+        &-icon{
+          height: 90px;
+          margin-bottom: 8px;
+
+          @media(max-width: 576px) {
+            display: none;
+          }
+        }
+
+        &-subtitle {
+          margin-bottom: 8px;
+        }
+
+        &-slogan {
+          padding: 0 18px;
+
+          @media(max-width: 576px) {
+            padding: 0 5px; 
+          }
+        }
+      }
+    }
+
+    &-choice {
+      &-sidebar {
+        top: -67%;
+
+        @media(max-width: 1024px) {
+          top: -46px;
+        }
+      }
+    }
+
     &-list {
       span {
         font-weight: 600;

@@ -895,6 +895,26 @@ h4 { font-weight: 500; font-size: 25px; }
 
 span.error { font-weight: 400; color: #FA3C1B; }
 
+.ventilation .section-possibility { margin-top: 300px; margin-bottom: 0; }
+
+.ventilation .section-possibility-item { padding: 38px 0 18px 0; height: 100%; }
+
+@media (max-width: 576px) { .ventilation .section-possibility-item { padding: 27px 0 27px 0; } }
+
+.ventilation .section-possibility-txt-icon { height: 90px; margin-bottom: 8px; }
+
+@media (max-width: 576px) { .ventilation .section-possibility-txt-icon { display: none; } }
+
+.ventilation .section-possibility-txt-subtitle { margin-bottom: 8px; }
+
+.ventilation .section-possibility-txt-slogan { padding: 0 18px; }
+
+@media (max-width: 576px) { .ventilation .section-possibility-txt-slogan { padding: 0 5px; } }
+
+.ventilation .section-choice-sidebar { top: -67%; }
+
+@media (max-width: 1024px) { .ventilation .section-choice-sidebar { top: -46px; } }
+
 .ventilation .section-list span { font-weight: 600; }
 
 .ventilation .section-content-text .flex { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
