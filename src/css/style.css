@@ -364,6 +364,8 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 576px) { .section-serv-text p:last-child { display: none; }
   .section-serv-text p:nth-last-child(-n+2) { font-size: 12px; margin-bottom: 0; } }
 
+@media (max-width: 400px) { .section-serv-text p:nth-last-child(-n+2) { font-size: 12px; margin-bottom: 20px; } }
+
 @media (max-width: 576px) { .section-serv-txt:last-child { display: none; }
   .section-serv-txt:nth-last-child(-n+2) { margin-bottom: 0; } }
 
