@@ -1,5 +1,77 @@
 .ventilation {
   .section {
+    &-info {
+      background: none;
+      position: relative;
+      padding: 55px 0 64px 0;
+
+      &-txt {
+        padding: 0 0 2px 35px;
+        max-width: 560px;
+
+        &-title {
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+      }
+
+      &-item {
+        position: relative;
+        padding-left: 50px;
+
+        &:last-child {
+          p {
+            margin-bottom: 0;
+          }
+        }
+
+        p {
+          margin-bottom: 25px;
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+
+      &-check {
+        position: absolute;
+        left: 0;
+      }
+
+      &-img {
+        max-width: 100%;
+        position: absolute;
+        right: 300px;
+        top: 0;
+      }
+    }
+
+    &-questions {
+      padding: 37px 0 50px 0;
+    }
+
+    &-questions {
+      input {
+        &:hover {
+          border-color: #FE9D02;
+        }
+      }
+
+      input[type="submit"] {
+        background-color: #FE9D02;
+        color: #fff;
+        font-weight: 500;
+        font-size: 15px;
+        cursor: pointer;
+        border-color:#FE9D02;
+
+        &:hover {
+          background: transparent;
+          color: #FE9D02;
+          border-color:#FE9D02;
+        }
+      }
+    }
+    
     &-possibility {
       margin-top: 300px;
       margin-bottom: 0;
