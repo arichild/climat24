@@ -597,7 +597,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 440px) { .section-article-txt { max-height: calc(100% - 28px); padding-top: 40px; } }
 
-@media (max-width: 335px) { .section-article-txt { max-height: calc(100% - 22px); padding-top: 0; } }
+@media (max-width: 350px) { .section-article-txt { max-height: calc(100% - 22px); padding-top: 0; } }
 
 .section-article-caption { color: #fff; font-weight: 700; font-size: 15px; }
 
