@@ -282,12 +282,48 @@
       @media(max-width: 1024px) {
         max-width: 100%;
       }
+
+      h2 {
+        margin-top: 0;
+        
+        @media (max-width: 576px) {
+          font-size: 20px;
+          margin-bottom: 16px;
+        }
+      }
+
+      p {
+        &:nth-child(2) {
+          font-size: 25px;
+          font-weight: 400;
+          margin-bottom: 15px;
+
+          @media (max-width: 576px) {
+            font-size: 16px;
+          }
+        }
+
+        @media(max-width: 576px) {
+          &:last-child {
+            display: none;
+          }
+
+          &:nth-last-child(-n+2) {
+            font-size: 12px;
+            margin-bottom: 0;
+          }
+        }
+      }
     }
 
     &-txt {
       @media(max-width: 576px) {
         &:last-child {
           display: none;
+        }
+
+        &:nth-last-child(-n+2) {
+          margin-bottom: 0;
         }
       }
     }
@@ -431,16 +467,6 @@
       @media (max-width: 576px) {
         font-size: 20px;
         margin-bottom: 20px;
-      }
-    }
-
-    &-sub {
-      font-weight: 400;
-      font-size: 25px;
-      margin-bottom: 15px;
-
-      @media (max-width: 576px) {
-        font-size: 16px;
       }
     }
 
