@@ -895,6 +895,8 @@ h4 { font-weight: 500; font-size: 25px; }
 
 span.error { font-weight: 400; color: #FA3C1B; }
 
+.ventilation .section-list span { font-weight: 600; }
+
 .ventilation .section-content-text .flex { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .ventilation .section-content-text-desc h3 { margin-top: 58px; margin-bottom: 35px; }
