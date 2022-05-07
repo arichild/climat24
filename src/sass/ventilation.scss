@@ -47,12 +47,14 @@
 
     &-questions {
       padding: 37px 0 50px 0;
-    }
 
-    &-questions {
       input {
         &:hover {
           border-color: #FE9D02;
+        }
+
+        &:focus {
+          border-color:#FE9D02;
         }
       }
 
@@ -71,9 +73,237 @@
         }
       }
     }
-    
+
+    &-solutions {
+      .flex {
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-txt {
+        max-width: 640px;
+      }
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 60px;
+      }
+
+      &-type {
+        padding: 60px 0;
+
+        &.grey {
+          &.bg-left {
+            background-color: #F4F4F4;
+            position: relative;
+            z-index: 1;
+  
+            &::before {
+              content: "";
+              position: absolute;
+              left: -1000px;
+              right: 0;
+              bottom: 0;
+              height: 100%;
+              background-color: #f4f4f4;
+              z-index: -1;
+            }
+          }
+
+          &.bg-right {
+            background-color: #F4F4F4;
+            padding: 80px 22px 47px 0;
+            position: relative;
+            z-index: 1;
+  
+            &::before {
+              content: "";
+              position: absolute;
+              right: -1000px;
+              left: 0;
+              bottom: 0;
+              height: 100%;
+              background-color: #f4f4f4;
+              z-index: -1;
+            }
+          }
+        }
+        
+        h3 {
+          margin-top: 0;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 20px;
+          margin-bottom: 12px;
+
+          &:nth-child(3) {
+            margin-bottom: 32px;
+          }
+        }
+      }
+      
+      &-item {
+        padding-bottom: 50px;
+      }
+
+      &-price {
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 32px;
+      }
+
+      &-btn {
+        
+        .btn-blue {
+          max-width: 382px;
+          width: 100%;
+          height: 54px;
+        }
+      }
+    }
+
+    &-gift {
+      background-color: #0D19A3;
+
+      .flex {
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &-text {
+        max-width: 700px;
+
+        h2 {
+          color: #fff;
+          margin-bottom: 55px;
+          margin-top: 0;
+        }
+
+        .btn-orange {
+          max-width: 430px;
+        }
+      }
+    }
+
+    &-work {
+      &-caption {
+        font-weight: 600;
+        font-size: 35px;
+        margin-top: 64px;
+        margin-bottom: 22px;
+      }
+
+      &-cards {
+        background-color: #F4F4F4;
+        padding: 56px 0 162px 0;
+      }
+
+      &-btn {
+        text-align: center;
+        margin-top: 56px;
+
+        .btn-blue {
+          max-width: 358px;
+        }
+      }
+
+
+      &-item {
+        padding: 20px 10px;
+        box-shadow: 0px 0px 19px rgba(0, 6, 73, 0.2);
+        height: 100%;
+        background-color: #fff;
+      }
+
+      &-title {
+        font-size: 104px;
+        font-weight: 600;
+        color: #fff;
+        text-shadow: 1px 0 1px #0d19a3, 0 1px 1px #0d19a3, -1px 0 1px #0d19a3, 0 -1px 1px #0d19a3;
+        margin-bottom: 15px;
+        line-height: 0.8;
+        text-align: center;
+      }
+
+      &-subtitle {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+
+      &-list {
+        ul {
+          padding-left: 28px;
+          margin-bottom: 0;
+        }
+
+        li {
+          position: relative;
+          font-weight: 400;
+          font-size: 15px;
+          margin-bottom: 15px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &::before {
+            display: inline-block;
+            position: absolute;
+            left: -28px;
+            top: 2px;
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #0D19A3;
+          }
+        }
+      }
+    }
+
+    &-feedbacks {
+      padding: 67px 0 40px 0;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    &-feedback {
+      background-color: #F4F4F4;
+      box-shadow: 0px 2px 25px rgba(2, 8, 82, 0.11);
+      margin-bottom: 48px;
+
+      .flex {
+        align-items: center;
+      }
+
+      &-text {
+        max-width: 938px;
+        padding-left: 18px;
+
+        p {
+          font-size: 15px;
+          margin-bottom: 12px;
+
+          &:last-child {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &-img {
+        line-height: 0;
+      }
+    }
+
     &-possibility {
-      margin-top: 300px;
+      margin-top: 75px;
       margin-bottom: 0;
 
       &-item {

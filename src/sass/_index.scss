@@ -1830,3 +1830,41 @@ span.error {
   font-weight: 400;
   color: #FA3C1B;
 }
+
+.btn-blue {
+  width: 100%;
+  max-width: 234px;
+  padding: 7px 0;
+  background-color: #07bca9;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  border: 2px solid #07bca9;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    border: 2px solid #07bca9;
+    background: transparent;
+    color: #07bca9;
+  }
+}
+
+.btn-orange {
+  width: 100%;
+  max-width: 234px;
+  padding: 7px 0;
+  background-color: #fe9d02;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  border: 2px solid #fe9d02;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    border: 2px solid #fe9d02;
+    background: transparent;
+    color: #fe9d02;
+  }
+}
