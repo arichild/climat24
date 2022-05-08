@@ -73,6 +73,12 @@
   }
 }
 
+@media(min-width: 1024px) {
+  .col-zero {
+    display: none;
+  }
+}
+
 /*  12-column */
 .col-1 {
   -ms-flex: 0 0 8.33333%;

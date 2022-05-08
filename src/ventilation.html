@@ -226,7 +226,25 @@
         <div class="flex">
           <div class="section-gift-text">
             <h2>Базовый набор фильтров в подарок каждому новому клиенту!</h2>
-            <button class="btn-orange">Получить комплект фильтров</button>
+            <form action="#" class="section-gift-validate" novalidate="novalidate">
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-6 col-zero">
+                  <div class="section-gift-form-cell">
+                    <input type="text" name="name" id="name" placeholder="Ваше имя">
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6 col-zero">
+                  <div class="section-gift-form-cell">
+                    <input type="tel" name="tel" id="tel" placeholder="Ваш номер">
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-4 col-xs-12">
+                  <div class="section-gift-form-cell">
+                    <input type="submit" name="submit" id="submit" value="Получить комплект фильтров">
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
   
           <div class="section-gift-img">
@@ -250,7 +268,7 @@
       <div class="section-work-cards">
         <div class="container">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-ss-6">
               <div class="section-work-item">
                 <div class="section-work-title">
                   01
@@ -268,7 +286,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-ss-6">
               <div class="section-work-item">
                 <div class="section-work-title">
                   02
@@ -285,7 +303,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-ss-6">
               <div class="section-work-item">
                 <div class="section-work-title">
                   03
@@ -302,7 +320,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-ss-6">
               <div class="section-work-item">
                 <div class="section-work-title">
                   04
@@ -503,6 +521,87 @@
     <div class="section-feedbacks">
       <div class="container">
         <h2>Наши отзывы</h2>
+
+        <div class="swiper feedback">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="section-feedback">
+                <div class="flex">
+                  <div class="section-feedback-img">
+                    <img src="./images/feedback1.png" alt="">
+                  </div>
+              
+                  <div class="section-feedback-text">
+                    <p>
+                      “Заказывали в Климат24 разработку сплит-системы для квартиры в 120 квадратов.
+                      Отдельная проблема для нас была в детской комнате, где совершенно другой температурный режим.
+                      Проектировщик понял нас во всем, учел все мелочи и предложил мультисплит с удобной регулировкой по комнатам.
+                      Очень оперативно подобрали систему, доставили и установили за рабочий день.
+                      С учетом продленной гарантии, сервиса и неплохой скидки все получается максимально выгодно. Рекомендуем!“
+                    </p>
+              
+                    <p>Валентина, г. Минск</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="section-feedback">
+                <div class="flex">
+                  <div class="section-feedback-img">
+                    <img src="./images/feedback2.png" alt="">
+                  </div>
+              
+                  <div class="section-feedback-text">
+                    <p>
+                      “Искали компанию для создания климатической системы в ресторан с залом 300 кв.м плюс горячая зона, холодный цех
+                      и
+                      несколько вспомогательных помещений.
+                      Особенность проекта — здание по сути пристроено к более старому. Заинтересовало предложение КЛИМАТ24 развести
+                      вентиляцию
+                      и запустить канальный кондиционер, чтобы не перебивать работу вытяжки в кухне. Проект разработан грамотно.
+                      Основной зал оказался под давлением, запахи не идут, кухонная вытяжка плюс кондиционирование снижают температуру
+                      в
+                      горячем цеху.
+                      Рациональный подход, грамотно и вполне приемлемо по цене.”
+                    </p>
+              
+                    <p>Алексей, г. Брест</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="section-feedback">
+                <div class="flex">
+                  <div class="section-feedback-img">
+                    <img src="./images/feedback3.png" alt="">
+                  </div>
+              
+                  <div class="section-feedback-text">
+                    <p>
+                      “При выборе здания под офисный центр столкнулась с проблемой старой вытяжки.
+                      Принудительная вентиляция работала отвратительно и гремела. Выделила несколько подрядчиков и выбрала Климат24 по
+                      тому,
+                      как они проработали предложение.
+                      Очень рациональное решение с мультисплит-системой и восстановлением части старой вентиляции.
+                      В итоге получилось вполне логично по притоку и вытяжке, обоснованно по цене и быстро. Объем работ был большой,
+                      спасло
+                      планирование.
+                      Готова рекомендовать эту фирму.“
+                    </p>
+              
+                    <p>Анастасия, г. Минск</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
   
         <div class="section-feedback">
           <div class="flex">
@@ -566,7 +665,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
