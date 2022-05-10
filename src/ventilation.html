@@ -66,7 +66,7 @@
           Как выбрать подрядчика по вентиляции?
         </div>
         <div class="section-questions-form">
-          <form action="#" class="section-questions-validate" novalidate="novalidate">
+          <form action="#" class="section-questions-validate">
             <div class="row">
               <div class="col-md-4 col-sm-4 col-xs-6 col-0">
                 <div class="section-questions-form-cell">
@@ -126,7 +126,7 @@
     <div class="section-solutions">
       <div class="container">
         <div class="section-solutions-type">
-            <div class="flex">
+            <div class="flex reverse">
               <div class="section-solutions-txt">
                 <h3>Приточно-вытяжная вентиляция</h3>
               
@@ -191,7 +191,7 @@
     <div class="section-solutions">
       <div class="container">
         <div class="section-solutions-type">
-          <div class="flex">
+          <div class="flex reverse">
             <div class="section-solutions-txt">
               <h3>Вытяжная вентиляция</h3>
     
@@ -226,7 +226,7 @@
         <div class="flex">
           <div class="section-gift-text">
             <h2>Базовый набор фильтров в подарок каждому новому клиенту!</h2>
-            <form action="#" class="section-gift-validate" novalidate="novalidate">
+            <form action="#" class="section-gift-validate">
               <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-6 col-zero">
                   <div class="section-gift-form-cell">
@@ -255,8 +255,138 @@
     </div>
 
     <div class="section-quiz">
-      <!-- this block for a quiz -->
-    </div>
+      <div class="container">
+        <h2>Рассчет стоимости</h2>
+
+        <div class="section-quiz-content">
+          <div class="section-quiz-header">
+            <div class="section-quiz-caption">
+              Ответьте на 6 простых вопросов и получите:
+            </div>
+            <div class="section-quiz-items">
+              <div class="flex">
+                <div class="section-quiz-item">
+                  <div class="section-quiz-item-icon">
+                    <img src="./images/icons/quiz1.svg" alt="alt">
+                  </div>
+                  <div class="section-quiz-item-subtitle">
+                    Консультация инженера
+                  </div>
+                  <div class="section-quiz-item-slogan">
+                    Простым языком расскажет о вариантах решения Вашей задачи
+                  </div>
+                </div>
+                <div class="section-quiz-item">
+                  <div class="section-quiz-item-icon">
+                    <img src="./images/icons/quiz2.svg" alt="alt">
+                  </div>
+                  <div class="section-quiz-item-subtitle">
+                    Выезд инженера
+                  </div>
+                  <div class="section-quiz-item-slogan">
+                    Мастер приедет на место, оценит помещение, снимет замеры
+                  </div>
+                </div>
+                <div class="section-quiz-item">
+                  <div class="section-quiz-item-icon">
+                    <img src="./images/icons/quiz3.svg" alt="alt">
+                  </div>
+                  <div class="section-quiz-item-subtitle">
+                    Эскизный чертеж
+                  </div>
+                  <div class="section-quiz-item-slogan">
+                    До начала работ мы предоставим Вам 2 эскизных чертежа
+                  </div>
+                </div>
+                <div class="section-quiz-item">
+                  <div class="section-quiz-item-icon">
+                    <img src="./images/icons/quiz4.svg" alt="alt">
+                  </div>
+                  <div class="section-quiz-item-subtitle">
+                    Понятный расчет
+                  </div>
+                  <div class="section-quiz-item-slogan">
+                    Рассчитаем стоимость материалов, оборудования и работ
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          
+          <div class="section-quiz-body">
+            <div class="section-quiz-body-question">
+              Укажите площадь Вашего объекта:
+            </div>
+
+            <div class="section-quiz-progress">
+              <div class="section-quiz-progress-fill" :style="{width:(step / totalSteps * 100) + '%'}">
+                
+              </div>
+            </div>
+
+            <div class="section-quiz-body-answers">
+              <div class="section-quiz-step" v-if="step === 0">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="section-quiz-body-answer">
+                      <label for="answer-2" class="section-quiz-label">
+                        От 50 кв. м до 70кв. м
+                        <input type="radio" class="custom-checkbox" id="answer-2" name="answer" value="50">
+                        <div class="section-quiz-input">
+                  
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="section-quiz-body-answer">
+                      <label for="answer-1">До 50 кв. м</label>
+                      <input type="radio" class="custom-checkbox" id="answer-1" name="answer" value="50">
+                    </div>
+                  </div>
+  
+                  <div class="col-md-4">
+                    <div class="section-quiz-body-answer">
+                      <label for="answer-3">До 50 кв. м</label>
+                      <input type="radio" class="custom-checkbox" id="answer-3" name="answer" value="50">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="section-quiz-body-answer">
+                      <label for="answer-4">До 50 кв. м</label>
+                      <input type="radio" class="custom-checkbox" id="answer-4" name="answer" value="50">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="section-quiz-body-answer">
+                      <label for="answer-5">До 50 кв. м</label>
+                      <input type="radio" class="custom-checkbox" id="answer-5" name="answer" value="50">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section-quiz-step" v-if="step === 1">
+                <h1>asdasdasdasd</h1>
+              </div>
+            </div>
+
+            <div class="section-quiz-controller">
+              <div class="row">
+                <div class="col-md-4">
+                  <button class="section-quiz-btn prev"  @click.prevent="toPrevStep">Вернуться назад</button>
+                </div>
+                <div class="col-md-4">
+                  <button class="section-quiz-btn skip" @click.prevent="toNextStep">Пропустить вопрос</button>
+                </div>
+                <div class="col-md-4">
+                  <button class="section-quiz-btn next" @click.prevent="toNextStep">Следующий вопрос</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <div class="section-work">
       <div class="section-work-caption">
@@ -268,7 +398,7 @@
       <div class="section-work-cards">
         <div class="container">
           <div class="row">
-            <div class="col-md-3 col-ss-6">
+            <div class="col-md-3 col-xs-6 col-us-6">
               <div class="section-work-item">
                 <div class="section-work-title">
                   01
@@ -286,7 +416,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 col-ss-6">
+            <div class="col-md-3 col-xs-6 col-us-6">
               <div class="section-work-item">
                 <div class="section-work-title">
                   02
@@ -303,7 +433,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 col-ss-6">
+            <div class="col-md-3 col-xs-6 col-us-6">
               <div class="section-work-item">
                 <div class="section-work-title">
                   03
@@ -320,7 +450,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 col-ss-6">
+            <div class="col-md-3 col-xs-6 col-us-6">
               <div class="section-work-item">
                 <div class="section-work-title">
                   04

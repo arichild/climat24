@@ -1,5 +1,33 @@
-// validator
+// validator for forms 
 $(".section-questions-validate").validate({
+  errorElement: "span",
+
+  rules: {
+    name: {
+      required: true,
+      lettersonly: true,
+    },
+
+    tel: {
+      required: true,
+      minlength: 6,
+    },
+  },
+
+  messages: {
+    name: {
+      required: "Пожалуйста, введите ваше Имя",
+      lettersonly: "Ваше имя не может состоять из цифр",
+    },
+
+    tel: {
+      required: "Пожалуйста, введите ваш номер телефона",
+      minlength: "Минимальная длина 6 символов",
+    },
+  }
+});
+
+$(".section-gift-validate").validate({
   errorElement: "span",
 
   rules: {
