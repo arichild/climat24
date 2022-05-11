@@ -73,6 +73,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .col-hidden {
+    display: none;
+  }
+}
+
 @media(min-width: 1024px) {
   .col-zero {
     display: none;

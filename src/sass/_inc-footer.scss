@@ -3,6 +3,10 @@
   padding: 20px 0;
   background-color: #F4F4F4;
 
+  &.bg-white {
+    background-color: #fff;
+  }
+
   @media(max-width: 576px) {
     br {
       display: none;

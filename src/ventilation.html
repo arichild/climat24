@@ -96,6 +96,7 @@
 
             <div class="flex">
               <div class="section-solutions-item">
+                <h3>Приточная вентиляция</h3>
                 <img src="./images/vent-item1.png" alt="alt">
               </div>
               <div class="section-solutions-txt">
@@ -149,6 +150,7 @@
                 </div>
               </div>
               <div class="section-solutions-item">
+                <h3>Приточно-вытяжная вентиляция</h3>
                 <img src="./images/vent-item2.png" alt="alt">
               </div>
             </div>
@@ -161,6 +163,7 @@
         <div class="section-solutions-type bg-right grey">    
           <div class="flex">
             <div class="section-solutions-item">
+              <h3>Приточно вытяжная с рекуперацией</h3>
               <img src="./images/vent-item3.png" alt="alt">
             </div>
             <div class="section-solutions-txt">
@@ -214,6 +217,7 @@
               </div>
             </div>
             <div class="section-solutions-item">
+              <h3>Вытяжная вентиляция</h3>
               <img src="./images/vent-item4.png" alt="alt">
             </div>
           </div>
@@ -312,78 +316,116 @@
               </div>
             </div>
           </div>
-          </div>
-          
-          <div class="section-quiz-body">
-            <div class="section-quiz-body-question">
-              Укажите площадь Вашего объекта:
-            </div>
 
-            <div class="section-quiz-progress">
-              <div class="section-quiz-progress-fill" :style="{width:(step / totalSteps * 100) + '%'}">
-                
+          <div class="section-quiz-body" v-if="step === 0">
+            <div class="section-quiz-step">
+              <div class="section-quiz-body-question" v-for="item in form">
+                {{ item.title }}
+              </div>
+            
+              <div class="section-quiz-progress">
+                <div class="section-quiz-progress-fill" :style="{width:(step / totalSteps * 100) + '%'}">
+                </div>
+              </div>
+            
+              <div class="section-quiz-body-answers">
+                <div class="row" v-for="item in form">
+                  <div class="col-sm-4" v-for="value in item.values">
+                    <div class="section-quiz-body-answer">
+                      <label class="section-quiz-label">
+                        {{ value }}
+                        <input type="radio" class="custom-checkbox" id="answer" name="answer" :value="value" @click.prevent="getValue">
+                        <div class="section-quiz-input"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="section-quiz-body-answers">
-              <div class="section-quiz-step" v-if="step === 0">
+            <div class="section-quiz-step" v-if="step === 1">
+              <div class="section-quiz-body-question">
+                Вопрос: 2:
+              </div>
+            
+              <div class="section-quiz-progress">
+                <div class="section-quiz-progress-fill" :style="{width:(step / totalSteps * 100) + '%'}">
+                </div>
+              </div>
+            
+              <div class="section-quiz-body-answers">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-sm-4">
                     <div class="section-quiz-body-answer">
-                      <label for="answer-2" class="section-quiz-label">
-                        От 50 кв. м до 70кв. м
-                        <input type="radio" class="custom-checkbox" id="answer-2" name="answer" value="50">
+                      <label for="answer-1" class="section-quiz-label">
+                        От 50кв.м до 70кв.м
+                        <input type="radio" class="custom-checkbox" id="answer-1" name="answer" value="50">
                         <div class="section-quiz-input">
-                  
+          
                         </div>
                       </label>
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-sm-4">
                     <div class="section-quiz-body-answer">
-                      <label for="answer-1">До 50 кв. м</label>
-                      <input type="radio" class="custom-checkbox" id="answer-1" name="answer" value="50">
+                      <label for="answer-2" class="section-quiz-label">
+                        От 70 кв.м до 90кв.м
+                        <input type="radio" class="custom-checkbox" id="answer-2" name="answer" value="50">
+                        <div class="section-quiz-input">
+          
+                        </div>
+                      </label>
                     </div>
                   </div>
-  
-                  <div class="col-md-4">
+                  <div class="col-sm-4">
                     <div class="section-quiz-body-answer">
-                      <label for="answer-3">До 50 кв. м</label>
-                      <input type="radio" class="custom-checkbox" id="answer-3" name="answer" value="50">
+                      <label for="answer-3" class="section-quiz-label">
+                        От 90 кв.м до 110кв.м
+                        <input type="radio" class="custom-checkbox" id="answer-3" name="answer" value="50">
+                        <div class="section-quiz-input">
+          
+                        </div>
+                      </label>
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-sm-4">
                     <div class="section-quiz-body-answer">
-                      <label for="answer-4">До 50 кв. м</label>
-                      <input type="radio" class="custom-checkbox" id="answer-4" name="answer" value="50">
+                      <label for="answer-4" class="section-quiz-label">
+                        От 110кв.м до 130кв.м
+                        <input type="radio" class="custom-checkbox" id="answer-4" name="answer" value="50">
+                        <div class="section-quiz-input">
+          
+                        </div>
+                      </label>
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-sm-4">
                     <div class="section-quiz-body-answer">
-                      <label for="answer-5">До 50 кв. м</label>
-                      <input type="radio" class="custom-checkbox" id="answer-5" name="answer" value="50">
+                      <label for="answer-5" class="section-quiz-label">
+                        От 130кв.м до 150кв.м
+                        <input type="radio" class="custom-checkbox" id="answer-5" name="answer" value="50">
+                        <div class="section-quiz-input">
+          
+                        </div>
+                      </label>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="section-quiz-step" v-if="step === 1">
-                <h1>asdasdasdasd</h1>
               </div>
             </div>
-
             <div class="section-quiz-controller">
               <div class="row">
-                <div class="col-md-4">
-                  <button class="section-quiz-btn prev"  @click.prevent="toPrevStep">Вернуться назад</button>
+                <div class="col-sm-4 col-hidden">
+                  <button class="section-quiz-btn prev" @click.prevent="toPrevStep">Вернуться назад</button>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4 col-hidden">
                   <button class="section-quiz-btn skip" @click.prevent="toNextStep">Пропустить вопрос</button>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4 col-ss-12">
                   <button class="section-quiz-btn next" @click.prevent="toNextStep">Следующий вопрос</button>
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -818,6 +860,9 @@
             </div>
             <div class="col-sm-6">
               <div class="section-box-text-img">
+                <h3>
+                  Система вентиляции в квартире: зачем нужна, виды, цена, где заказать в Минске и Гомеле
+                </h3>
                 <img src="./images/type.png" alt="alt">
               </div>
             </div>
@@ -866,6 +911,9 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="section-box-text-img">
+                <h3>
+                  Вентиляция в квартире: цена
+                </h3>
                 <img src="./images/price.png" alt="alt">
               </div>
             </div>
@@ -931,6 +979,9 @@
             </div>
     
             <div class="section-content-text-img">
+              <h3>
+                Заказать систему вентиляции в квартиру с доставкой и монтажом
+              </h3>
               <img src="./images/vent.png" alt="alt">
             </div>
     
@@ -941,4 +992,4 @@
   </div>
 </div>
 
-<!--#include file="inc-footer.html"-->
+<!--#include file="inc-footer2.html"-->
