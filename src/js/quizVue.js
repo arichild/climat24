@@ -7,11 +7,12 @@ var app = new Vue({
     answer: [],
 
     // @todo: с помощью цикла проходить, и title заносить где должен быть вопрос
-    // value, в input 
+    // value, в input
     form: [
       {
         title: 'Укажите площадь Вашего объекта:',
-        values: ['До 50 кв.м', 'От 50 кв.м до 70кв.м', 'От 70кв.м до 90кв.м', 'От 90кв.м до 110кв.м', 'От 110кв.м до 130кв.м'],
+        values: ['До 50 кв.м', 'От 50 кв.м до 70кв.м', 'От 70кв.м до 90кв.м', 'От 90кв.м до 110кв.м', 'От  110кв.м до 130кв.м',
+        ],
       },
 
       // {
@@ -23,17 +24,16 @@ var app = new Vue({
 
   methods: {
     toNextStep() {
-      this.step++
+      this.step++;
     },
 
     toPrevStep() {
-      this.step--
+      this.step--;
     },
 
     getValue(e) {
-      
-      this.answer.push(e.target.value)
+      this.answer.push(e.target.value);
       console.log(this.answer);
-    }
-  }
-})
+    },
+  },
+});
