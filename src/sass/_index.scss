@@ -100,7 +100,7 @@
         font-weight: 500;
         border: 2px solid #fe9d02;
         cursor: pointer;
-        transition: all 0.2s ease-out;
+        transition: 0.2s ease-out;
 
         &:hover {
           border: 2px solid #fe9d02;
@@ -376,7 +376,7 @@
         position: relative;
         font-size: 25px;
         color: #000;
-        transition: all 0.2s ease-out;
+        transition: 0.2s ease-out;
 
         &::before {
           content: '';
@@ -884,7 +884,7 @@
         background-color: #07bca9;
         cursor: pointer;
         border: 2px solid #07bca9;
-        transition: all 0.2s ease-out;
+        transition: 0.2s ease-out;
 
         &:hover {
           border-color: 2px solid #07bca9;
@@ -1100,7 +1100,7 @@
       font-size: 25px;
       border: 2px solid #07bca9;
       background-color: #07bca9;
-      transition: all 0.2s ease-out;
+      transition: 0.2s ease-out;
       cursor: pointer;
 
       &:hover {
@@ -1208,7 +1208,7 @@
 
           .section-object-items-btn {
             img {
-              transition: all 0.3s ease-out;
+              transition: 0.3s ease-out;
               opacity: 0.35;
             }
           }
@@ -1264,7 +1264,7 @@
         text-align: center;
         max-width: 362px;
         margin: 0px auto;
-        transition: all 0.2s ease-out;
+        transition: 0.2s ease-out;
         border: 2px solid #fe9d02;
 
         &:hover {
@@ -1305,6 +1305,8 @@
 
     &-text {
       &-desc {
+        font-size: 25px;
+
         h2 {
           margin-top: 0;
 
@@ -1324,7 +1326,6 @@
 
         p {
           font-weight: 400;
-          font-size: 25px;
 
           @media (max-width: 768px) {
             font-size: 12px;
@@ -1345,7 +1346,7 @@
           position: relative;
           margin-bottom: 2px;
           font-weight: 400;
-          font-size: 25px;
+          // font-size: 25px;
           margin-bottom: 20px;
 
           @media (max-width: 768px) {
@@ -1408,9 +1409,10 @@
       }
 
       &-desc {
+        font-size: 15px;
+
         p {
           font-weight: 400;
-          font-size: 15px;
 
           @media (max-width: 1024px) {
             font-size: 12px;
@@ -1444,7 +1446,7 @@
       background-color: #fa3c1b;
       text-align: center;
       padding: 20px 0;
-      transition: all 0.2s ease-out;
+      transition: 0.2s ease-out;
 
       @media (max-width: 1024px) {
         padding: 6px 0;
@@ -1460,7 +1462,7 @@
         color: #fff;
         font-weight: 500;
         font-size: 25px;
-        transition: all 0.2s ease-out;
+        transition: 0.2s ease-out;
 
         @media (max-width: 1024px) {
           font-size: 20px;
@@ -1478,6 +1480,8 @@
 
     &-text {
       &-desc {
+        font-size: 15px;
+
         h3 {
           margin-top: 0;
 
@@ -1489,7 +1493,6 @@
 
         p {
           font-weight: 400;
-          font-size: 15px;
 
           @media (max-width: 768px) {
             font-size: 12px;
@@ -1516,7 +1519,7 @@
           position: relative;
           margin-bottom: 2px;
           font-weight: 400;
-          font-size: 15px;
+          // font-size: 15px;
           margin-bottom: 0;
 
           @media (max-width: 768px) {
@@ -1570,9 +1573,10 @@
       }
 
       &-desc {
+        font-size: 15px;
+
         p {
           font-weight: 400;
-          font-size: 15px;
 
           @media (max-width: 768px) {
             font-size: 12px;
@@ -1596,7 +1600,6 @@
         li {
           position: relative;
           font-weight: 400;
-          font-size: 15px;
 
           @media (max-width: 768px) {
             font-size: 12px;
@@ -1634,23 +1637,35 @@
     &-text {
       background-color: #f4f4f4;
       padding-bottom: 58px;
+      padding-top: 15px;
+
+      @media(max-width:768px) {
+        padding-top: 25px;
+      }
 
       @media (max-width: 1024px) {
         padding-bottom: 20px;
       }
 
+      &-img {
+        @media(max-width: 1024px) {
+          margin-bottom: 25px;
+        }
+      }
+
       h3 {
-        margin-top: 15px;
+        margin-top: 0;
 
         @media (max-width: 768px) {
           font-size: 15px;
-          margin-top: 25px;
+          // margin-top: 25px;
           margin-bottom: 20px;
         }
       }
 
       &-desc {
         max-width: 601px;
+        font-size: 15px;
 
         @media (max-width: 1024px) {
           max-width: 100%;
@@ -1658,7 +1673,6 @@
 
         p {
           font-weight: 400;
-          font-size: 15px;
 
           @media (max-width: 768px) {
             font-size: 12px;
@@ -1694,7 +1708,6 @@
         li {
           position: relative;
           font-weight: 400;
-          font-size: 15px;
 
           @media (max-width: 768px) {
             font-size: 12px;
@@ -1792,7 +1805,7 @@
         font-family: 'Montserrat', sans-serif;
         background-color: #f4f4f4;
         border: 2px solid #f4f4f4;
-        transition: all 0.2s ease-out;
+        transition: 0.2s ease-out;
 
         &:hover {
           border-color: rgb(60, 216, 255);
@@ -1892,7 +1905,7 @@ span.error {
   font-weight: 500;
   border: 2px solid #07bca9;
   cursor: pointer;
-  transition: all 0.2s ease-out;
+  transition: 0.2s ease-out;
 
   &:hover {
     border: 2px solid #07bca9;
@@ -1911,7 +1924,7 @@ span.error {
   font-weight: 500;
   border: 2px solid #fe9d02;
   cursor: pointer;
-  transition: all 0.2s ease-out;
+  transition: 0.2s ease-out;
 
   &:hover {
     border: 2px solid #fe9d02;

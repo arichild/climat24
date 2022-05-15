@@ -310,7 +310,7 @@
 
             methods: {
               toNextStep() {
-                if (this.step < this.form.length) {
+                if (this.step <= this.form.length - 2) {
                   this.step++;
                 } else {
                   const str = JSON.stringify(this.answer);
@@ -358,7 +358,7 @@
               },
 
               btnText: function() {
-                if (this.step < this.form.length) {
+                if (this.step < this.form.length - 1) {
                   return 'Следующий вопрос'
                 } else {
                   return 'Отправить'
@@ -367,17 +367,9 @@
 
               progressValue: function() {
                 if (this.step >= 1) {
-                  return `${Math.round((this.step / this.form.length) * 100) + '%'} уже готово!`
+                  return `${Math.round((this.step / (this.form.length - 1)) * 100) + '%'} уже готово!`
                 }
               },
-
-              endQuiz: function() {
-                if (this.step === this.form.length) {
-                  return 'Вы ответили на все вопросы!'
-                } else {
-                  return
-                }
-              }
             }
           });
         });
@@ -461,13 +453,9 @@
               </div>
 
               <div class="section-quiz-progress">
-                <div class="section-quiz-progress-fill" :style="{width:(Math.round((step / form.length) * 100)) + '%'}">
+                <div class="section-quiz-progress-fill" :style="{width:(Math.round((step / (form.length - 1)) * 100)) + '%'}">
                 </div>
               </div>
-            </div>
-
-            <div class="section-quiz-end" v-if="show">
-              {{ endQuiz }}
             </div>
 
             <div class="section-quiz-step" v-for="(item, index) in form">

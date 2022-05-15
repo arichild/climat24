@@ -38,6 +38,7 @@
       &-item {
         position: relative;
         padding-left: 50px;
+        font-size: 20px;
 
         @media (max-width: 576px) {
           padding-left: 35px;
@@ -51,7 +52,6 @@
 
         p {
           margin-bottom: 25px;
-          font-size: 20px;
           font-weight: 500;
 
           @media (max-width: 576px) {
@@ -70,9 +70,11 @@
       &-check {
         position: absolute;
         left: 0;
-        top: -3px;
+        top: -5px;
 
         @media (max-width: 576px) {
+          top: -2px;
+
           img {
             width: 25px;
             height: 25px;
@@ -183,7 +185,7 @@
         &.reverse {
           .section-solutions-item {
             padding-right: 0;
-            padding-left: 10px;
+            padding-left: 15px;
           }
 
           @media(max-width: 1024px) {
@@ -198,6 +200,7 @@
 
       &-txt {
         max-width: 640px;
+        font-size: 20px;
 
         @media (max-width: 768px) {
           h3 {
@@ -278,7 +281,6 @@
         }
 
         p {
-          font-size: 20px;
           margin-bottom: 12px;
 
           &:nth-child(3) {
@@ -297,7 +299,7 @@
 
       &-item {
         padding-bottom: 50px;
-        padding-right: 10px;
+        padding-right: 15px;
 
         @media(max-width: 1024px) {
           padding-right: 0;
@@ -369,7 +371,7 @@
 
       &-form-cell {
         @media (max-width: 1024px) {
-          // margin-bottom: 15px;
+          margin-bottom: 15px;
         }
       }
 
@@ -414,12 +416,12 @@
         font-family: "Montserrat", sans-serif;
         background-color: #fff;
         border: 2px solid #fff;
-        transition: all 0.2s ease-out;
+        transition: 0.2s ease-out;
 
         @media (max-width: 1024px) {
           font-size: 15px;
           font-weight: 400;
-          margin-bottom: 15px;
+          // margin-bottom: 15px;
         }
 
         &:hover {
@@ -520,13 +522,6 @@
         padding-bottom: 28px;
       }
 
-      &-end {
-        font-weight: 600;
-        font-size: 20px;
-        text-align: center;
-        margin: 35px 0;
-      }
-
       h2 {
         margin-top: 0;
         margin-bottom: 38px;
@@ -623,7 +618,7 @@
         font-size: 20px;
         color: #a5a5a6;
         cursor: pointer;
-        transition: all 0.2s ease-out;
+        transition: 0.2s ease-out;
 
         &.next {
           svg {
@@ -955,6 +950,8 @@
       }
 
       &-list {
+        font-size: 15px;
+
         ul {
           padding-left: 28px;
           margin-bottom: 0;
@@ -967,7 +964,6 @@
         li {
           position: relative;
           font-weight: 400;
-          font-size: 15px;
           margin-bottom: 15px;
 
           @media (max-width: 576px) {
@@ -1097,8 +1093,12 @@
       }
 
       &-text {
-        max-width: 938px;
-        padding-left: 18px;
+        // max-width: 938px;
+        // padding-left: 18px;
+        flex: 0 0 calc(100% - 153px);
+        max-width: calcl(100% - 153px);
+        padding: 24px 18px;
+        font-size: 15px;
 
         @media (max-width: 1024px) {
           display: flex;
@@ -1107,12 +1107,11 @@
         }
 
         p {
-          font-size: 15px;
           margin-bottom: 12px;
 
           &:last-child {
             font-weight: 600;
-            font-size: 15px;
+            // font-size: 15px;
             margin-bottom: 0;
 
             @media (max-width: 1024px) {
@@ -1138,8 +1137,10 @@
 
       &-img {
         line-height: 0;
-        max-width: 153px;
-        width: 100%;
+        // max-width: 153px;
+        // width: 100%;
+        flex: 0 0 153px;
+        max-width: calc(100% - 153px);
 
         @media (max-width: 1024px) {
           display: none;
@@ -1192,7 +1193,7 @@
     &-choice {
       &-sidebar {
         width: 43%;
-        top: -67%;
+        top: -179px;
         z-index: 1;
 
         @media (max-width: 1024px) {
@@ -1249,17 +1250,22 @@
 
     &-content {
       &-text {
+              padding-top: 58px;
+
+      @media(max-width: 768px) {
+        padding-top: 20px;
+      }
         .flex {
           align-items: center;
         }
 
         &-desc {
           h3 {
-            margin-top: 58px;
+            margin-top: 0;
             margin-bottom: 35px;
 
             @media (max-width: 768px) {
-              margin-top: 20px;
+              // margin-top: 20px;
               margin-bottom: 16px;
             }
 
@@ -1280,10 +1286,7 @@
         }
 
         &-img {
-          margin-top: 35px;
-
           @media (max-width: 576px) {
-            margin-top: 20px;
             margin-bottom: 15px;
           }
         }
