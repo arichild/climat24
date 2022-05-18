@@ -647,14 +647,39 @@
         }
       }
 
-      [class*='col-'] {
-        padding-left: 28px;
-        padding-right: 28px;
+      .row {
+        align-items: center;
+        margin-left: -32px;
+        margin-right: -32px;
+
+        // @media(max-width: 1024px) {
+        //   margin-left: 24px;
+        //   margin-right: 24px;
+        // }
       }
 
-      .row {
-        margin-left: -28px;
-        margin-right: -28px;
+      [class*="col-"] {
+        width: 100%;
+        padding-left: 32px;
+        padding-right: 32px;
+
+        // @media(max-width: 1024px) {
+        //   padding-left: 24px;
+        //   padding-right: 24px;
+        // }
+      }
+
+            .col-md-3 {
+        @media(min-width: 1024px) {
+          flex: 0 0 30%;
+          max-width: 30%;
+        }
+      }
+      .col-md-4 {
+        @media(min-width: 1024px) {
+          flex: 0 0 39.8%;
+          max-width: 39.8%;
+        }
       }
     }
 
@@ -684,6 +709,12 @@
           margin-right: auto;
           margin-bottom: 10px;
         }
+      }
+    }
+
+    &-form {
+      &.vent-house {
+
       }
     }
   }
