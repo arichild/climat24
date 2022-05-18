@@ -1616,11 +1616,11 @@
           }
         }
 
-        &:nth-child(1) {
-          p {
-            &:nth-child(2) {
+        &:not(:last-child) {
+          p:not(:first-child) {
               margin-bottom: 0;
-            }
+            // &:nth-child(2) {
+            // }
           }
         }
       }

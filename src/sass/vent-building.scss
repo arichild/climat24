@@ -1,0 +1,372 @@
+.section {
+  &-info {
+    &.vent-building {
+      padding: 128px 0 161px 0;
+      .flex {
+        position: relative;
+      }
+
+      @media (max-width: 1024px) {
+        padding-top: 89px;;
+        padding-bottom: 35px;
+
+        .flex {
+          flex-direction: column;
+        }
+      }
+    }
+
+    &-txt {
+      &.vent-building {
+        padding: 0 0 23px 35px;
+        max-width: 624px;
+
+        @media(max-width: 1024px) {
+          max-width: 100%;
+          padding-left: 15px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &-img {
+      &.vent-building {
+        max-width: 100%;
+        position: absolute;
+        right: -60px;
+        top: 5px;
+
+        @media(min-width: 1024px) {
+          z-index: -1;
+        }
+
+        @media(max-width: 1130px) {
+          max-width: 60%;
+          top: 0;
+        }
+
+        @media (max-width: 1024px) {
+          max-width: 100%;
+          position: initial;
+          padding: 0;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  &-solutions {
+    &.vent-building {
+      padding: 58px 0 40px 0;
+
+      @media(max-width: 1024px) {
+        padding: 30px 0 30px 0;
+      }
+
+      .row {
+        margin-left: -15px;
+        margin-right: -15px;
+        align-items: center;
+
+        [class*="col-"] {
+          width: 100%;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        &.reverse {
+          @media (max-width: 1023px) {
+            flex-direction: column-reverse;
+          }
+        }
+      }
+
+      &:nth-child(odd) {
+        @media(max-width: 1024px) {
+          background-color: #fff;
+        }
+      }
+
+      &:nth-child(even) {
+        @media(max-width: 1024px) {
+          background-color: #F4F4F4;
+        }
+      }
+    }
+
+    &.bg-grey {
+      background-color: #F4F4F4;
+
+      .row {
+        margin-left: -72px;
+        margin-right: -72px;
+        align-items: center;
+
+        [class*="col-"] {
+          width: 100%;
+          padding-left: 72px;
+          padding-right: 72px;
+        }
+
+        &.reverse {
+          @media (max-width: 1023px) {
+            flex-direction: column-reverse;
+          }
+        }
+      }
+    }
+
+    &-txt {
+      &.vent-building {
+        font-size: 15px;
+      }
+
+
+      @media (max-width: 768px) {
+        h3 {
+          display: none;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 30px;
+
+      @media (max-width: 576px) {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+    }
+
+    &-type {
+      &.vent-building {
+        // font-size: 12px;
+        // padding: 0;
+
+        p {
+          @media(max-width: 576px) {
+            line-height: 142.52%;
+            font-size: 12px;
+          }
+        }
+      }
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+
+        @media (max-width: 576px) {
+          font-size: 15px;
+        }
+      }
+    }
+
+    &-item {
+      &.vent-building {
+        @media(max-width: 1024px) {
+          padding-bottom: 15px;
+        }
+      }
+      padding-bottom: 0;
+      text-align: center;
+
+      @media(max-width: 1024px) {
+        text-align: center;
+      }
+
+      img {
+        @media (max-width: 576px) {
+          padding: 0 50px;
+        }
+      }
+
+      h3 {
+        display: none;
+
+        @media (max-width: 768px) {
+          display: block;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        padding-bottom: 10px;
+      }
+    }
+
+    &-price {
+      font-weight: 600;
+      font-size: 25px;
+      margin-bottom: 32px;
+
+      @media (max-width: 576px) {
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-btn {
+      @media (max-width: 576px) {
+        text-align: center;
+      }
+
+
+      .btn-blue {
+        // max-width: 382px;
+        width: 100%;
+        height: 54px;
+
+        @media (max-width: 576px) {
+          font-size: 15px;
+          font-weight: 400;
+          height: 36px;
+          max-width: 248px;
+        }
+
+        &.vent-building {
+          max-width: 290px;
+
+          @media(max-width: 576px) {
+            max-width: 173px;
+          }
+        }
+      }
+    }
+  }
+
+  &-content {
+    &.vent-building {
+      background-image: none;
+    }
+    &-text {
+      &.vent-building {
+        padding-top: 67px;
+        padding-bottom: 0;
+        background-color: #fff;
+
+        @media(max-width: 1024px) {
+          padding-top: 0;
+        }
+      }
+
+      &-desc {
+        &.vent-building {
+          max-width: 525px;
+
+          @media(max-width: 1024px) {
+            max-width: 100%;
+          }
+
+          h3 {
+            @media(max-width: 576px) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &-img {
+        &.vent-building {
+          padding-top: 30px;
+        }
+      }
+    }
+
+    &-list {
+      &.vent-building {
+        padding: 30px 0 57px 0;
+
+        @media(max-width: 1024px) {
+          padding-top: 0;
+          padding-bottom: 22px;
+        }
+
+        ul {
+          margin-bottom: 20px;
+        }
+      }
+
+      &-desc {
+        &.list-style {
+          ul {
+            padding-left: 0;
+          }
+
+          li {
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-choice {
+    &-sidebar {
+      &.vent-building {
+        width: 43%;
+        top: -179px;
+        z-index: 1;
+
+        @media (max-width: 1024px) {
+          top: -54px;
+          width: 58%;
+        }
+
+        @media (max-width: 576px) {
+          top: -48px;
+        }
+
+        @media(max-width: 409px) {
+          top: -43px;
+        }
+      }
+    }
+  }
+
+  &-possibility {
+    &-item {
+      &.vent-building {
+        padding: 38px 0 18px 0;
+        height: 100%;
+
+        @media (max-width: 576px) {
+          padding: 27px 0 27px 0;
+        }
+      }
+    }
+
+    &-txt {
+      &-icon {
+        &.vent-building {
+          height: 90px;
+          margin-bottom: 8px;
+
+          @media (max-width: 576px) {
+            display: none;
+          }
+        }
+      }
+
+      &-subtitle {
+        &.vent-building {
+          margin-bottom: 8px;
+          padding: 0 4px;
+        }
+      }
+
+      &-slogan {
+        &.vent-building {
+          padding: 0 18px;
+
+          @media (max-width: 576px) {
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }
+}
