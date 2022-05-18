@@ -2,14 +2,14 @@
   .section {
     &-info {
       background: none;
-      padding: 44px 0;
+      padding: 55px 0;
 
       .flex {
         position: relative;
       }
 
       @media (max-width: 1024px) {
-        padding-top: 89px;
+        padding-top: 24px;
         padding-bottom: 0;
 
         .flex {
