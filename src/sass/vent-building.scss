@@ -7,7 +7,7 @@
       }
 
       @media (max-width: 1024px) {
-        padding-top: 89px;;
+        padding-top: 20px;
         padding-bottom: 35px;
 
         .flex {
@@ -25,6 +25,7 @@
           max-width: 100%;
           padding-left: 15px;
           margin-bottom: 20px;
+          border-left: 3px solid #2F2FA2;
         }
       }
     }
