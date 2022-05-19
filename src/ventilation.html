@@ -317,6 +317,8 @@
               step: 0,
               answer: [],
               show: false,
+              activeNext: true,
+              activePrev: false,
 
               form: [
                 {
@@ -336,7 +338,7 @@
                 },
 
                 {
-                  title: 'Вопрос 4:',
+                  title: '4.У Вас уже есть проект?',
                   values: ['Да', 'Нет, нужно сделать'],
                 },
 
@@ -351,8 +353,10 @@
               toNextStep() {
                 if (this.step <= this.form.length - 2) {
                   this.step++;
+                  this.activePrev = true
                 } else {
                   const str = JSON.stringify(this.answer);
+                  this.activeNext = false
                   // console.log(str)
 
                   // send data
@@ -378,6 +382,7 @@
                 if (this.step !== 0) {
                   this.step--;
                   this.show = false;
+                  this.activePrev = false
                 }
               },
 
@@ -517,7 +522,7 @@
             <div class="section-quiz-controller">
               <div class="row">
                 <div class="col-sm-4 col-hidden">
-                  <button class="section-quiz-btn prev" @click.prevent="toPrevStep">
+                  <button class="section-quiz-btn prev" @click.prevent="toPrevStep" v-bind:class="{ active: activePrev }">
                     <svg>
                       <use xlink:href="./svg/svg/symbols.svg#back"></use>
                     </svg>
@@ -525,7 +530,7 @@
                   </button>
                 </div>
                 <div class="col-sm-4 col-hidden">
-                  <button class="section-quiz-btn skip" @click.prevent="toNextStep">
+                  <button class="section-quiz-btn skip" @click.prevent="toNextStep" v-bind:class="{ active: activeNext }">
                     Пропустить вопрос
                     <svg>
                       <use xlink:href="./svg/svg/symbols.svg#skip"></use>
@@ -533,7 +538,7 @@
                   </button>
                 </div>
                 <div class="col-sm-4 col-ss-12">
-                  <button class="section-quiz-btn next" @click.prevent="toNextStep">
+                  <button class="section-quiz-btn next" @click.prevent="toNextStep" v-bind:class="{ active: activeNext }">
                     {{ btnText }}
                     <svg>
                       <use xlink:href="./svg/svg/symbols.svg#next"></use>
