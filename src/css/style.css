@@ -727,7 +727,7 @@ img { max-width: 100%; height: auto; }
 
 .section-object-items-img img { -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; max-width: 363px; width: 100%; }
 
-.section-object-items-link { padding: 7px 23px; background-color: #fe9d02; text-align: center; max-width: 362px; margin: 0px auto; -webkit-transition: 0.2s ease-out; -o-transition: 0.2s ease-out; transition: 0.2s ease-out; border: 2px solid #fe9d02; }
+.section-object-items-link { padding: 7px 10px; background-color: #fe9d02; text-align: center; max-width: 362px; margin: 0px auto; -webkit-transition: 0.2s ease-out; -o-transition: 0.2s ease-out; transition: 0.2s ease-out; border: 2px solid #fe9d02; }
 
 .section-object-items-link:hover { background: transparent; color: #fe9d02; border-radius: 2px solid #fe9d02; }
 
@@ -1613,6 +1613,14 @@ span.error { font-weight: 400; color: #fa3c1b; }
 .section-quiz-btn:hover { background-color: #0d19a3; border: 1px solid #0d19a3; color: #fff; }
 
 .section-quiz-btn:hover svg { stroke: #fff; }
+
+.section-quiz-btn.active { border: 1px solid #0D19A3; color: #0D19A3; }
+
+.section-quiz-btn.active svg { stroke: #0D19A3; }
+
+.section-quiz-btn.active:hover { background-color: #0d19a3; border: 1px solid #0d19a3; color: #fff; }
+
+.section-quiz-btn.active:hover svg { stroke: #fff; }
 
 @media (max-width: 1024px) { .section-quiz-btn { display: block; margin: 0px auto; padding: 10px 0; font-size: 15px; } }
 

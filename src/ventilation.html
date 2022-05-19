@@ -397,6 +397,8 @@
               },
 
               btnText: function() {
+                console.log(this.step)
+                console.log(this.form.length - 1)
                 if (this.step < this.form.length - 1) {
                   return 'Следующий вопрос'
                 } else {
@@ -799,7 +801,7 @@
           </div>
 
           <div class="section-object-items-link">
-            <a href="javascript:void(0)" class="section-object-items-open">Посмотреть все объкты</a>
+            <a href="javascript:void(0)" class="section-object-items-open">Посмотреть все объекты</a>
           </div>
         </div>
       </div>

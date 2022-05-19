@@ -440,6 +440,25 @@
         }
       }
 
+      &.active {
+        border: 1px solid #0D19A3;
+        color: #0D19A3;
+
+        svg {
+          stroke: #0D19A3;
+        }
+
+        &:hover {
+          background-color: #0d19a3;
+          border: 1px solid #0d19a3;
+          color: #fff;
+
+          svg {
+            stroke: #fff;
+          }
+        }
+      }
+
       @media (max-width: 1024px) {
         display: block;
         margin: 0px auto;
