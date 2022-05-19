@@ -1462,7 +1462,7 @@ span.error { font-weight: 400; color: #fa3c1b; }
 
 .section-info-txt.vent-house { padding: 19px 0 42px 35px; }
 
-@media (max-width: 1024px) { .section-info-txt.vent-house { padding-left: 8px; border-left: 3px solid #2F2FA2; } }
+@media (max-width: 1024px) { .section-info-txt.vent-house { padding-left: 8px; border-left: 3px solid #2F2FA2; padding-top: 15px; padding-bottom: 30px; } }
 
 .section-info-img.vent-house.vent-house { max-width: 100%; }
 
