@@ -1095,7 +1095,7 @@ span.error { font-weight: 400; color: #fa3c1b; }
 
 @media (max-width: 768px) { .ventilation .section-solutions-item h3 { display: block; text-align: center; margin-bottom: 20px; } }
 
-@media (max-width: 576px) { .ventilation .section-solutions-item { padding-bottom: 10px; } }
+@media (max-width: 576px) { .ventilation .section-solutions-item { padding-bottom: 20px; } }
 
 .ventilation .section-solutions-price { font-weight: 600; font-size: 25px; margin-bottom: 32px; }
 
@@ -1881,6 +1881,10 @@ span.error { font-weight: 400; color: #fa3c1b; }
 @media (max-width: 576px) { .section-possibility-txt-slogan.vent-building { padding: 0 5px; } }
 
 .footer { width: 100%; padding: 20px 0; background-color: #F4F4F4; }
+
+.footer .row { margin-left: -13px; margin-right: -13px; }
+
+.footer [class*="col-"] { width: 100%; padding-left: 13px; padding-right: 13px; }
 
 .footer.bg-white { background-color: #fff; }
 

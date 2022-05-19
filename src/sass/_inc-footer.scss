@@ -3,6 +3,17 @@
   padding: 20px 0;
   background-color: #F4F4F4;
 
+  .row {
+    margin-left: -13px;
+    margin-right: -13px;
+  }
+
+  [class*="col-"] {
+    width: 100%;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
   &.bg-white {
     background-color: #fff;
   }
