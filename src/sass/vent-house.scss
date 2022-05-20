@@ -246,10 +246,6 @@
 
     &.vent-house {
       background-color: #fff;
-
-      @media(max-width: 576px) {
-        display: none;
-      }
     }
 
       &-heading {
@@ -443,21 +439,32 @@
         }
       }
 
-      &.active {
+      &:hover {
+        background-color: transparent;
         border: 1px solid #0D19A3;
         color: #0D19A3;
 
         svg {
           stroke: #0D19A3;
         }
+      }
+
+      &.active {
+        background-color: #0d19a3;
+        border: 1px solid #0d19a3;
+        color: #fff;
+
+        svg {
+          stroke: #fff;
+        }
 
         &:hover {
-          background-color: #0d19a3;
-          border: 1px solid #0d19a3;
-          color: #fff;
+          background-color: transparent;
+          border: 1px solid #0D19A3;
+          color: #0D19A3;
 
           svg {
-            stroke: #fff;
+            stroke: #0D19A3;
           }
         }
       }

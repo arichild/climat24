@@ -122,7 +122,7 @@
       </div>
     </div>
 
-    <div class="section-solutions">
+    <div class="section-solutions bg">
       <div class="container">
         <div class="section-solutions-type">
           <div class="row reverse">
@@ -318,7 +318,6 @@
               answer: [],
               show: false,
               activeNext: true,
-              activePrev: false,
 
               form: [
                 {
@@ -353,7 +352,6 @@
               toNextStep() {
                 if (this.step <= this.form.length - 2) {
                   this.step++;
-                  this.activePrev = true
                 } else {
                   const str = JSON.stringify(this.answer);
                   this.activeNext = false
@@ -382,7 +380,6 @@
                 if (this.step !== 0) {
                   this.step--;
                   this.show = false;
-                  this.activePrev = false
                 }
               },
 
@@ -522,7 +519,7 @@
             <div class="section-quiz-controller">
               <div class="row">
                 <div class="col-sm-4 col-hidden">
-                  <button class="section-quiz-btn prev" @click.prevent="toPrevStep" v-bind:class="{ active: activePrev }">
+                  <button class="section-quiz-btn prev" @click.prevent="toPrevStep">
                     <svg>
                       <use xlink:href="./svg/svg/symbols.svg#back"></use>
                     </svg>
@@ -530,7 +527,7 @@
                   </button>
                 </div>
                 <div class="col-sm-4 col-hidden">
-                  <button class="section-quiz-btn skip" @click.prevent="toNextStep" v-bind:class="{ active: activeNext }">
+                  <button class="section-quiz-btn skip" @click.prevent="toNextStep">
                     Пропустить вопрос
                     <svg>
                       <use xlink:href="./svg/svg/symbols.svg#skip"></use>

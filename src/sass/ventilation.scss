@@ -1,7 +1,7 @@
 .ventilation {
   .section {
     &-info {
-      background: none;
+      // background: none;
       padding: 55px 0;
 
       .flex {
@@ -191,6 +191,12 @@
     }
 
     &-solutions {
+      &.bg {
+        background-image: url(../images/bgs/test.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        z-index: 99999;
+      }
       .row {
         margin-left: -10px;
         margin-right: -10px;
@@ -541,7 +547,6 @@
         }
       }
 
-
       &-mob {
         display: none;
 
@@ -689,12 +694,32 @@
         }
 
         &:hover {
+          background-color: transparent;
+          border: 1px solid #0D19A3;
+          color: #0D19A3;
+
+          svg {
+            stroke: #0D19A3;
+          }
+        }
+
+        &.active {
           background-color: #0d19a3;
           border: 1px solid #0d19a3;
           color: #fff;
 
           svg {
             stroke: #fff;
+          }
+
+          &:hover {
+            background-color: transparent;
+            border: 1px solid #0D19A3;
+            color: #0D19A3;
+
+            svg {
+              stroke: #0D19A3;
+            }
           }
         }
 
