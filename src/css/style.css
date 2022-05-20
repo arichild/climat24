@@ -1311,7 +1311,9 @@ span.error { font-weight: 400; color: #fa3c1b; }
 
 .ventilation .section-quiz-body-answer .custom-checkbox:checked + label::before { border-color: #0d19a3; background-color: transparent; }
 
-.ventilation .section-work-bg { position: absolute; z-index: -1; overflow: hidden; left: 0; top: 470px; }
+.ventilation .section-work { position: relative; }
+
+.ventilation .section-work-bg { position: absolute; z-index: 0; overflow: hidden; left: 0; top: 470px; }
 
 @media (max-width: 1024px) { .ventilation .section-work-bg { display: none; } }
 
