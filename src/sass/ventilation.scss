@@ -107,6 +107,8 @@
     }
 
     &-questions {
+      position: relative;
+      z-index: 1;
       background-color: #0d19a3;
       padding: 26px 0 ;
 
