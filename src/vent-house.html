@@ -353,8 +353,10 @@
           data: {
             step: 0,
             answer: [],
+            contact: [],
             show: false,
             activeNext: true,
+            done: true,
 
             form: [
               {
@@ -387,30 +389,37 @@
 
           methods: {
             toNextStep() {
-              if (this.step <= this.form.length - 2) {
+              if (this.step <= this.form.length - 1) {
                 this.step++;
               } else {
                 const str = JSON.stringify(this.answer);
                 this.activeNext = false
-                // console.log(str)
-
-                // send data
-                // fetch("https://jsonplaceholder.typicode.com/posts", {
-                //   method: "POST",
-                //   body: JSON.stringify(str),
-                //   headers: {
-                //     "Content-type": "application/json; charset=UTF-8",
-                //   },
-                // })
-                //   .then((response) => response.json())
-                //   .then((data) => {
-                //     console.log(data)
-                //   })
               }
 
               if (this.step === this.form.length) {
                 this.show = true;
+                this.done = false
               }
+            },
+
+            getData() {
+              this.contact.push(this.$refs.valueName.value, this.$refs.valueTel.value);
+
+              const dataAnswer = JSON.stringify(this.answer);
+              const dataContact = JSON.stringify(this.contact);
+
+              // send data
+              // fetch("https://jsonplaceholder.typicode.com/posts", {
+              //   method: "POST",
+              //   body: JSON.stringify(str),
+              //   headers: {
+              //     "Content-type": "application/json; charset=UTF-8",
+              //   },
+              // })
+              //   .then((response) => response.json())
+              //   .then((data) => {
+              //     console.log(data)
+              //   })
             },
 
             toPrevStep() {
@@ -430,17 +439,55 @@
             },
           },
 
+          watch: {
+              step: function (val) {
+                if (val === this.form.length) {
+                  setTimeout(() => {
+                    jQuery('.section-quiz-validate').validate({
+                      errorElement: "span",
+
+                      rules: {
+                        name: {
+                          required: true,
+                          lettersonly: true,
+                        },
+
+                        tel: {
+                          required: true,
+                          minlength: 6,
+                        },
+                      },
+
+                      messages: {
+                        name: {
+                          required: "Пожалуйста, введите ваше Имя",
+                          lettersonly: "Ваше имя не может состоять из цифр",
+                        },
+
+                        tel: {
+                          required: "Пожалуйста, введите ваш номер телефона",
+                          minlength: "Минимальная длина 6 символов",
+                        },
+                      }
+                    })
+
+                    var tel = document.getElementById('tel-quiz');
+
+                    if (tel) {
+                      var maskOptions = {
+                        mask: '+{000}(00)000-00-00'
+                      };
+
+                      var mask = IMask(tel, maskOptions);
+                    }
+                  }, 1)
+                }
+              }
+            },
+
           computed: {
             stepData: function() {
               return this.form[this.step]
-            },
-
-            btnText: function() {
-              if (this.step < this.form.length - 1) {
-                return 'Следующий вопрос'
-              } else {
-                return 'Отправить'
-              }
             },
 
             progressValue: function() {
@@ -525,7 +572,7 @@
             </div>
           </div>
 
-          <div class="section-quiz-progress-bar">
+          <div class="section-quiz-progress-bar" v-if="done">
             <div class="section-quiz-progress-value">
               {{ progressValue }}
             </div>
@@ -533,6 +580,37 @@
             <div class="section-quiz-progress">
               <div class="section-quiz-progress-fill" :style="{width:(Math.round((step / (form.length - 1)) * 100)) + '%'}">
               </div>
+            </div>
+          </div>
+
+          <div class="section-quiz-end" v-bind:class="{ active: show }">
+            <div class="section-quiz-end-title">
+              Отлично! Вы ответили на все вопросы! <br>
+              А мы уже расчитываем стоимость систем для Вашего помещения!
+            </div>
+            <div class="section-quiz-end-subtitle">
+              Оставьте Ваши контакты, чтобы мы смогли выслать Вам расчет на Viber
+            </div>
+            <div class="section-quiz-form">
+              <form action="#" class="section-quiz-validate">
+                <div class="row">
+                  <div class="col-md-4 col-sm-4 col-xs-6">
+                    <div class="section-quiz-form-cell">
+                      <input type="text" name="name" id="name" placeholder="Ваше имя" ref="valueName">
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-6">
+                    <div class="section-quiz-form-cell">
+                      <input type="tel" name="tel" id="tel-quiz" placeholder="Ваш номер" ref="valueTel">
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="section-quiz-form-cell">
+                      <input type="submit" name="submit" id="submit" value="Получить рассчет стоимости" @click.prevent="getData">
+                    </div>
+                  </div>
+                </div>
+              </Form>
             </div>
           </div>
 
@@ -551,7 +629,7 @@
             </div>
           </div>
 
-          <div class="section-quiz-controller">
+          <div class="section-quiz-controller" v-if="done">
             <div class="row">
               <div class="col-sm-4 col-hidden">
                 <button class="section-quiz-btn prev" @click.prevent="toPrevStep">
@@ -571,7 +649,7 @@
               </div>
               <div class="col-sm-4 col-ss-12">
                 <button class="section-quiz-btn next" @click.prevent="toNextStep" v-bind:class="{ active: activeNext }">
-                  {{ btnText }}
+                  Следующий вопрос
                   <svg>
                     <use xlink:href="./svg/svg/symbols.svg#next"></use>
                   </svg>

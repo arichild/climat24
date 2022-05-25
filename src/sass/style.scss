@@ -12,6 +12,9 @@
 @import "vent-building.scss";
 @import "inc-footer.scss";
 
+// popups
+@import "./popups/price.scss";
+
 * {
   box-sizing: border-box;
 }

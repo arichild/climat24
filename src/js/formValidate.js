@@ -1,4 +1,4 @@
-// validator for forms 
+// validator for forms
 $(".section-questions-validate").validate({
   errorElement: "span",
 
@@ -68,6 +68,6 @@ if (elementZ) {
   var maskOptions = {
     mask: '+{000}(00)000-00-00'
   };
-  
+
   var mask = IMask(elementZ, maskOptions);
 }

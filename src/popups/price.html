@@ -1,0 +1,81 @@
+<div class="popup-price">
+  <div class="container">
+    <div class="flex">
+      <div class="popup-price-img">
+        <img src="./images/popup-price-img.png" alt="alt">
+      </div>
+
+      <div class="popup-price-form">
+        <div class="popup-price-headline">
+          Закажите бесплатный рассчет стоимости системы вентиляции для Вашего помещения
+        </div>
+
+        <div class="popup-price-subtitle">
+          Оставьте Ваши контакты и в течение 5 минут с Вами свяжется наш специалист и ответит на все вопросы!
+        </div>
+
+        <form action="#" class="popup-price-validate">
+          <div class="row">
+            <div class="col-md-12 col-sm-4 col-xs-6">
+              <div class="popup-price-form-cell">
+                <input type="text" name="name" id="name" placeholder="Ваше имя">
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-4 col-xs-6">
+              <div class="popup-price-form-cell">
+                <input type="tel" name="tel" id="tel" placeholder="Ваш номер">
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-4 col-xs-12">
+              <div class="popup-price-form-cell">
+                <input type="submit" name="submit" id="submit" value="Получить консультацию">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $(".popup-price-validate").validate({
+        errorElement: "span",
+
+        rules: {
+          name: {
+            required: true,
+            lettersonly: true,
+          },
+
+          tel: {
+            required: true,
+            minlength: 6,
+          },
+        },
+
+        messages: {
+          name: {
+            required: "Пожалуйста, введите ваше Имя",
+            lettersonly: "Ваше имя не может состоять из цифр",
+          },
+
+          tel: {
+            required: "Пожалуйста, введите ваш номер телефона",
+            minlength: "Минимальная длина 6 символов",
+          },
+        }
+      });
+    });
+
+    var tel = document.getElementById('tel');
+
+    if (tel) {
+      var maskOptions = {
+        mask: '+{000}(00)000-00-00'
+      };
+
+      var mask = IMask(tel, maskOptions);
+    }
+  </script>
+</div>
