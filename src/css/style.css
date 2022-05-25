@@ -385,7 +385,7 @@ img { max-width: 100%; height: auto; }
 
 .section-possibility-block { height: 100%; }
 
-.section-possibility-item { padding: 24px 17px 36px 17px; }
+.section-possibility-item { padding: 24px 14px 36px 14px; }
 
 @media (max-width: 576px) { .section-possibility-item { padding: 10px 5px; } }
 
