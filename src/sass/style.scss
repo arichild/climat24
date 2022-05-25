@@ -10,10 +10,12 @@
 @import "ventilation.scss";
 @import "vent-house.scss";
 @import "vent-building.scss";
+@import "thanks.scss";
 @import "inc-footer.scss";
 
 // popups
 @import "./popups/price.scss";
+@import "./popups/catalog.scss";
 
 * {
   box-sizing: border-box;
