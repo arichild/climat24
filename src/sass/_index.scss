@@ -1473,6 +1473,11 @@
     }
 
     &-link {
+      display: block;
+      width: 100%;
+      color: #fff;
+      font-weight: 500;
+      font-size: 25px;
       background-color: #fa3c1b;
       text-align: center;
       padding: 20px 0;
@@ -1480,23 +1485,11 @@
 
       @media (max-width: 1024px) {
         padding: 6px 0;
+        font-size: 20px;
       }
 
       &:hover {
         background-color: #fe9d02;
-      }
-
-      a {
-        display: block;
-        width: 100%;
-        color: #fff;
-        font-weight: 500;
-        font-size: 25px;
-        transition: 0.2s ease-out;
-
-        @media (max-width: 1024px) {
-          font-size: 20px;
-        }
       }
     }
   }
