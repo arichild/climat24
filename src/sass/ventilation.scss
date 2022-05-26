@@ -403,11 +403,19 @@
         }
 
         .btn-blue {
+          display: block;
+          text-align: center;
+          padding: 8px 0;
           max-width: 382px;
           width: 100%;
           height: 54px;
 
+          @media(max-width: 1024px) {
+            margin: 0px auto;
+          }
+
           @media (max-width: 576px) {
+            padding: 6px 0;
             font-size: 15px;
             font-weight: 400;
             height: 36px;
@@ -1165,6 +1173,8 @@
         }
 
         .btn-blue {
+          display: block;
+          margin: 0px auto;
           max-width: 358px;
         }
       }

@@ -96,10 +96,6 @@
           margin-bottom: 20px;
         }
 
-        span {
-          font-weight: 700;
-        }
-
         &.thanks {
           @media(max-width: 768px) {
             margin-bottom: 32px;
@@ -1127,6 +1123,8 @@
     }
 
     &-more {
+      display: block;
+      margin: 0px auto;
       padding: 7px 0;
       max-width: 294px;
       width: 100%;
@@ -1933,7 +1931,7 @@ span.error {
 .btn-blue {
   width: 100%;
   max-width: 234px;
-  padding: 7px 0;
+  padding: 8px 0;
   background-color: #07bca9;
   color: #fff;
   font-size: 25px;
