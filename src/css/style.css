@@ -1247,11 +1247,15 @@ span.error { font-weight: 400; color: #fa3c1b; }
 
 @media (max-width: 576px) { .ventilation .section-quiz-controller { margin-top: 0; } }
 
+@media (max-width: 768px) { .ventilation .section-quiz-controller .row { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; } }
+
 .ventilation .section-quiz-btn { position: relative; background-color: transparent; border: 1px solid #a5a5a6; width: 100%; padding: 14px 0; font-weight: 400; font-size: 20px; color: #a5a5a6; cursor: pointer; -webkit-transition: 0.2s ease-out; -o-transition: 0.2s ease-out; transition: 0.2s ease-out; }
 
 .ventilation .section-quiz-btn.next svg { margin-left: 15px; }
 
 .ventilation .section-quiz-btn.skip svg { margin-left: 15px; }
+
+.ventilation .section-quiz-btn.prev { margin-bottom: 0; }
 
 .ventilation .section-quiz-btn.prev svg { margin-right: 15px; }
 
@@ -1268,6 +1272,8 @@ span.error { font-weight: 400; color: #fa3c1b; }
 .ventilation .section-quiz-btn.active:hover svg { stroke: #0D19A3; }
 
 @media (max-width: 1024px) { .ventilation .section-quiz-btn { display: block; margin: 0px auto; padding: 10px 0; font-size: 15px; } }
+
+@media (max-width: 768px) { .ventilation .section-quiz-btn { margin-bottom: 15px; } }
 
 @media (max-width: 576px) { .ventilation .section-quiz-btn { max-width: 248px; } }
 
@@ -1748,11 +1754,15 @@ span.error { font-weight: 400; color: #fa3c1b; }
 
 @media (max-width: 576px) { .section-quiz-controller { margin-top: 0; } }
 
+@media (max-width: 768px) { .section-quiz-controller .row { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; } }
+
 .section-quiz-btn { position: relative; background-color: transparent; border: 1px solid #a5a5a6; width: 100%; padding: 14px 0; font-weight: 400; font-size: 20px; color: #a5a5a6; cursor: pointer; -webkit-transition: 0.2s ease-out; -o-transition: 0.2s ease-out; transition: 0.2s ease-out; }
 
 .section-quiz-btn.next svg { margin-left: 15px; }
 
 .section-quiz-btn.skip svg { margin-left: 15px; }
+
+.section-quiz-btn.prev { margin-bottom: 0; }
 
 .section-quiz-btn.prev svg { margin-right: 15px; }
 
@@ -1773,6 +1783,8 @@ span.error { font-weight: 400; color: #fa3c1b; }
 .section-quiz-btn.active:hover svg { stroke: #0D19A3; }
 
 @media (max-width: 1024px) { .section-quiz-btn { display: block; margin: 0px auto; padding: 10px 0; font-size: 15px; } }
+
+@media (max-width: 768px) { .section-quiz-btn { margin-bottom: 15px; } }
 
 @media (max-width: 576px) { .section-quiz-btn { max-width: 248px; } }
 
