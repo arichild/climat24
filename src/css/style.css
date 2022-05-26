@@ -1009,7 +1009,7 @@ span.error { font-weight: 400; color: #FF6347; }
 @media (max-width: 576px) { .ventilation .section-info-check { top: -2px; }
   .ventilation .section-info-check img { width: 25px; height: 25px; } }
 
-.ventilation .section-info-img { max-width: 100%; position: absolute; right: -60px; top: -70px; }
+.ventilation .section-info-img { max-width: 100%; position: absolute; right: -85px; top: -70px; }
 
 @media (min-width: 1024px) { .ventilation .section-info-img { z-index: -1; } }
 
