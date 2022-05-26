@@ -1635,7 +1635,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 1024px) { .section-serv-bg { display: none; } }
 
-.section-choice-sidebar.vent-house { width: 43%; top: -179px; z-index: 1; }
+.section-choice-sidebar.vent-house { width: 43%; top: -186px; z-index: 1; }
 
 @media (max-width: 1024px) { .section-choice-sidebar.vent-house { top: -54px; width: 58%; } }
 
@@ -2033,7 +2033,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 .section-content-list-desc.list-style li::before { display: none; }
 
-.section-choice-sidebar.vent-building { width: 43%; top: -179px; z-index: 1; }
+.section-choice-sidebar.vent-building { width: 43%; top: -185px; z-index: 1; }
 
 @media (max-width: 1024px) { .section-choice-sidebar.vent-building { top: -54px; width: 58%; } }
 
