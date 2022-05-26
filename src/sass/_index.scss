@@ -130,7 +130,7 @@
         }
 
         &.thanks {
-          padding: 12px 0;
+          padding: 10px 0;
           max-width: 282px;
           width: 100%;
           font-size: 18px;
@@ -1358,8 +1358,6 @@
         }
 
         p {
-          font-weight: 400;
-
           @media (max-width: 768px) {
             font-size: 12px;
           }
@@ -1445,7 +1443,6 @@
         font-size: 15px;
 
         p {
-          font-weight: 400;
 
           @media (max-width: 1024px) {
             font-size: 12px;
@@ -1525,7 +1522,6 @@
         }
 
         p {
-          font-weight: 400;
 
           @media (max-width: 768px) {
             font-size: 12px;
@@ -1609,7 +1605,6 @@
         font-size: 15px;
 
         p {
-          font-weight: 400;
 
           @media (max-width: 768px) {
             font-size: 12px;
@@ -1705,7 +1700,6 @@
         }
 
         p {
-          font-weight: 400;
 
           @media (max-width: 768px) {
             font-size: 12px;
@@ -1911,21 +1905,28 @@
 h2 {
   font-size: 35px;
   font-weight: 600;
+  line-height: 1.4;
 }
 
 h3 {
   font-size: 25px;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 h4 {
   font-weight: 500;
   font-size: 25px;
+  line-height: 1.2;
 }
 
 span.error {
   font-weight: 400;
-  color: #fa3c1b;
+  color: #FF6347;
+}
+
+.error {
+  margin-bottom: 5px;
 }
 
 .btn-blue {

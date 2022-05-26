@@ -343,7 +343,7 @@
         p {
           margin-bottom: 12px;
 
-          &:nth-child(3) {
+          &:last-of-type {
             margin-bottom: 32px;
 
             @media (max-width: 576px) {
