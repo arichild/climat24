@@ -1427,7 +1427,7 @@
       }
 
       h3 {
-        color: #fff;
+        // color: #fff;
         margin-top: 0px;
 
         @media (max-width: 1024px) {
@@ -1911,6 +1911,11 @@ h4 {
   font-weight: 500;
   font-size: 25px;
   line-height: 1.2;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 span.error {

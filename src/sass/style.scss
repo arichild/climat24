@@ -11,6 +11,8 @@
 @import "vent-house.scss";
 @import "vent-building.scss";
 @import "thanks.scss";
+@import "object.scss";
+@import "object-item.scss";
 @import "inc-footer.scss";
 
 // popups
@@ -67,7 +69,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1196px;
+  max-width: 1216px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;

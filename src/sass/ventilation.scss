@@ -810,45 +810,6 @@
         }
       }
 
-      .custom-checkbox+label {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        user-select: none;
-        border: 1px solid #000;
-        width: 100%;
-        padding: 6px;
-      }
-
-      .custom-checkbox {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-      }
-
-      .custom-checkbox:checked + label {
-        border: 1px solid #0D19A3;
-        color: #0D19A3;
-      }
-
-      .custom-checkbox:checked+label::after {
-        content: '';
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        background-color: #0d19a3;
-        position: absolute;
-        transform: translate(0, -50%);
-        top: 50%;
-        left: 12px;
-
-        @media(max-width: 1024px) {
-          width: 18px;
-          height: 18px;
-          left: 11px;
-        }
-      }
-
       &-progress {
         position: relative;
         height: 9px;
@@ -1619,4 +1580,86 @@
       }
     }
   }
+}
+
+.custom-checkbox+label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  border: 1px solid #000;
+  width: 100%;
+  padding: 6px;
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox:checked+label {
+  border: 1px solid #0D19A3;
+  color: #0D19A3;
+}
+
+.custom-checkbox:checked+label::after {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #0d19a3;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  left: 12px;
+
+  @media(max-width: 1024px) {
+    width: 18px;
+    height: 18px;
+    left: 11px;
+  }
+}
+
+.custom-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  word-break: break-all;
+
+  @media(max-width: 1024px) {
+    font-size: 15px;
+  }
+}
+
+.custom-checkbox+label::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #000;
+  margin-right: 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+
+  @media(max-width: 1024px) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.custom-checkbox:checked+label::before {
+  border-color: #0d19a3;
+  background-color: transparent;
 }
