@@ -30,8 +30,8 @@ const complexity = new Swiper('.complexity', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next.complexity-button-next',
+    prevEl: '.swiper-button-prev.complexity-button-prev',
   },
 });
 
@@ -56,12 +56,12 @@ const client = new Swiper('.client', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next client',
-    prevEl: '.swiper-button-prev client',
+    nextEl: '.swiper-button-next.client-button-next',
+    prevEl: '.swiper-button-prev.client-button-prev',
   },
 });
 
-const feedback = new Swiper('.reviews', {
+const reviews = new Swiper('.reviews', {
   loop: false,
   slidesPerView: 3,
 
@@ -82,8 +82,8 @@ const feedback = new Swiper('.reviews', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next.reviews-button-next',
+    prevEl: '.swiper-button-prev.reviews-button-prev',
   },
 
   // If we need pagination
