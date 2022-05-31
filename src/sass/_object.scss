@@ -281,8 +281,16 @@
 
 .section-choice-sidebar {
   &.object {
-    @media(max-width: 576px) {
-      left: 0;
-    }
+    top: -185px;
+
+    @media (max-width: 1024px) {
+        top: -54px;
+        width: 58%;
+      }
+
+      @media (max-width: 576px) {
+        top: -48px;
+        left: 0;
+      }
   }
 }

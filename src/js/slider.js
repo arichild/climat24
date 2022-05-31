@@ -41,11 +41,21 @@ const client = new Swiper('.client', {
   // setWrapperSize: true,
   // autoHeight: true,
   slidesPerView: 5,
-  spaceBetween: 25,
+  // spaceBetween: 25,
 
-  grid: {
-      rows: 2,
+  // grid: {
+  //     rows: 2,
+  //   },
+
+  breakpoints: {
+    1025: {
+      slidesPerView: 5,
     },
+
+    300: {
+      slidesPerView: 3,
+    },
+  },
 
   // Navigation arrows
   navigation: {
@@ -59,8 +69,12 @@ const feedback = new Swiper('.reviews', {
   slidesPerView: 3,
 
   breakpoints: {
-    768: {
+    1025: {
       slidesPerView: 3,
+    },
+
+    768: {
+      slidesPerView: 2,
     },
 
     300: {
