@@ -63,7 +63,19 @@
       @media(max-width: 1024px) {
         display: none;
       }
+
+      &-mob {
+        display: none;
+
+        @media(max-width: 576px) {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
     }
+
 
     .container {
       position: relative;
@@ -153,6 +165,11 @@
       @media(max-width: 768px) {
         width: 35px;
         height: 35px;
+
+        img {
+          width: 10px;
+          height: auto;
+        }
       }
     }
 
@@ -191,6 +208,17 @@
 
       @media(max-width: 1024px) {
         display: none;
+      }
+
+      &-mob {
+        display: none;
+
+        @media(max-width: 576px) {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 20%;
+        }
       }
     }
 
@@ -456,6 +484,18 @@
       @media(max-width: 1024px) {
         display: none;
       }
+
+      &-mob {
+        display: none;
+
+        @media(max-width: 576px) {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 38%;
+          z-index: -1;
+        }
+      }
     }
 
     .col-none {
@@ -567,6 +607,19 @@
       }
     }
 
+    &-bg {
+      &-mob {
+        display: none;
+
+        @media(max-width: 576px) {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+
     &-img-content {
       &.industrial {
         margin-bottom: 110px;
@@ -612,10 +665,18 @@
       @media(max-width: 1024px) {
         display: none;
       }
-    }
 
-    &-item {
-      height: 100%;
+      &-mob {
+        display: none;
+
+        @media(max-width: 576px) {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+        }
+      }
     }
 
     &-title {
@@ -626,20 +687,52 @@
       @media(max-width: 768px) {
         font-size: 20px;
       }
+
+      @media(max-width: 576px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-btn {
+      .swiper-button-next,
+      .swiper-button-prev {
+        position: initial;
+      }
     }
 
     &-img {
       text-align: center;
-      padding: 18px;
+      padding: 8px;
       box-shadow: 0px 0px 5px 2px rgba(0, 6, 73, 0.2);
       margin: 0 12px;
       margin-bottom: 25px;
       line-height: 0;
+      height: 82px;
+      position: relative;
+      background-color: #fff;
+
+      // для картинки
+      // max-height: 100px - (2 * 18) не calc
+      img {
+        // max-height: 64px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        padding: 0 8px;
+
+        @media(max-width: 576px) {
+          height: 25px;
+        }
+      }
 
       @media(max-width: 576px) {
-        padding: 10px 8px;
+        padding: 8px;
         margin: 0 10px;
         margin-bottom: 20px;
+        height: 47px;
       }
     }
 
@@ -653,6 +746,7 @@
       height: 100%;
       margin-left: auto;
       margin-right: auto;
+      padding: 10px 0;
     }
 
     .swiper-button-next,
@@ -693,15 +787,20 @@
         @media(max-width: 768px) {
           width: 35px;
           height: 35px;
+
+          img {
+            width: 10px;
+            height: auto;
+          }
         }
       }
 
       .swiper-button-prev {
-        left: calc(50% - 70px);
+        left: calc(50% - 55px);
       }
 
       .swiper-button-next {
-        right: calc(50% - 70px);
+        right: calc(50% - 55px);
       }
   }
 
@@ -726,6 +825,17 @@
       @media(max-width: 1024px) {
         display: none;
       }
+
+      &-mob {
+        display: none;
+
+        @media(max-width: 576px) {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: -25px;
+        }
+      }
     }
 
     &-title {
@@ -745,10 +855,20 @@
 
     .swiper-wrapper {
       margin-bottom: 40px;
+
+      @media(max-width: 576px) {
+        margin-bottom: 30px;
+      }
     }
 
     .swiper-slide {
       text-align: center;
+
+      img {
+        @media(max-width: 576px) {
+          width: 188px;
+        }
+      }
     }
 
     .swiper-button-next,
@@ -777,6 +897,11 @@
       @media(max-width: 768px) {
         width: 35px;
         height: 35px;
+
+        img {
+          width: 10px;
+          height: auto;
+        }
       }
     }
 

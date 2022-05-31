@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const design = new Swiper('.design', {
   loop: false,
   setWrapperSize: true,
   autoHeight: true,
@@ -38,29 +38,26 @@ const complexity = new Swiper('.complexity', {
 
 const client = new Swiper('.client', {
   loop: false,
-  // setWrapperSize: true,
-  // autoHeight: true,
   slidesPerView: 5,
-  // spaceBetween: 25,
-
-  // grid: {
-  //     rows: 2,
-  //   },
 
   breakpoints: {
     1025: {
       slidesPerView: 5,
     },
 
-    300: {
+    400: {
       slidesPerView: 3,
+    },
+
+    300: {
+      slidesPerView: 2,
     },
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next client',
+    prevEl: '.swiper-button-prev client',
   },
 });
 
