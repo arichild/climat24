@@ -507,6 +507,7 @@
         background-color: #fff;
         border: 2px solid #fff;
         transition: 0.2s ease-out;
+        color: #C4C4C4;
 
         @media (max-width: 1024px) {
           font-size: 15px;
@@ -1470,6 +1471,10 @@
         &-txt {
           @media (max-width: 576px) {
             font-size: 20px;
+          }
+
+          @media(max-width: 408px) {
+            font-size: 18px;
           }
         }
       }

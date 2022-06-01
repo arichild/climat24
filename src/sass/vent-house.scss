@@ -891,6 +891,10 @@
         color: #C4C4C4;
       }
 
+      input:focus::placeholder {
+        color: transparent;
+      }
+
       input[type="submit"] {
         font-size: 25px;
         white-space: nowrap;
