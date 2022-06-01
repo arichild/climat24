@@ -223,11 +223,11 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 414px) { .header-middle-mob-call { margin-right: 25px; } }
 
-.header-middle-mob-burger { position: relative; width: 36px; }
+.header-middle-mob-burger { position: relative; width: 36px; height: 36px; }
 
-.header-middle-mob-burger .toggler { content: ""; position: absolute; z-index: 999; top: -4px; right: 6px; width: 36px; height: 2.4px; background: #2F2FA2; font-size: 0; padding: 0; margin: 0; cursor: pointer; }
+.header-middle-mob-burger .toggler { content: ""; position: absolute; z-index: 999; top: 14px; right: 6px; width: 36px; height: 2px; background: #2F2FA2; font-size: 0; padding: 0; margin: 0; cursor: pointer; }
 
-.header-middle-mob-burger .toggler::after, .header-middle-mob-burger .toggler::before { content: ''; position: absolute; display: block; left: 0; width: 100%; height: 2.4px; background: #2F2FA2; content: ""; }
+.header-middle-mob-burger .toggler::after, .header-middle-mob-burger .toggler::before { content: ''; position: absolute; display: block; left: 0; width: 100%; height: 2px; background: #2F2FA2; content: ""; }
 
 .header-middle-mob-burger .toggler::after { top: -10px; }
 
@@ -357,7 +357,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 380px) { .section-info-img { padding: 0 30px; } }
 
-.section-possibility { background-color: #0d19a3; position: relative; z-index: 1; margin-bottom: 68px; }
+.section-possibility { background-color: #0d19a3; position: relative; z-index: 1; margin-bottom: 68px; position: relative; z-index: 2; }
 
 @media (max-width: 576px) { .section-possibility { background-color: #fff; margin-bottom: 28px; } }
 
@@ -2358,7 +2358,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 .section-work-cards .row { margin-left: -12px; margin-right: -12px; }
 
-.section-work-cards [class*="col-"] { width: 100%; padding-left: 12px; padding-right: 12px; }
+.section-work-cards [class*="col-"] { padding-left: 12px; padding-right: 12px; }
 
 @media (max-width: 1024px) { .section-work-cards { padding: 56px 0 40px 0; } }
 

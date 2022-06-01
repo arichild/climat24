@@ -62,13 +62,21 @@ jQuery.validator.addMethod(
   }, "Ваше имя не может состоять из цифр"
 );
 
-var elementZ = document.getElementById('tel');
+let inpTel = document.querySelectorAll('input[type=tel]');
+let mask;
 
-if (elementZ) {
-  var maskOptions = {
-    mask: '+{000}(00)000-00-00',
-    placeholder: '+{000}(00)000-00-00',
-  };
-
-  var mask = IMask(elementZ, maskOptions);
-}
+for(var i = 0; i < inpTel.length; i++) {
+  inpTel[i].addEventListener('focus', function(){
+    mask = IMask(this, {
+        mask: '+{375} (00) 000 00 00',
+        overwrite: true,
+        lazy: false,
+        autofix: true
+    });
+  })
+  inpTel[i].addEventListener('blur', function(){
+    if(this.value.match('_')){
+      mask.masked.reset()
+    }
+  })
+};
