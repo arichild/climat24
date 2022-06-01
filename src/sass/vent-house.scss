@@ -248,6 +248,11 @@
   &-serv {
     position: relative;
 
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
     &.vent-house {
       padding-top: 54px;
       margin-bottom: 80px;
@@ -927,8 +932,15 @@
       font-weight: 400;
       font-size: 20px;
       color: #fff;
-      margin-bottom: 62px;
       max-width: 610px;
+
+      &.vent-house {
+        margin-bottom: 62px;
+
+        @media(max-width: 1024px) {
+          margin-bottom: 20px;
+        }
+      }
 
       @media(max-width: 1024px) {
         margin-left: auto;

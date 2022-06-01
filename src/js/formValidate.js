@@ -66,7 +66,8 @@ var elementZ = document.getElementById('tel');
 
 if (elementZ) {
   var maskOptions = {
-    mask: '+{000}(00)000-00-00'
+    mask: '+{000}(00)000-00-00',
+    placeholder: '+{000}(00)000-00-00',
   };
 
   var mask = IMask(elementZ, maskOptions);

@@ -219,14 +219,18 @@
           </div>
         </div>
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev complexity-button-next">
-          <img src="./images/arrow-prev.svg" alt="alt">
+        <div class="section-complexity-btn">
+          <div class="flex">
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev complexity-button-prev">
+              <img src="./images/arrow-prev.svg" alt="alt">
+            </div>
+            <div class="swiper-button-next complexity-button-next">
+              <img src="./images/arrow-next.svg" alt="alt">
+            </div>
+          </div>
         </div>
-        <div class="swiper-button-next complexity-button-next">
-          <img src="./images/arrow-next.svg" alt="alt">
         </div>
-      </div>
     </div>
 
     <div class="section-complexity-bg">
@@ -335,17 +339,17 @@
     </div>
   </div>
 
-  <div class="section-questions vent-house">
+  <div class="section-questions vent-house industrial">
     <div class="container">
       <div class="section-questions-header">
         <div class="row">
           <div class="col-md-7">
-            <div class="section-questions-txt">
+            <div class="section-questions-txt industrial">
               <div class="section-questions-title vent-house" id="section-questions-title">
                 У Вас уже есть готовый проект вентиляции?
               </div>
 
-              <div class="section-questions-subtitle">
+              <div class="section-questions-subtitle industrial">
                 Отправьте проект нам! Наш главный инженер оценит проект, перезвонит Вам в течение часа и озвучит примерную стоимость
               </div>
             </div>
@@ -558,7 +562,7 @@
               },
 
               {
-                title: '5.6. Когда нужно приступать к работе?',
+                title: '5. Когда нужно приступать к работе?',
                 values: ['Вчера', 'Сегодня', 'Завтра', 'В течение недели', 'В течение месяца', 'Пока не знаю'],
               },
             ],
@@ -683,16 +687,20 @@
         <h2>Рассчет стоимости</h2>
         <p>Ответьте на 5 простых вопросов и получите:</p>
       </div>
+
       <div class="section-quiz-mob">
         <h2>Готовые решения и их стоимость</h2>
         <p>Получите бесплатный персональный расчет стоимости работ для Вашего объекта за 5 минут:</p>
       </div>
+
       <div class="section-quiz-content">
         <div class="section-quiz-header">
           <div class="section-quiz-items">
             <div class="flex">
               <div class="section-quiz-item">
-                <div class="section-quiz-item-icon"><img src="./images/icons/quiz1.svg" alt="alt"></div>
+                <div class="section-quiz-item-icon">
+                  <img src="./images/icons/quiz1.svg" alt="alt">
+                </div>
                 <div class="section-quiz-item-subtitle">
                   Консультация инженера
                 </div>
@@ -701,7 +709,9 @@
                 </div>
               </div>
               <div class="section-quiz-item">
-                <div class="section-quiz-item-icon"><img src="./images/icons/quiz2.svg" alt="alt"></div>
+                <div class="section-quiz-item-icon">
+                  <img src="./images/icons/quiz2.svg" alt="alt">
+                </div>
                 <div class="section-quiz-item-subtitle">
                   Выезд инженера
                 </div>
@@ -710,7 +720,9 @@
                 </div>
               </div>
               <div class="section-quiz-item">
-                <div class="section-quiz-item-icon"><img src="./images/icons/quiz3.svg" alt="alt"></div>
+                <div class="section-quiz-item-icon">
+                  <img src="./images/icons/quiz3.svg" alt="alt">
+                </div>
                 <div class="section-quiz-item-subtitle">
                   Эскизный чертеж
                 </div>
@@ -719,7 +731,9 @@
                 </div>
               </div>
               <div class="section-quiz-item">
-                <div class="section-quiz-item-icon"><img src="./images/icons/quiz4.svg" alt="alt"></div>
+                <div class="section-quiz-item-icon">
+                  <img src="./images/icons/quiz4.svg" alt="alt">
+                </div>
                 <div class="section-quiz-item-subtitle">
                   Понятный расчет
                 </div>
@@ -730,33 +744,26 @@
             </div>
           </div>
         </div>
-        <div class="section-quiz-body">
-          <div class="section-quiz-body-question">
-            <div class="section-quiz-body-txt">
-              1.Укажите площадь Вашего объекта:
-            </div>
-          </div>
-          <div class="section-quiz-body-question">
-            <!---->
-          </div>
-          <div class="section-quiz-body-question">
-            <!---->
-          </div>
-          <div class="section-quiz-body-question">
-            <!---->
-          </div>
-          <div class="section-quiz-body-question">
-            <!---->
-          </div>
-          <div class="section-quiz-progress-bar">
-            <div class="section-quiz-progress-value">
 
-            </div>
-            <div class="section-quiz-progress">
-              <div class="section-quiz-progress-fill" style="width: 0%;"></div>
+        <div class="section-quiz-body">
+          <div class="section-quiz-body-question" v-for="(item, index) in form">
+            <div class="section-quiz-body-txt" v-if="index === step">
+              {{ item.title }}
             </div>
           </div>
-          <div class="section-quiz-end">
+
+          <div class="section-quiz-progress-bar" v-if="done">
+            <div class="section-quiz-progress-value">
+              {{ progressValue }}
+            </div>
+
+            <div class="section-quiz-progress">
+              <div class="section-quiz-progress-fill" :style="{width:(Math.round((step / (form.length - 1)) * 100)) + '%'}">
+              </div>
+            </div>
+          </div>
+
+          <div class="section-quiz-end" v-bind:class="{ active: show }">
             <div class="section-quiz-end-title">
               Отлично! Вы ответили на все вопросы! <br>
               А мы уже расчитываем стоимость систем для Вашего помещения!
@@ -768,80 +775,67 @@
               <form action="#" class="section-quiz-validate">
                 <div class="row">
                   <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="section-quiz-form-cell"><input type="text" name="name" id="name" placeholder="Ваше имя">
+                    <div class="section-quiz-form-cell">
+                      <input type="text" name="name" id="name" placeholder="Ваше имя" ref="valueName">
                     </div>
                   </div>
                   <div class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="section-quiz-form-cell"><input type="tel" name="tel" id="tel-quiz"
-                        placeholder="Ваш номер"></div>
+                    <div class="section-quiz-form-cell">
+                      <input type="tel" name="tel" id="tel-quiz" placeholder="Ваш номер" ref="valueTel">
+                    </div>
                   </div>
                   <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="section-quiz-form-cell"><input type="submit" name="submit" id="submit"
-                        value="Получить рассчет стоимости"></div>
+                    <div class="section-quiz-form-cell">
+                      <input type="submit" name="submit" id="submit" value="Получить рассчет стоимости"
+                        @click.prevent="getData">
+                    </div>
                   </div>
                 </div>
-              </form>
+              </Form>
             </div>
           </div>
-          <div class="section-quiz-step">
-            <div class="section-quiz-body-answers">
+
+          <div class="section-quiz-step" v-for="(item, index) in form">
+            <div class="section-quiz-body-answers" v-if="index === step">
               <div class="row">
-                <div class="col-sm-4">
-                  <div class="section-quiz-body-answer"><input type="radio" id="0" name="answer" class="custom-checkbox"
-                      value="До 60 кв. м"> <label for="0">До 60 кв. м</label>
-                    <div class="section-quiz-input"></div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="section-quiz-body-answer"><input type="radio" id="1" name="answer" class="custom-checkbox"
-                      value="От 60 кв. м до 100 кв. м"> <label for="1">От 60 кв. м до 100 кв. м</label>
-                    <div class="section-quiz-input"></div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="section-quiz-body-answer"><input type="radio" id="2" name="answer" class="custom-checkbox"
-                      value="От 70 кв. м до 80кв. м"> <label for="2">От 70 кв. м до 80кв. м</label>
-                    <div class="section-quiz-input"></div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="section-quiz-body-answer"><input type="radio" id="3" name="answer" class="custom-checkbox"
-                      value="От 100кв. м"> <label for="3">От 100кв. м</label>
+                <div class="col-sm-4" v-for="(value, index) in item.values">
+                  <div class="section-quiz-body-answer">
+                    <input type="radio" class="custom-checkbox" :id="index" name="answer" :value="value"
+                      @change="getValue(value)">
+                    <label :for="index">{{ value }}</label>
                     <div class="section-quiz-input"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="section-quiz-step">
-            <!---->
-          </div>
-          <div class="section-quiz-step">
-            <!---->
-          </div>
-          <div class="section-quiz-step">
-            <!---->
-          </div>
-          <div class="section-quiz-step">
-            <!---->
-          </div>
-          <div class="section-quiz-controller">
+
+          <div class="section-quiz-controller" v-if="done">
             <div class="row">
-              <div class="col-sm-4 col-ss-12"><button class="section-quiz-btn prev"><svg>
+              <div class="col-sm-4 col-ss-12">
+                <button class="section-quiz-btn prev" @click.prevent="toPrevStep">
+                  <svg>
                     <use xlink:href="./svg/svg/symbols.svg#back"></use>
                   </svg>
                   Вернуться назад
-                </button></div>
-              <div class="col-sm-4 col-ss-12"><button class="section-quiz-btn skip">
+                </button>
+              </div>
+              <div class="col-sm-4 col-ss-12">
+                <button class="section-quiz-btn skip" @click.prevent="toNextStep">
                   Пропустить вопрос
                   <svg>
                     <use xlink:href="./svg/svg/symbols.svg#skip"></use>
-                  </svg></button></div>
-              <div class="col-sm-4 col-ss-12"><button class="section-quiz-btn next active">
+                  </svg>
+                </button>
+              </div>
+              <div class="col-sm-4 col-ss-12">
+                <button class="section-quiz-btn next" @click.prevent="toNextStep" v-bind:class="{ active: activeNext }">
                   Следующий вопрос
                   <svg>
                     <use xlink:href="./svg/svg/symbols.svg#next"></use>
-                  </svg></button></div>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -893,13 +887,13 @@
     </div>
   </div>
 
-  <div class="section-questions vent-house">
+  <div class="section-questions vent-house industrial">
     <div class="container">
       <div class="section-questions-title vent-house" id="section-questions-title">
         Получите бесплатный подбор оборудования под Ваш бюджет!
       </div>
 
-      <div class="section-questions-subtitle">
+      <div class="section-questions-subtitle vent-house">
         В течении 5 минут главный инженер свяжется с Вами и рассчитает стоимость оборудования
       </div>
 
@@ -913,7 +907,7 @@
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6">
               <div class="section-questions-form-cell industrial">
-                <input type="tel" name="tel" id="tel" placeholder="Ваш номер">
+                <input type="tel" name="tel" id="tel1" placeholder="Ваш номер">
               </div>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
@@ -1035,12 +1029,17 @@
         </div>
 
       </div>
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev client-button-prev">
-        <img src="./images/arrow-prev.svg" alt="alt">
-      </div>
-      <div class="swiper-button-next client-button-next">
-        <img src="./images/arrow-next.svg" alt="alt">
+
+      <div class="section-client-btn">
+        <div class="flex">
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev client-button-prev">
+            <img src="./images/arrow-prev.svg" alt="alt">
+          </div>
+          <div class="swiper-button-next client-button-next">
+            <img src="./images/arrow-next.svg" alt="alt">
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1212,7 +1211,7 @@
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="section-box-text-img">
+          <div class="section-box-text-img industrial">
             <h3>
               Оборудование для вентиляции промышленных помещений
             </h3>

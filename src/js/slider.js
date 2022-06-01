@@ -16,6 +16,7 @@ const complexity = new Swiper('.complexity', {
   setWrapperSize: true,
   autoHeight: true,
   slidesPerView: 4,
+  spaceBetween: 49,
 
   breakpoints: {
     1025: {

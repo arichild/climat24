@@ -1314,7 +1314,9 @@
         z-index: 1;
 
         &-img {
-          line-height: 0;
+          img {
+            line-height: 0;
+          }
 
           @media (max-width: 576px) {
             margin-bottom: 15px;
