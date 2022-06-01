@@ -377,9 +377,9 @@
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-      $(document).ready(function() {
-          var app = new Vue({
+    document.addEventListener("DOMContentLoaded", function (event) {
+      $(document).ready(function () {
+        var app = new Vue({
           el: '.section-quiz',
           data: {
             step: 0,
@@ -391,29 +391,29 @@
             done: true,
 
             start: {
-                title: '1.Укажите площадь Вашего объекта:',
-                questions: [
-                  {
-                    title: 'Кафе, ресторан',
-                    value: 'cafe',
-                  },
+              title: '1.Укажите площадь Вашего объекта:',
+              questions: [
+                {
+                  title: 'Кафе, ресторан',
+                  value: 'cafe',
+                },
 
-                  {
-                    title: 'Офис',
-                    value: 'office',
-                  },
+                {
+                  title: 'Офис',
+                  value: 'office',
+                },
 
-                  {
-                    title: 'Бассейн',
-                    value: 'pool',
-                  },
+                {
+                  title: 'Бассейн',
+                  value: 'pool',
+                },
 
-                  {
-                    title: 'Другое',
-                    value: 'another',
-                  },
-                ],
-              },
+                {
+                  title: 'Другое',
+                  value: 'another',
+                },
+              ],
+            },
 
             cafe: [
               {
@@ -541,7 +541,7 @@
 
           methods: {
             toNextStep() {
-              if ((this.step + 1) <= this.form.length) {
+              if (this.step < this.form.length + 1) {
                 this.step++;
               } else {
                 this.activeNext = false
@@ -590,8 +590,8 @@
           },
 
           watch: {
-            step: function(val) {
-              if (val === this.form.length) {
+            step: function (val) {
+              if (val === this.form.length + 1) {
                 this.show = true
                 this.done = false
 
@@ -639,13 +639,13 @@
           },
 
           computed: {
-            formStep: function() {
+            formStep: function () {
               return this.form[this.step - 1]
             },
 
-            progressValue: function() {
+            progressValue: function () {
               if (this.step >= 1) {
-                return `${Math.round((this.step / this.form.length) * 100) + '%'} уже готово!`
+                return `${Math.round((this.step / (this.form.length + 1)) * 100) + '%'} уже готово!`
               }
             },
           }
@@ -724,7 +724,7 @@
               {{ start.title }}
             </div>
           </div>
-          <div class="section-quiz-body-question" v-if="step !== 0" >
+          <div class="section-quiz-body-question" v-if="step !== 0">
             <div class="section-quiz-body-txt" v-if="done">
               {{ formStep.title }}
             </div>
@@ -735,7 +735,8 @@
               {{ progressValue }}
             </div>
             <div class="section-quiz-progress">
-              <div class="section-quiz-progress-fill" :style="{width:(Math.round((step / form.length) * 100)) + '%'}">
+              <div class="section-quiz-progress-fill"
+                :style="{width:(Math.round((step / (form.length + 1)) * 100)) + '%'}">
               </div>
             </div>
           </div>
@@ -763,21 +764,23 @@
                   </div>
                   <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="section-quiz-form-cell">
-                      <input type="submit" name="submit" id="submit" value="Получить рассчет стоимости" @click.prevent="getData">
+                      <input type="submit" name="submit" id="submit" value="Получить рассчет стоимости"
+                        @click.prevent="getData">
                     </div>
                   </div>
                 </div>
-              </Form>
+              </form>
             </div>
           </div>
 
-          <div class="section-quiz-step" v-if="step === 0" v-if="done">
+          <div class="section-quiz-step" v-if="step === 0">
             <div class="section-quiz-body-answers">
               <div class="row">
                 <div class="col-sm-4" v-for="(question, index) in start.questions">
                   <div class="section-quiz-body-answer">
-                    <input type="radio" class="custom-checkbox" :id="index" name="answer" @change="startQuiz(question.value)">
-                    <label :for="index">{{ question.title }}</label>
+                    <input type="radio" class="custom-checkbox" :id="'checkbox_'+step+'_'+index" name="answer"
+                      @change="startQuiz(question.value)">
+                    <label :for="'checkbox_'+step+'_'+index">{{ question.title }}</label>
                     <div class="section-quiz-input"></div>
                   </div>
                 </div>
@@ -790,45 +793,46 @@
               <div class="row">
                 <div class="col-sm-4" v-for="(value, index) in formStep.values">
                   <div class="section-quiz-body-answer">
-                    <input type="radio" class="custom-checkbox" :id="index" name="answer" :value="value" @change="getValue(value)">
-                    <label :for="index">{{ value }}</label>
+                    <input type="radio" class="custom-checkbox" :checked="index === 0" :id="'checkbox_'+step+'_'+index"
+                      name="answer" :value="value" @change="getValue(value)">
+                    <label :for="'checkbox_'+step+'_'+index">{{ value }}</label>
                     <div class="section-quiz-input"></div>
                   </div>
                 </div>
               </div>
             </div>
 
-          <div class="section-quiz-controller" v-if="done">
-            <div class="row">
-              <div class="col-sm-4 col-ss-12">
-                <button class="section-quiz-btn prev" @click.prevent="toPrevStep">
-                  <svg>
-                    <use xlink:href="./svg/svg/symbols.svg#back"></use>
-                  </svg>
-                  Вернуться назад
-                </button>
-              </div>
-              <div class="col-sm-4 col-ss-12">
-                <button class="section-quiz-btn skip" @click.prevent="toNextStep">
-                  Пропустить вопрос
-                  <svg>
-                    <use xlink:href="./svg/svg/symbols.svg#skip"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="col-sm-4 col-ss-12">
-                <button class="section-quiz-btn next" @click.prevent="toNextStep" v-bind:class="{ active: activeNext }">
+            <div class="section-quiz-controller" v-if="done">
+              <div class="row">
+                <div class="col-sm-4 col-ss-12">
+                  <button class="section-quiz-btn prev" @click.prevent="toPrevStep">
+                    <svg>
+                      <use xlink:href="./svg/svg/symbols.svg#back"></use>
+                    </svg>
+                    Вернуться назад
+                  </button>
+                </div>
+                <div class="col-sm-4 col-ss-12">
+                  <button class="section-quiz-btn skip" @click.prevent="toNextStep">
+                    Пропустить вопрос
+                    <svg>
+                      <use xlink:href="./svg/svg/symbols.svg#skip"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="col-sm-4 col-ss-12">
+                  <button class="section-quiz-btn next" @click.prevent="toNextStep" v-bind:class="{ active: activeNext }">
                     Следующий вопрос
-                  <svg>
-                    <use xlink:href="./svg/svg/symbols.svg#next"></use>
-                  </svg>
-                </button>
+                    <svg>
+                      <use xlink:href="./svg/svg/symbols.svg#next"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 
