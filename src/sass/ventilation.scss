@@ -1123,6 +1123,8 @@
       &-btn {
         text-align: center;
         margin-top: 56px;
+        position: relative;
+        z-index: 1;
 
         @media (max-width: 1024px) {
           margin-top: 24px;

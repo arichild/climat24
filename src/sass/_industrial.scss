@@ -409,6 +409,13 @@
     &-text {
       position: relative;
       z-index: 1;
+
+      &-img {
+        line-height: 0;
+        &.industrial {
+          padding-right: 3.79%;
+        }
+      }
     }
 
     &-bg {
@@ -934,6 +941,12 @@
 
       &-desc {
         &.industrial {
+          padding-top: 21px;
+
+          @media(max-width: 576px) {
+            padding-top: 2px;
+          }
+
           h3 {
             @media(max-width: 1024px) {
               display: none;
