@@ -1833,7 +1833,7 @@
         background-color: #f4f4f4;
         border: 2px solid #f4f4f4;
         transition: 0.2s ease-out;
-        color: #C4C4C4;
+        // color: #C4C4C4;
 
         &:hover {
           border-color: rgb(60, 216, 255);
@@ -1861,6 +1861,10 @@
           margin-right: 0;
           max-width: 100%;
         }
+      }
+
+      input[type='tel'] {
+        color: #C4C4C4;
       }
 
       input[type='submit'] {

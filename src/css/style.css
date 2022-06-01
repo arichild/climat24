@@ -923,7 +923,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1024px) { .section-questions-form-cell { margin-bottom: 12px; } }
 
-.section-questions-form input { width: 100%; height: 54px; border: none; outline: none; text-align: center; font-size: 16px; font-family: 'Montserrat', sans-serif; background-color: #f4f4f4; border: 2px solid #f4f4f4; -webkit-transition: 0.2s ease-out; -o-transition: 0.2s ease-out; transition: 0.2s ease-out; color: #C4C4C4; }
+.section-questions-form input { width: 100%; height: 54px; border: none; outline: none; text-align: center; font-size: 16px; font-family: 'Montserrat', sans-serif; background-color: #f4f4f4; border: 2px solid #f4f4f4; -webkit-transition: 0.2s ease-out; -o-transition: 0.2s ease-out; transition: 0.2s ease-out; }
 
 .section-questions-form input:hover { border-color: #3cd8ff; }
 
@@ -944,6 +944,8 @@ img { max-width: 100%; height: auto; }
 .section-questions-form input::placeholder { font-weight: 400; font-size: 15px; color: #0d19a3; }
 
 @media (max-width: 1024px) { .section-questions-form input { margin-right: 0; max-width: 100%; } }
+
+.section-questions-form input[type='tel'] { color: #C4C4C4; }
 
 .section-questions-form input[type='submit'] { background-color: #07bca9; color: #fff; font-weight: 500; font-size: 15px; cursor: pointer; border: 2px solid #07bca9; }
 
@@ -1149,7 +1151,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 1024px) { .ventilation .section-gift-img { display: none; } }
 
-.ventilation .section-gift input { width: 100%; height: 54px; border: none; outline: none; text-align: center; font-size: 16px; font-family: "Montserrat", sans-serif; background-color: #fff; border: 2px solid #fff; -webkit-transition: 0.2s ease-out; -o-transition: 0.2s ease-out; transition: 0.2s ease-out; color: #C4C4C4; }
+.ventilation .section-gift input { width: 100%; height: 54px; border: none; outline: none; text-align: center; font-size: 16px; font-family: "Montserrat", sans-serif; background-color: #fff; border: 2px solid #fff; -webkit-transition: 0.2s ease-out; -o-transition: 0.2s ease-out; transition: 0.2s ease-out; }
 
 @media (max-width: 1024px) { .ventilation .section-gift input { font-size: 15px; font-weight: 400; } }
 
@@ -1172,6 +1174,8 @@ span.error { font-weight: 400; color: #FF6347; }
 .ventilation .section-gift input::placeholder { font-weight: 400; font-size: 15px; color: #c4c4c4; }
 
 @media (max-width: 1024px) { .ventilation .section-gift input { margin-right: 0; max-width: 100%; } }
+
+.ventilation .section-gift input[type="tel"] { color: #C4C4C4; }
 
 .ventilation .section-gift input[type="submit"] { background-color: #fe9d02; color: #fff; font-weight: 500; font-size: 25px; cursor: pointer; border: 2px solid #fe9d02; max-width: 100%; white-space: nowrap; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 

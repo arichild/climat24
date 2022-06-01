@@ -507,7 +507,7 @@
         background-color: #fff;
         border: 2px solid #fff;
         transition: 0.2s ease-out;
-        color: #C4C4C4;
+        // color: #C4C4C4;
 
         @media (max-width: 1024px) {
           font-size: 15px;
@@ -541,6 +541,10 @@
           margin-right: 0;
           max-width: 100%;
         }
+      }
+
+      input[type="tel"] {
+        color: #C4C4C4;
       }
 
       input[type="submit"] {
