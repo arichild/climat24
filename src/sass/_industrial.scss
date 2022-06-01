@@ -443,6 +443,10 @@
 
         &.industrial {
           padding-right: 3.79%;
+
+          @media(max-width: 1024px) {
+            padding-right: 0;
+          }
         }
       }
     }
