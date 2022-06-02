@@ -41,6 +41,24 @@
     }
   }
 
+  &-choice {
+    &-sidebar {
+      &.industrial {
+        @media(max-width: 1024px) {
+          top: -59px;
+        }
+
+        @media(max-width: 576px) {
+          top: -52px;
+        }
+
+        @media(max-width: 400px) {
+          top: -45px;
+        }
+      }
+    }
+  }
+
   &-choice-sidebar-txt {
     &.industrial {
       @media(max-width: 576px) {
@@ -345,6 +363,8 @@
 
         @media(max-width: 576px) {
           padding: 10px 5px 15px 5px;
+          height: calc(100% - 20px);
+          margin-bottom: 20px;
         }
 
         @media(max-width: 400px) {
@@ -542,7 +562,11 @@
     z-index: 1;
 
     @media(max-width: 1024px) {
-      padding: 28px 0 75px 0;
+      padding: 28px 0 87px 0;
+    }
+
+    @media(max-width: 576px) {
+      padding: 28px 0 80px 0;
     }
 
     &-bg {
@@ -656,6 +680,9 @@
   }
 
   &-quiz {
+    position: relative;
+    z-index: 2;
+
     &.industrial {
       @media(max-width: 768px) {
         padding-bottom: 0;

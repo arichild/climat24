@@ -2291,6 +2291,12 @@ span.error { font-weight: 400; color: #FF6347; }
 
 .section-equipment .flex { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
+@media (max-width: 1024px) { .section-choice-sidebar.industrial { top: -59px; } }
+
+@media (max-width: 576px) { .section-choice-sidebar.industrial { top: -52px; } }
+
+@media (max-width: 400px) { .section-choice-sidebar.industrial { top: -45px; } }
+
 @media (max-width: 576px) { .section-choice-sidebar-txt.industrial { font-size: 12px; } }
 
 .section-complexity { padding: 68px 0 46px 0; background-color: #F4F4F4; position: relative; }
@@ -2404,7 +2410,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 .section-work-item.industrial { padding: 27px 32px 30px 32px; height: calc(100% - 30px); margin-bottom: 30px; }
 
-@media (max-width: 576px) { .section-work-item.industrial { padding: 10px 5px 15px 5px; } }
+@media (max-width: 576px) { .section-work-item.industrial { padding: 10px 5px 15px 5px; height: calc(100% - 20px); margin-bottom: 20px; } }
 
 @media (max-width: 400px) { .section-work-item.industrial { height: calc(100% - 15px); margin-bottom: 15px; } }
 
@@ -2475,7 +2481,9 @@ span.error { font-weight: 400; color: #FF6347; }
 
 .section-qualification { padding: 67px 0 239px 0; background-color: #F4F4F4; position: relative; z-index: 1; }
 
-@media (max-width: 1024px) { .section-qualification { padding: 28px 0 75px 0; } }
+@media (max-width: 1024px) { .section-qualification { padding: 28px 0 87px 0; } }
+
+@media (max-width: 576px) { .section-qualification { padding: 28px 0 80px 0; } }
 
 .section-qualification-bg { position: absolute; right: 0; top: 350px; z-index: -1; max-width: 50vw; }
 
@@ -2518,6 +2526,8 @@ span.error { font-weight: 400; color: #FF6347; }
 .section-qualification-list { margin-bottom: 52px; }
 
 @media (max-width: 768px) { .section-qualification-list { margin-bottom: 23px; } }
+
+.section-quiz { position: relative; z-index: 2; }
 
 @media (max-width: 768px) { .section-quiz.industrial { padding-bottom: 0; } }
 
