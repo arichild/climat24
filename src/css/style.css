@@ -2683,12 +2683,12 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 1024px) { .section-thanks.page-404 { padding-top: 25px; } }
 
-@media (min-width: 1024px) { .section-thanks.page-404 .col-md-5 { -webkit-box-flex: 0; -ms-flex: 0 0 43.66667%; flex: 0 0 43.66667%; max-width: 43.66667%; }
-  .section-thanks.page-404 .col-md-7 { -webkit-box-flex: 0; -ms-flex: 0 0 56.33333%; flex: 0 0 56.33333%; max-width: 56.33333%; } }
+@media (min-width: 1024px) { .section-thanks.page-404 .col-md-7 { -webkit-box-flex: 0; -ms-flex: 0 0 56.33333%; flex: 0 0 56.33333%; max-width: 56.33333%; }
+  .section-thanks.page-404 .col-md-5 { -webkit-box-flex: 0; -ms-flex: 0 0 43.66667%; flex: 0 0 43.66667%; max-width: 43.66667%; } }
 
 .section-thanks.page-404 .row { margin-left: -13px; margin-right: -13px; }
 
-.section-thanks.page-404 [class*="col-"] { width: 100%; padding-left: 13px; padding-right: 13px; }
+.section-thanks.page-404 [class*="col-"] { padding-left: 13px; padding-right: 13px; }
 
 @media (max-width: 768px) { .section-thanks-img.page-404 { padding: 0 25px; } }
 

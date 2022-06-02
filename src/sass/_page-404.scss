@@ -7,15 +7,16 @@
       }
 
       @media(min-width: 1024px) {
+        .col-md-7 {
+          flex: 0 0 56.33333%;
+          max-width: 56.33333%;
+        }
+
         .col-md-5 {
           flex: 0 0 43.66667%;
           max-width: 43.66667%;
         }
 
-        .col-md-7 {
-          flex: 0 0 56.33333%;
-          max-width: 56.33333%;
-        }
       }
 
       .row {
@@ -24,7 +25,6 @@
       }
 
       [class*="col-"] {
-        width: 100%;
         padding-left: 13px;
         padding-right: 13px;
       }
