@@ -71,16 +71,10 @@
           },
         }
       });
+    });
 
-      jQuery.validator.addMethod(
-        "lettersonly",
-        function (value, element) {
-          return this.optional(element) || /^[a-zA-ZА-Яа-я\s]+$/i.test(value);
-        }, "Ваше имя не может состоять из цифр"
-      );
-
-      let inpTel = document.querySelectorAll('input[type=tel]');
-      let mask;
+    let inpTel = document.querySelectorAll('input[type=tel]');
+    let mask;
 
       for (var i = 0; i < inpTel.length; i++) {
         inpTel[i].addEventListener('focus', function () {
@@ -97,6 +91,5 @@
           }
         })
       };
-    });
   </script>
 </div>
