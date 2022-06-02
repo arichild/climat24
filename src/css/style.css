@@ -2681,6 +2681,8 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 1024px) { .section-content-text-img.industrial { padding-top: 0; } }
 
+@media (max-width: 768px) { .section-thanks-img.page-404 { padding: 0 25px; } }
+
 .footer { width: 100%; padding: 20px 0; background-color: #F4F4F4; }
 
 .footer .row { margin-left: -10px; margin-right: -10px; }

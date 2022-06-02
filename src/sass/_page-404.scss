@@ -1,0 +1,7 @@
+.section-thanks-img {
+  &.page-404 {
+    @media(max-width: 768px) {
+      padding: 0 25px;
+    }
+  }
+}
