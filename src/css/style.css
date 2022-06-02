@@ -2424,17 +2424,23 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 576px) { .section-work-title.industrial { font-size: 60px; } }
 
+@media (max-width: 400px) { .section-work-title.industrial { font-size: 55px; } }
+
 .section-work-subtitle { font-weight: 600; font-size: 20px; margin-bottom: 20px; }
 
 .section-work-subtitle.industrial { margin-bottom: 8px; text-align: center; }
 
 @media (max-width: 576px) { .section-work-subtitle.industrial { font-size: 12px; } }
 
+@media (max-width: 400px) { .section-work-subtitle.industrial { font-size: 10px; } }
+
 @media (max-width: 576px) { .section-work-subtitle { font-size: 15px; margin-bottom: 12px; } }
 
 .section-work-desc { text-align: center; font-size: 15px; }
 
 @media (max-width: 576px) { .section-work-desc.industrial { font-size: 10px; } }
+
+@media (max-width: 400px) { .section-work-desc.industrial { font-size: 8px; } }
 
 @media (max-width: 576px) { .section-work .row { margin-left: -12px; margin-right: -12px; }
   .section-work [class*="col-"] { width: 100%; padding-left: 12px; padding-right: 12px; } }
