@@ -18,6 +18,19 @@
 
   &-middle {
     margin-bottom: 160px;
+    position: relative;
+
+    &-bg {
+      position: absolute;
+      right: 0;
+      top: -150px;
+      z-index: -1;
+      max-width: 50vw;
+
+      @media(max-width: 1024px) {
+        display: none;
+      }
+    }
 
     @media(max-width: 1024px) {
       margin-bottom: 32px;
@@ -112,63 +125,42 @@
       }
     }
   }
-}
 
-.contact-map {
-  @media(max-width: 1024px) {
-    display: none !important;
-  }
-}
+  &-map {
+    position: relative;
 
-#map {
-  @media(max-width: 1024px) {
+    @media(max-width: 1024px) {
       display: none !important;
     }
-}
 
-.dropdown-toggle {
-  &.active-zxc {
-    .arrow-map {
-      margin-left: 12px;
-      padding: 5px;
+    #map {
+      height: 426px !important;
+
+      @media(max-width: 1024px) {
+        display: none !important;
+      }
+    }
+
+    &-place {
+      position: absolute;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url(../images/arrow-map2.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 4px);
+      background-size: 22px;
+      background-color: #fff;
       border: 1px solid #0D19A3;
-      transform: rotate(180deg);
+      display: flex;
+      align-items: center;
+      padding: 4px 35px 4px 12px;
+      font-weight: 400;
+      font-size: 18px;
+      font-family: 'Montserrat';
+      top: 14px;
+      right: 18px;
+      cursor: pointer;
     }
   }
-}
-
-.btn.btn-success.dropdown-toggle {
-  background-color: #fff;
-  border: 1px solid #0D19A3;
-  display: flex;
-  align-items: center;
-  padding: 4px 4px 4px 12px;
-  font-weight: 400;
-  font-size: 18px;
-
-  .arrow-map {
-    margin-left: 12px;
-    padding: 5px;
-    border: 1px solid #0D19A3;
-
-    &.active {
-      transform: rotate(180deg);
-    }
-  }
-}
-
-.dropdown-menu {
-  li {
-    background-color: #fff;
-    padding: 4px 4px 4px 12px;
-
-    a {
-      color: #000;
-    }
-  }
-}
-
-.ymaps-2-1-79-controls__toolbar_left {
-  float: right !important;
-  margin-right: 18px;
 }

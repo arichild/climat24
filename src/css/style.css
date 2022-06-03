@@ -2702,7 +2702,11 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 576px) { .contact-headline { font-size: 20px; } }
 
-.contact-middle { margin-bottom: 160px; }
+.contact-middle { margin-bottom: 160px; position: relative; }
+
+.contact-middle-bg { position: absolute; right: 0; top: -150px; z-index: -1; max-width: 50vw; }
+
+@media (max-width: 1024px) { .contact-middle-bg { display: none; } }
 
 @media (max-width: 1024px) { .contact-middle { margin-bottom: 32px; }
   .contact-middle .col-hide { display: none; } }
@@ -2739,23 +2743,15 @@ span.error { font-weight: 400; color: #FF6347; }
 
 .contact-info-link a:hover { opacity: .35; }
 
+.contact-map { position: relative; }
+
 @media (max-width: 1024px) { .contact-map { display: none !important; } }
 
-@media (max-width: 1024px) { #map { display: none !important; } }
+.contact-map #map { height: 426px !important; }
 
-.dropdown-toggle.active-zxc .arrow-map { margin-left: 12px; padding: 5px; border: 1px solid #0D19A3; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+@media (max-width: 1024px) { .contact-map #map { display: none !important; } }
 
-.btn.btn-success.dropdown-toggle { background-color: #fff; border: 1px solid #0D19A3; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 4px 4px 4px 12px; font-weight: 400; font-size: 18px; }
-
-.btn.btn-success.dropdown-toggle .arrow-map { margin-left: 12px; padding: 5px; border: 1px solid #0D19A3; }
-
-.btn.btn-success.dropdown-toggle .arrow-map.active { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
-
-.dropdown-menu li { background-color: #fff; padding: 4px 4px 4px 12px; }
-
-.dropdown-menu li a { color: #000; }
-
-.ymaps-2-1-79-controls__toolbar_left { float: right !important; margin-right: 18px; }
+.contact-map-place { position: absolute; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url(../images/arrow-map2.svg); background-repeat: no-repeat; background-position: calc(100% - 4px); background-size: 22px; background-color: #fff; border: 1px solid #0D19A3; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 4px 35px 4px 12px; font-weight: 400; font-size: 18px; font-family: 'Montserrat'; top: 14px; right: 18px; cursor: pointer; }
 
 .footer { width: 100%; padding: 20px 0; background-color: #F4F4F4; }
 

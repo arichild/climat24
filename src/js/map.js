@@ -1,144 +1,73 @@
-ymaps.ready(init);
+//карта магазинов на странице контакты
+	function mapContactInit() {
+    var styles = [{
+	        "stylers": []
+        },
 
-function init () {
-    var myMap = new ymaps.Map('map', {
-            center: [52.440045, 31.007221],
-            zoom: 17,
-            controls: []
-        }),
+        {
+            "featureType": "all",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#575757"
+                }
+            ]
+	    },
 
-            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
-
-        // Создадим собственный макет выпадающего списка.
-        ListBoxLayout = ymaps.templateLayoutFactory.createClass(
-            "<button id='my-listbox-header' class='btn btn-success dropdown-toggle' data-toggle='dropdown'>" +
-                "{{data.title}} <img src='./images/arrow-map.svg' class='arrow-map' alt='alt'> <span class='caret'></span>" +
-            "</button>" +
-            // Этот элемент будет служить контейнером для элементов списка.
-            // В зависимости от того, свернут или развернут список, этот контейнер будет
-            // скрываться или показываться вместе с дочерними элементами.
-            "<ul id='my-listbox'" +
-                " class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu'" +
-                " style='display: {% if state.expanded %}block{% else %}none{% endif %};'></ul>", {
-
-            build: function() {
-                // Вызываем метод build родительского класса перед выполнением
-                // дополнительных действий.
-                ListBoxLayout.superclass.build.call(this);
-
-                this.childContainerElement = $('#my-listbox').get(0);
-                // Генерируем специальное событие, оповещающее элемент управления
-                // о смене контейнера дочерних элементов.
-                this.events.fire('childcontainerchange', {
-                    newChildContainerElement: this.childContainerElement,
-                    oldChildContainerElement: null
-                });
-            },
-
-            // Переопределяем интерфейсный метод, возвращающий ссылку на
-            // контейнер дочерних элементов.
-            getChildContainerElement: function () {
-                return this.childContainerElement;
-            },
-
-            clear: function () {
-                // Заставим элемент управления перед очисткой макета
-                // откреплять дочерние элементы от родительского.
-                // Это защитит нас от неожиданных ошибок,
-                // связанных с уничтожением dom-элементов в ранних версиях ie.
-                this.events.fire('childcontainerchange', {
-                    newChildContainerElement: null,
-                    oldChildContainerElement: this.childContainerElement
-                });
-                this.childContainerElement = null;
-                // Вызываем метод clear родительского класса после выполнения
-                // дополнительных действий.
-                ListBoxLayout.superclass.clear.call(this);
+        {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+            {
+                "color": "#1B1B1B"
             }
-        }),
+        ]
+	}];
 
-        // Также создадим макет для отдельного элемента списка.
-        ListBoxItemLayout = ymaps.templateLayoutFactory.createClass(
-            "<li><a>{{data.content}}</a></li>"
-        ),
+    // Создаем объект стилей для карты, на базе наших стилей выше
+    var styledMap = new google.maps.StyledMapType(styles,
+        {name: "Styled Map"});
 
-        // Создадим 2 пункта выпадающего списка
-        listBoxItems = [
-            new ymaps.control.ListBoxItem({
-                data: {
-                    content: 'г.Гомель',
-                    center: [52.440045, 31.007221],
-                    zoom: 17
-                }
-            }),
-            new ymaps.control.ListBoxItem({
-                data: {
-                    content: 'г.Минск',
-                    center: [53.933677, 27.427632],
-                    zoom: 17
-                }
-            })
-        ],
+        // описывавем опции, карты, там впринципе все понятно
+        var mapOptions = {
+        zoom: 17,
+        center: new google.maps.LatLng(52.440045, 31.007221),
+        mapTypeControl:false,
+        mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        },
+        scrollwheel: false,
+        zoomControl: false,
+        scaleControl:false,
+        disableDefaultUI: true,
+        navigationControlOptions: {
+            style: google.maps.NavigationControlStyle.SMALL
+        }
+    };
 
-        // Теперь создадим список, содержащий 2 пункта.
-        listBox = new ymaps.control.ListBox({
-                items: listBoxItems,
-                data: {
-                    title: 'г.Гомель'
-                },
-                options: {
-                    // С помощью опций можно задать как макет непосредственно для списка,
-                    layout: ListBoxLayout,
-                    // так и макет для дочерних элементов списка. Для задания опций дочерних
-                    // элементов через родительский элемент необходимо добавлять префикс
-                    // 'item' к названиям опций.
-                    itemLayout: ListBoxItemLayout
-                }
-            });
+    //инициализациия карты
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    var myCenter = new google.maps.LatLng(52.440045, 31.007221);
+    var marker = new google.maps.Marker({position:myCenter});
 
-        listBox.events.add('click', function (e) {
-            // Получаем ссылку на объект, по которому кликнули.
-            // События элементов списка пропагируются
-            // и их можно слушать на родительском элементе.
-            var item = e.get('target');
-            listBox.options.visible = false
-            // Клик на заголовке выпадающего списка обрабатывать не надо.
-            if (item != listBox) {
-                myMap.setCenter(
-                    item.data.get('center'),
-                    item.data.get('zoom')
-                );
-            }
-        });
-
-    myMap.geoObjects.add(new ymaps.Placemark([52.440045, 31.007221], {
-        }, {
-            preset: 'islands#circleIcon',
-            iconColor: '#e94335'
-        }))
-        .add(new ymaps.Placemark([53.933677, 27.427632], {
-        }, {
-            preset: 'islands#circleDotIcon',
-            iconColor: '#e94335'
-        }))
-
-        const arrow = document.querySelector('.dropdown-toggle');
-        console.log(arrow)
+    marker.setMap(map);
 
 
+    $("#contact-map-place").change(function(){
+        let thsLat = parseFloat($(this).find(':selected').attr('data-lat'));
+        let thsLng = parseFloat($(this).find(':selected').attr('data-lng'));
 
+        map.setCenter(new google.maps.LatLng(thsLat, thsLng));
 
-    myMap.controls.add(listBox, {float: 'left'});
+        var myCenter = new google.maps.LatLng(thsLat, thsLng);
+
+        var marker = new google.maps.Marker({position:myCenter});
+        marker.setMap(map);
+    });
+
 }
 
-
-// $(document).ready(function() {
-//     function addDiv() {
-//         var itemClass = "addressBox";
-//         $(".dropdown-toggle").toggleClass('active-zxc');
-//     }
-
-//     setTimeout(addDiv, 2000);
-// });
+jQuery(document).ready(function($){
+    //Инициализируем карту магазинов
+    mapContactInit();
+});
