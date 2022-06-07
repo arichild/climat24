@@ -1464,6 +1464,8 @@
       }
 
       &-img {
+        // line-height: 0;
+
         h3 {
           display: none;
 
@@ -1929,6 +1931,7 @@ h4 {
 h5 {
   font-size: 20px;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 span.error {

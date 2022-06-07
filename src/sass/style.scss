@@ -16,10 +16,13 @@
 @import "industrial.scss";
 @import "page-404.scss";
 @import "contact.scss";
+@import "object-item2.scss";
+@import "object-item3.scss";
 @import "inc-footer.scss";
 
 // popups
 @import "./popups/contact.scss";
+@import "./popups/qualification.scss";
 
 * {
   box-sizing: border-box;

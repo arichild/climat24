@@ -606,6 +606,13 @@
       }
     }
 
+    &-img {
+      margin-left: -150px;
+      width: calc(100% + 150px);
+      position: relative;
+      top: 100px;
+    }
+
     .col-none {
       @media(max-width: 1024px) {
         display: none;
@@ -712,6 +719,7 @@
     &.industrial {
       padding-top: 75px;
       margin-bottom: 0;
+      background-color: #f4f4f4;
 
       @media(max-width: 768px) {
         padding-top: 28px;
@@ -739,6 +747,12 @@
 
     &-links {
       &.industrial {
+        @media(max-width: 1024px) {
+          &::before {
+            content: none;
+          }
+        }
+
         @media(max-width: 768px) {
           margin-bottom: 0;
           padding-bottom: 0;

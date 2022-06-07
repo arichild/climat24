@@ -1,0 +1,43 @@
+<div class="popup-qualification">
+  <div class="section-reviews-slider">
+    <!-- Slider main container -->
+    <div class="swiper qualification">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="./images/qualification-popup.jpg" alt="alt">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/qualification-popup2.jpg" alt="alt">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/qualification-popup3.jpg" alt="alt">
+        </div>
+      </div>
+      <div class="swiper-button-prev reviews-button-prev">
+        <img src="./images/arrow-prev-white.svg" alt="alt">
+      </div>
+      <div class="swiper-button-next reviews-button-next">
+        <img src="./images/arrow-next-white.svg" alt="alt">
+      </div>
+
+      <!-- If we need navigation buttons -->
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      const reviews = new Swiper('.qualification', {
+        loop: false,
+        slidesPerView: 1,
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next.reviews-button-next',
+          prevEl: '.swiper-button-prev.reviews-button-prev',
+        },
+      });
+    });
+  </script>
+</div>

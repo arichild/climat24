@@ -62,11 +62,6 @@
   padding-right: 33px;
 }
 
-.clear {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 @media (max-width: 576px) {
   .col-0 {
     display: none;
@@ -735,4 +730,9 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
+}
+
+.clear {
+  padding-left: 0px;
+  padding-right: 0px;
 }

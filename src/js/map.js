@@ -1,5 +1,5 @@
 //карта магазинов на странице контакты
-	function mapContactInit() {
+function mapContactInit() {
     var styles = [{
 	        "stylers": []
         },
@@ -68,6 +68,11 @@
 }
 
 jQuery(document).ready(function($){
-    //Инициализируем карту магазинов
-    mapContactInit();
+    if($('.contact-map')) {
+        //Инициализируем карту магазинов
+        mapContactInit();
+        console.log('aaaaaa')
+    } else {
+        console.log('asdasd')
+    }
 });
