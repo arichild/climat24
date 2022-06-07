@@ -2855,7 +2855,11 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 576px) { .section-object-items-cart.cart-margin { margin-bottom: 20px; max-height: calc(100% - 20px); min-width: 100%; } }
 
+@media (max-width: 576px) { .section-object-items-cart.margin-zero { margin-bottom: 0; max-height: 100%; } }
+
 @media (max-width: 576px) { .section-object-items-img.img-width img { max-width: 100%; } }
+
+@media (max-width: 576px) { .section-object-items-img.margin-zero { margin-bottom: 0; } }
 
 @media (max-width: 576px) { .section-box-text-desc .section-box-text-caption.bg-grey { background-color: #F4F4F4; color: #000; }
   .section-box-text-desc .section-box-text-caption.bg-grey::before { content: ""; position: absolute; right: -1000px; left: 0; bottom: 0; height: 100%; background-color: #F4F4F4; z-index: -1; }
@@ -2871,7 +2875,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 576px) { .section-box-text-img.object-item3 { display: block; color: #000; text-align: start; font-size: 12px; }
   .section-box-text-img.object-item3 p { display: block; }
-  .section-box-text-img.object-item3 img { margin-bottom: 20px; } }
+  .section-box-text-img.object-item3 img { margin-bottom: 16px; } }
 
 @media (max-width: 1024px) { .section-object-items-txt.padding-object { padding-bottom: 12px; padding-left: 12px; } }
 

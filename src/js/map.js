@@ -71,8 +71,5 @@ jQuery(document).ready(function($){
     if($('.contact-map')) {
         //Инициализируем карту магазинов
         mapContactInit();
-        console.log('aaaaaa')
-    } else {
-        console.log('asdasd')
     }
 });
