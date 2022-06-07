@@ -16,10 +16,6 @@
       margin-bottom: 20px;
       max-height: calc(100% - 20px);
       min-width: 100%;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
     }
   }
 }
@@ -103,5 +99,12 @@
     img {
       margin-bottom: 20px;
     }
+  }
+}
+
+.section-object-items-txt.padding-object {
+  @media(max-width: 1024px) {
+    padding-bottom: 12px;
+    padding-left: 12px;
   }
 }

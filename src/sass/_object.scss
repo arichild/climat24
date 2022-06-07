@@ -10,6 +10,10 @@
     display: inline-block;
     text-decoration: none;
 
+    @media(max-width: 576px) {
+      font-size: rem(10px);
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -20,6 +24,10 @@
     margin-right: 4px;
     font-size: 14px;
     color: #A5A5A6;
+
+    @media(max-width: 576px) {
+      font-size: 10px;
+    }
   }
 }
 
