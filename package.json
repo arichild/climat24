@@ -17,5 +17,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprites": "^4.1.2",
     "node-sass": "^7.0.0"
+  },
+  "dependencies": {
+    "lightgallery": "^2.4.0"
   }
 }
