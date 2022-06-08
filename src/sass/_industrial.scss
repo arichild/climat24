@@ -366,11 +366,6 @@
           height: calc(100% - 20px);
           margin-bottom: 20px;
         }
-
-        @media(max-width: 400px) {
-          height: calc(100% - 15px);
-          margin-bottom: 15px;
-        }
       }
 
       @media (max-width: 1024px) {
@@ -449,14 +444,14 @@
 
     @media (max-width: 576px) {
       .row {
-        margin-left: -12px;
-        margin-right: -12px;
+        margin-left: -10px;
+        margin-right: -10px;
       }
 
       [class*="col-"] {
         width: 100%;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   }
@@ -856,9 +851,11 @@
         right: 0;
         margin: auto;
         padding: 0 8px;
+        max-height: 65px;
 
         @media(max-width: 576px) {
           height: 25px;
+          max-height: 25px;
         }
       }
 

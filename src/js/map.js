@@ -1,48 +1,46 @@
-//карта магазинов на странице контакты
+// map for contact.html
 function mapContactInit() {
+  var mapOptions = {
+    zoom: 17,
+    center: new google.maps.LatLng(52.440045, 31.007221),
+    mapTypeControl:false,
+    scrollwheel: false,
+    zoomControl: false,
+    scaleControl:false,
+    disableDefaultUI: true,
 
-    // описывавем опции, карты, там впринципе все понятно
-    var mapOptions = {
-        zoom: 17,
-        center: new google.maps.LatLng(52.440045, 31.007221),
-        mapTypeControl:false,
-        scrollwheel: false,
-        zoomControl: false,
-        scaleControl:false,
-        disableDefaultUI: true,
+    mapTypeControlOptions: {
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    },
 
-        mapTypeControlOptions: {
-            mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-        },
+    navigationControlOptions: {
+        style: google.maps.NavigationControlStyle.SMALL
+    },
+  }
 
-        navigationControlOptions: {
-            style: google.maps.NavigationControlStyle.SMALL
-        },
-    }
+  // initial map
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  var myCenter = new google.maps.LatLng(52.440045, 31.007221);
+  var marker = new google.maps.Marker({position:myCenter});
 
-    //инициализациия карты
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    var myCenter = new google.maps.LatLng(52.440045, 31.007221);
+  marker.setMap(map);
+
+  // for select
+  $("#contact-map-place").change(function() {
+    let thsLat = parseFloat($(this).find(':selected').attr('data-lat'));
+    let thsLng = parseFloat($(this).find(':selected').attr('data-lng'));
+
+    map.setCenter(new google.maps.LatLng(thsLat, thsLng));
+
+    var myCenter = new google.maps.LatLng(thsLat, thsLng);
     var marker = new google.maps.Marker({position:myCenter});
 
     marker.setMap(map);
-
-    $("#contact-map-place").change(function() {
-        let thsLat = parseFloat($(this).find(':selected').attr('data-lat'));
-        let thsLng = parseFloat($(this).find(':selected').attr('data-lng'));
-
-        map.setCenter(new google.maps.LatLng(thsLat, thsLng));
-
-        var myCenter = new google.maps.LatLng(thsLat, thsLng);
-
-        var marker = new google.maps.Marker({position:myCenter});
-        marker.setMap(map);
-    });
+  });
 }
 
 jQuery(document).ready(function($) {
-    if($('.contact-map')) {
-        //Инициализируем карту магазинов
-        mapContactInit();
-    }
+  if ($('.contact-map')[0]) {
+    mapContactInit();
+  }
 });

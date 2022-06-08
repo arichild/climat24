@@ -1,3 +1,4 @@
+// swiper slider
 const design = new Swiper('.design', {
   loop: false,
   setWrapperSize: true,
@@ -36,7 +37,6 @@ const complexity = new Swiper('.complexity', {
     prevEl: '.swiper-button-prev.complexity-button-prev',
   },
 });
-
 
 const client = new Swiper('.client', {
   loop: false,
