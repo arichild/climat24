@@ -1,16 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="climat24" />
+  <meta name="description" content="climat24" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+
   <title>climat24</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lg-fb-comment-box.min.css"
+    integrity="sha512-JeQRe3W6dq6H+AAnkomgU8XWGCTM53GmkoYb/R8nmHNOk8xWLwt8bzQmT2cr1Ra0I/WaSTiBOmQOkj7iHXi//w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lg-transitions.min.css"
+    integrity="sha512-/kdQdrZJ0rc181QhzXU6oIknhyr5NIuZlv4VzvhdDsiEzEbW9mckFGTqat8CM8FlGDCHMMUYity1gXIgjHJ58A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+      integrity="sha512-kwJUhJJaTDzGp6VTPBbMQWBFUof6+pv0SM3s8fo+E6XnPmVmtfwENK0vHYup3tsYnqHgRDoBDTJWoq7rnQw2+g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Swiper slider styles -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
 
   <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-  
+  <!-- wrapper -->
   <div class="wrapper" id="wrapper">
-    <header header class="header" id="header">
-  
+    <header class="header" id="header">
+        <div class="header-top">
+          <div class="container">
+            <div class="header-top-links">
+              <a href="#section-serv-title">Услуги</a>
+              <a href="#section-object-items">Наши объекты</a>
+              <a href="javascript:void(0)">Задачи</a>
+              <a href="#section-serv-text">Оборудование</a>
+              <a href="javascript:void(0)">Сертификаты</a>
+              <a href="#section-questions-title">Контакты</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-middle">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-ss-7">
+                <div class="header-middle-logo">
+                  <div class="header-middle-logo-img">
+                    <a href="javascript:void(0)" class="header-middle-logo-link">
+                      <img src="./images/header-logo.png" alt="alt">
+                    </a>
+                  </div>
+
+                  <div class="header-middle-logo-subtitle">
+                    Системы вентиляции и кондиционирования под ключ” в Беларуси
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-ss-5">
+                <div class="header-middle-call">
+                  <a class="header-middle-call-btn mfp-link" href="javascript:void(0)" data-href="./popups/price.html">
+                    Заказать звонок
+                  </a>
+                  <a href="javascript:void(0)" class="header-middle-call-tel">+375 (29) 312-56-75</a>
+                </div>
+
+                <div class="header-middle-mob">
+                  <div class="header-middle-mob-call">
+                    <a class="mfp-link" href="javascript:void(0)" data-href="./popups/price.html">
+                      <img src="./images/header-phone.png" alt="alt">
+                    </a>
+                  </div>
+
+                  <a class="header-middle-mob-burger">
+                    <span class="toggler"></span>
+                    <!-- <img src="./images/icons/header-burger.svg" alt="alt"> -->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-bottom">
+          <div class="container">
+            <div class="header-bottom-catalog">
+              <div class="flex">
+                <a href="javascript:void(0)" class="header-bottom-catalog-link">
+                  <div class="header-bottom-catalog-text">
+                    Вентиляция в квартире
+                  </div>
+                </a>
+                <a href="javascript:void(0)" class="header-bottom-catalog-link">
+                  <div class="header-bottom-catalog-text">
+                    Дом и дача
+                  </div>
+                </a>
+                <a href="javascript:void(0)" class="header-bottom-catalog-link">
+                  <div class="header-bottom-catalog-text">
+                    Офис,кафе и ресторан
+                  </div>
+                </a>
+                <a href="javascript:void(0)" class="header-bottom-catalog-link">
+                  <div class="header-bottom-catalog-text">
+                    Промышленная вентиляция
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-mob-menu">
+          <a href="javascript:void(0)" class="header-mob-menu-link">
+            <div class="header-mob-menu-text">
+              Вентиляция в квартире
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="header-mob-menu-link">
+            <div class="header-mob-menu-text">
+              Дом и дача
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="header-mob-menu-link">
+            <div class="header-mob-menu-text">
+              Офис,кафе и ресторан
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="header-mob-menu-link">
+            <div class="header-mob-menu-text">
+              Промышленная вентиляция
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="header-mob-menu-link">
+            <div class="header-mob-menu-text">
+              Услуги
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="header-mob-menu-link">
+            <div class="header-mob-menu-text">
+              Все объекты
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="header-mob-menu-link">
+            <div class="header-mob-menu-text">
+              Статьи
+            </div>
+          </a>
+          <a href="javascript:void(0)" class="header-mob-menu-link">
+            <div class="header-mob-menu-text">
+              Контакты
+            </div>
+          </a>
+        </div>
     </header>

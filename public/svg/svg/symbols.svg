@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+
+    <symbol id="back" viewBox="0 0 51 19">
+      <path d="M1 9.5h49.5M1 9.5L9.5 1M1 9.5L9.5 18"></path>
+    </symbol>
+
+    <symbol id="next" viewBox="0 0 51 19">
+      <path d="M49.5 9.5H0m49.5 0L41 1m8.5 8.5L41 18"></path>
+    </symbol>
+
+    <symbol id="skip" viewBox="0 0 51 19">
+      <path d="M49.5 9.5H0m49.5 0L41 1m8.5 8.5L41 18"></path>
+    </symbol>
+
+</svg>

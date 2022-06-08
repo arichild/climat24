@@ -823,9 +823,11 @@
 
       &-answer {
         margin-bottom: 22px;
+        min-height: calc(100% - 22px);
 
         @media (max-width: 768px) {
           margin-bottom: 12px;
+          min-height: calc(100% - 12px);
         }
 
         .custom-checkbox {
@@ -841,6 +843,7 @@
           font-weight: 500;
           cursor: pointer;
           word-break: break-all;
+          min-height: 100%;
 
           @media(max-width: 1024px) {
             font-size: 15px;
