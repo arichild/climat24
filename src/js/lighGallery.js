@@ -1,20 +1,21 @@
 // lightGallery for industrial.html qualification block
-document.getElementById('qualification-slider').addEventListener('click', function(e) {
-  const imgQualification = this.dataset.qualification;
-  const imgData = JSON.parse(imgQualification);
+let qualification = document.getElementById('qualification-slider');
 
-  e.preventDefault()
-  e = e || window.event
+if(qualification) {
+  qualification.addEventListener('click', function() {
+    const imgQualification = this.dataset.qualification;
+    const imgData = JSON.parse(imgQualification);
 
-  if (!imgQualification) return
+    if (!imgQualification) return
 
-  lightGallery(document.getElementById('qualification-slider'), {
-    dynamic: true,
-    download: false,
-    counter: false,
-    hideBarsDelay: 0,
-    controls: true,
+    lightGallery(document.getElementById('qualification-slider'), {
+      dynamic: true,
+      download: false,
+      counter: false,
+      hideBarsDelay: 0,
+      controls: true,
 
-    dynamicEl: imgData
-  })
-});
+      dynamicEl: imgData
+    })
+  });
+}
