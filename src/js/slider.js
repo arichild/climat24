@@ -17,6 +17,7 @@ const complexity = new Swiper('.complexity', {
   autoHeight: true,
   slidesPerView: 4,
   spaceBetween: 48,
+  initialSlide: 2,
 
   breakpoints: {
     1025: {
@@ -40,6 +41,7 @@ const complexity = new Swiper('.complexity', {
 const client = new Swiper('.client', {
   loop: false,
   slidesPerView: 5,
+  initialSlide: 2,
 
   breakpoints: {
     1025: {
@@ -65,6 +67,7 @@ const client = new Swiper('.client', {
 const reviews = new Swiper('.reviews', {
   loop: false,
   slidesPerView: 3,
+  initialSlide: 2,
 
   breakpoints: {
     1025: {

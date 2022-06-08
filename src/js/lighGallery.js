@@ -9,14 +9,14 @@ document.getElementById('dynamic').addEventListener('click', function() {
       // prevHtml: ".zxc",
 
       dynamicEl: [{
-          "src": '../images/qualification-popup.jpg',
-          'thumb': '../images/qualification-popup.jpg',
+          "src": './images/qualification-popup.jpg',
+          'thumb': './images/qualification-popup.jpg',
       }, {
-          'src': '../images/qualification-popup2.jpg',
-          'thumb': '../images/qualification-popup2.jpg',
+          'src': './images/qualification-popup2.jpg',
+          'thumb': './images/qualification-popup2.jpg',
       }, {
-          'src': '../images/qualification-popup3.jpg',
-          'thumb': '../images/qualification-popup3.jpg',
+          'src': './images/qualification-popup3.jpg',
+          'thumb': './images/qualification-popup3.jpg',
       }]
   })
 });
