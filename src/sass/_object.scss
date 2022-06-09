@@ -253,8 +253,9 @@
       height: 38px;
       line-height: 38px;
       display: inline-block;
+      vertical-align: middle;
       text-align: center;
-      margin-right: 15px;
+      margin-right: 11px;
 
       @media(max-width: 768px) {
         width: 28px;
@@ -314,13 +315,17 @@
     top: -185px;
 
     @media (max-width: 1024px) {
-        top: -54px;
+        top: -60px;
         width: 58%;
       }
 
       @media (max-width: 576px) {
-        top: -48px;
+        top: -52px;
         left: 0;
+      }
+
+      @media (max-width: 410px) {
+        top: -45px;
       }
   }
 }
