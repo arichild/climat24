@@ -2141,9 +2141,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 .object-type { margin-bottom: 38px; }
 
-@media (max-width: 768px) { .object-type { margin-bottom: 20px; } }
-
-@media (max-width: 576px) { .object-type { font-size: 20px; } }
+@media (max-width: 1024px) { .object-type { margin-bottom: 5px; } }
 
 .object-type .row { margin-left: -13px; margin-right: -13px; }
 
@@ -2152,10 +2150,6 @@ span.error { font-weight: 400; color: #FF6347; }
 .object-type [class*="col-"] { width: 100%; padding-left: 13px; padding-right: 13px; }
 
 @media (max-width: 576px) { .object-type [class*="col-"] { padding-left: 8px; padding-right: 8px; } }
-
-@media (max-width: 768px) { .object-type .btn-orange { max-width: 140px; font-size: 15px; } }
-
-.object-select { margin-bottom: 38px; }
 
 @media (max-width: 1024px) { .object-select { margin-bottom: 15px; } }
 
@@ -2550,7 +2544,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 576px) { .section-qualification-bg-mob { display: block; position: absolute; left: 0; top: 38%; z-index: -1; } }
 
-.section-qualification-img { margin-left: -150px; width: calc(100% + 150px); position: relative; top: 100px; }
+.section-qualification-img { margin-left: -150px; width: calc(100% + 150px); position: relative; top: 100px; margin-top: -100px; }
 
 @media (max-width: 1024px) { .section-qualification .col-none { display: none; } }
 
@@ -2568,7 +2562,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 768px) { .section-qualification-title { font-size: 20px; } }
 
-.section-qualification-subtitle { font-size: 20px; margin-bottom: 20px; }
+.section-qualification-subtitle { font-size: 20px; margin-bottom: 25px; }
 
 @media (max-width: 768px) { .section-qualification-subtitle { font-size: 15px; } }
 
@@ -2576,7 +2570,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 768px) { .section-qualification-item { font-size: 15px; padding-left: 35px; } }
 
-.section-qualification-item p { margin-bottom: 25px; }
+.section-qualification-item p { margin-bottom: 33px; }
 
 .section-qualification-check { position: absolute; left: 0; top: -5px; }
 
@@ -2735,6 +2729,8 @@ span.error { font-weight: 400; color: #FF6347; }
 .section-content-text-img.industrial { padding-top: 70px; }
 
 @media (max-width: 1024px) { .section-content-text-img.industrial { padding-top: 0; } }
+
+.lg-backdrop { opacity: .7; }
 
 .lg-backdrop.in { opacity: .7; }
 
