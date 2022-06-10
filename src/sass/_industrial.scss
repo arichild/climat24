@@ -670,6 +670,10 @@
 
       p {
         margin-bottom: 33px;
+
+        @media(max-width: 1024px) {
+          margin-bottom: 20px;
+        }
       }
     }
 

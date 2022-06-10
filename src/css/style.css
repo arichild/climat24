@@ -2572,6 +2572,8 @@ span.error { font-weight: 400; color: #FF6347; }
 
 .section-qualification-item p { margin-bottom: 33px; }
 
+@media (max-width: 1024px) { .section-qualification-item p { margin-bottom: 20px; } }
+
 .section-qualification-check { position: absolute; left: 0; top: -5px; }
 
 @media (max-width: 768px) { .section-qualification-check { width: 25px; height: 25px; top: -2px; } }
