@@ -7,15 +7,48 @@
       padding-top: 0;
       padding-bottom: 0;
     }
+
+    .row {
+      margin-left: -17px;
+      margin-right: -17px;
+    }
+
+    [class*="col-"] {
+      padding-left: 17px;
+      padding-right: 17px;
+
+    }
   }
 }
 
 .section-object-items-cart {
-  &.cart-margin {
+  &.cart-object {
+    max-width: 100%;
+
     @media(max-width: 576px) {
       margin-bottom: 20px;
       max-height: calc(100% - 20px);
       min-width: 100%;
+    }
+
+    .section-object-items-headline {
+      font-size: 25px;
+      margin-bottom: 7px;
+      line-height: 1.2;
+      font-weight: 600;
+
+      @media(max-width: 768px) {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .section-object-items-desc {
+      font-size: 18px;
+
+      @media(max-width: 768px) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -28,12 +61,11 @@
 }
 
 .section-object-items-img.img-width {
-  @media(max-width: 576px) {
-    img {
-      max-width: 100%;
-    }
+  img {
+    max-width: 100%;
   }
 }
+
 .section-object-items-img.margin-zero {
   @media(max-width: 576px) {
     margin-bottom: 0;
@@ -115,8 +147,8 @@
 }
 
 .section-object-items-txt.padding-object {
+  padding: 5px 10px 14px 11px;
   @media(max-width: 1024px) {
-    padding-bottom: 12px;
-    padding-left: 12px;
+    padding: 8px 20px 12px 12px;
   }
 }

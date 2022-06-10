@@ -98,13 +98,13 @@
       }
     }
 
-
     .container {
       position: relative;
     }
 
     &-item {
-      max-width: 258px;
+      // max-width: 258px;
+      display: inline-block;
       box-shadow: 0px 0px 17px 1px rgba(2, 8, 82, 0.11);
     }
 
@@ -606,6 +606,7 @@
       width: calc(100% + 150px);
       position: relative;
       top: 100px;
+      margin-top: -100px;
     }
 
     .col-none {
@@ -650,7 +651,7 @@
 
     &-subtitle {
       font-size: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
 
       @media(max-width: 768px) {
         font-size: 15px;
@@ -668,7 +669,7 @@
       }
 
       p {
-        margin-bottom: 25px;
+        margin-bottom: 33px;
       }
     }
 
@@ -1013,7 +1014,7 @@
         max-width: 273px;
 
         @media(max-width: 576px) {
-          width: 188px;
+          max-width: 46%;
         }
       }
     }
@@ -1112,6 +1113,9 @@
   }
 }
 
+.lg-backdrop {
+  opacity: .7;
+}
 .lg-backdrop.in {
   opacity: .7;
 }
@@ -1122,7 +1126,7 @@
 
 .lg-object.lg-image {
   @media(max-width: 768px) {
-    max-width: 300px;
+    max-width: 75%;
   }
 }
 
