@@ -2356,9 +2356,9 @@ span.error { font-weight: 400; color: #FF6347; }
 
 .section-complexity-bg-mob { display: none; }
 
-@media (max-width: 576px) { .section-complexity-bg-mob { display: block; position: absolute; right: 0; top: 0; } }
+@media (max-width: 576px) { .section-complexity-bg-mob { display: block; position: absolute; right: 0; top: 0; z-index: 1; } }
 
-.section-complexity .container { position: relative; }
+.section-complexity .container { position: relative; z-index: 2; }
 
 .section-complexity-item { display: inline-block; -webkit-box-shadow: 0px 0px 17px 1px rgba(2, 8, 82, 0.11); box-shadow: 0px 0px 17px 1px rgba(2, 8, 82, 0.11); }
 
@@ -2640,7 +2640,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 .section-client .container { position: relative; }
 
-.section-client .swiper { position: initial; width: 100%; height: 100%; margin-left: auto; margin-right: auto; padding: 10px 0 0 0; margin-bottom: 10px; }
+.section-client .swiper { width: 100%; height: 100%; margin-left: auto; margin-right: auto; padding: 10px 0 0 0; margin-bottom: 10px; }
 
 @media (max-width: 768px) { .section-client .swiper { margin-bottom: 0; } }
 
