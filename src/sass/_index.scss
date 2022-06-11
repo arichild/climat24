@@ -695,17 +695,17 @@
         }
       }
 
-      &:nth-child(2) {
-        &::before {
-          content: '';
-          position: absolute;
-          right: -1000px;
-          left: 0;
-          bottom: -5px;
-          height: 5px;
-          background: #fff;
-        }
-      }
+      // &:nth-child(2) {
+      //   &::before {
+      //     content: '';
+      //     position: absolute;
+      //     right: -1000px;
+      //     left: 0;
+      //     bottom: -5px;
+      //     height: 5px;
+      //     background: #fff;
+      //   }
+      // }
 
       &:last-child {
         @media (max-width: 576px) {

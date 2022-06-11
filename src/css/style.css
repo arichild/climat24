@@ -524,8 +524,6 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 576px) { .section-choice-cart:nth-child(1) { border-left: none; } }
 
-.section-choice-cart:nth-child(2)::before { content: ''; position: absolute; right: -1000px; left: 0; bottom: -5px; height: 5px; background: #fff; }
-
 @media (max-width: 576px) { .section-choice-cart:last-child { border-right: none; } }
 
 .section-choice-block { height: 100%; }
