@@ -214,6 +214,14 @@
       }
     }
 
+    .section-items-link-cart {
+      margin-bottom: 40px;
+
+      @media(max-width: 768px) {
+        margin-bottom: 20px;
+      }
+    }
+
     .section-object-items-cart {
       background-color: #F4F4F4;
       padding: 26px 14px;
