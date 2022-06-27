@@ -1,0 +1,102 @@
+<div class="popup-contact check-padding">
+  <div class="container">
+    <div class="flex">
+      <div class="popup-contact-img">
+        <img src="./images/popup-check.png" alt="alt">
+      </div>
+
+      <div class="popup-contact-form">
+        <div class="popup-contact-headline">
+          Получите чек лист “Как выбрать подрядчика по вентиляции”
+        </div>
+
+        <div class="popup-contact-subtitle">
+          Оставьте Ваши контакты и получите чек лист “Как выбрать подрядчика по вентиляции” с полезными советами!
+        </div>
+
+        <form action="#" class="popup-contact-validate">
+          <div class="row">
+            <div class="col-md-12 col-sm-4 col-xs-6">
+              <div class="popup-contact-form-cell">
+                <input type="text" name="name" id="name" placeholder="Ваше имя">
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-4 col-xs-6">
+              <div class="popup-contact-form-cell">
+                <input type="tel" name="tel" id="tel" placeholder="Ваш номер">
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-4 col-xs-12">
+              <div class="popup-contact-form-cell">
+                <input type="submit" name="submit" id="submit" value="Получить чек лист">
+
+                <div class="popup-contact-conf">
+                  <img src="./images/popup-lock.png" alt="alt">
+                  Ваши данные защищены.
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $(".popup-contact-validate").validate({
+        errorElement: "span",
+
+        rules: {
+          name: {
+            required: true,
+            lettersonly: true,
+          },
+
+          tel: {
+            required: true,
+            minlength: 6,
+          },
+        },
+
+        messages: {
+          name: {
+            required: "Пожалуйста, введите ваше Имя",
+            lettersonly: "Ваше имя не может состоять из цифр",
+          },
+
+          tel: {
+            required: "Пожалуйста, введите ваш номер телефона",
+            minlength: "Минимальная длина 6 символов",
+          },
+        }
+      });
+
+      jQuery.validator.addMethod(
+        "lettersonly",
+        function (value, element) {
+          return this.optional(element) || /^[a-zA-ZА-Яа-я\s]+$/i.test(value);
+        }, "Ваше имя не может состоять из цифр"
+      );
+
+      let inpTel = document.querySelectorAll('input[type=tel]');
+      let mask;
+
+      for (var i = 0; i < inpTel.length; i++) {
+        inpTel[i].addEventListener('focus', function () {
+          mask = IMask(this, {
+            mask: '+{375} (00) 000 00 00',
+            overwrite: true,
+            lazy: false,
+            autofix: true
+          });
+        })
+        inpTel[i].addEventListener('blur', function () {
+          if (this.value.match('_')) {
+            mask.masked.reset()
+          }
+        })
+      };
+    });
+  </script>
+</div>
