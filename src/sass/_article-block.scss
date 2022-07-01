@@ -152,6 +152,7 @@
     .section-object-items-desc {
       font-size: 12px;
       padding-right: 10px;
+      -webkit-line-clamp: 4;
 
       @media(max-width: 1024px) {
         -webkit-line-clamp: 3;
