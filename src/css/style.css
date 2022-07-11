@@ -498,7 +498,9 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1024px) { .section-choice-sidebar-txt { padding: 0; } }
 
-@media (max-width: 1024px) { .section-choice-sidebar { padding: 12px 0; font-size: 25px; width: 44%; top: -30%; text-align: end; padding-right: 10px; } }
+@media (max-width: 400px) { .section-choice-sidebar-txt { font-size: 12px; } }
+
+@media (max-width: 1024px) { .section-choice-sidebar { padding: 12px 0; font-size: 25px; width: 45%; top: -30%; text-align: end; padding-right: 10px; } }
 
 @media (max-width: 576px) { .section-choice-sidebar { font-size: 18px; top: -55%; } }
 
@@ -1665,7 +1667,7 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 576px) { .section-choice-sidebar-txt.vent-house::before { display: none; } }
 
-@media (max-width: 576px) { .section-choice-sidebar-txt { font-size: 20px; } }
+@media (max-width: 576px) { .section-choice-sidebar-txt { font-size: 18px; } }
 
 @media (max-width: 409px) { .section-choice-sidebar-txt { font-size: 15px; } }
 
@@ -2344,11 +2346,13 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 1024px) { .section-choice-sidebar.industrial { top: -59px; } }
 
-@media (max-width: 576px) { .section-choice-sidebar.industrial { top: -52px; } }
+@media (max-width: 576px) { .section-choice-sidebar.industrial { top: -70px; } }
 
 @media (max-width: 400px) { .section-choice-sidebar.industrial { top: -45px; } }
 
-@media (max-width: 576px) { .section-choice-sidebar-txt.industrial { font-size: 12px; } }
+@media (max-width: 576px) { .section-choice-sidebar-txt.industrial { font-size: 18px; } }
+
+@media (max-width: 400px) { .section-choice-sidebar-txt.industrial { font-size: 12px; } }
 
 .section-complexity { padding: 68px 0 46px 0; background-color: #F4F4F4; position: relative; }
 
@@ -3313,6 +3317,8 @@ iframe .gm-style .place-card-large { display: none !important; }
 .popup-filter .mfp-close::after { content: ""; display: inline-block; position: absolute; top: 15px; right: 15px; height: 20px; width: 20px; background: url(../images/close-popup.png) no-repeat right; background-size: 20px; }
 
 .popup-contact.check-padding { padding: 180px 53px 113px 35px; }
+
+.reviews-popup { text-align: center; }
 
 * { -webkit-box-sizing: border-box; box-sizing: border-box; }
 

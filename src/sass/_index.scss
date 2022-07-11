@@ -617,12 +617,16 @@
         @media (max-width: 1024px) {
           padding: 0;
         }
+
+        @media(max-width: 400px) {
+          font-size: 12px;
+        }
       }
 
       @media (max-width: 1024px) {
         padding: 12px 0;
         font-size: 25px;
-        width: 44%;
+        width: 45%;
         top: -30%;
         text-align: end;
         padding-right: 10px;

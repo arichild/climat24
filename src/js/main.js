@@ -1,5 +1,5 @@
-const upBtn = document.getElementById("btn-up");
+// const upBtn = document.getElementById("btn-up");
 
-upBtn.addEventListener('click', () => {
-  window.scrollTo(0, 0);
-})
+// upBtn.addEventListener('click', () => {
+//   window.scrollTo(0, 0);
+// })

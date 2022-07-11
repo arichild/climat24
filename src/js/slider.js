@@ -12,6 +12,21 @@ const design = new Swiper('.design', {
   },
 });
 
+const feedback = new Swiper('.feedback', {
+  loop: false,
+  setWrapperSize: true,
+  autoHeight: true,
+  slidesPerView: 1,
+
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+});
+
 const articleMore = new Swiper('.more', {
   loop: false,
   setWrapperSize: true,

@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="section-info-txt vent-house">
-            <h1 class="section-info-txt-title">Промышленные системы вентиляции “Под ключ” в Минске и Гомеле</h1>
+            <h1 class="section-info-txt-title">Промышленные системы вентиляции “Под ключ”</h1>
             <p class="section-info-txt-subtitle">Получите бесплатный подбор оборудования по Вашему техзаданию!</strong></p>
             <a class="section-info-txt-btn industrial" href="#" data-href="./popups/price.html">
               Подобрать оборудование
@@ -466,7 +466,7 @@
                     Сервис и гарантия
                   </div>
                   <div class="section-possibility-txt-slogan vent-building">
-                    Сервисное и гарантийное обслуживание в любой точке беларуси в кратчайшие сроки
+                    Сервисное и гарантийное обслуживание в любой точке Беларуси в кратчайшие сроки
                   </div>
                 </div>
               </div>
@@ -654,15 +654,24 @@
                     }
                   })
 
-                  var tel = document.getElementById('tel-quiz');
+                  let inpTel = document.querySelectorAll('input[type=tel]');
+                  let mask;
 
-                  if (tel) {
-                    var maskOptions = {
-                      mask: '+{000}(00)000-00-00'
-                    };
-
-                    var mask = IMask(tel, maskOptions);
-                  }
+                  for(var i = 0; i < inpTel.length; i++) {
+                    inpTel[i].addEventListener('focus', function(){
+                      mask = IMask(this, {
+                          mask: '+{375} (00) 000 00 00',
+                          overwrite: true,
+                          lazy: false,
+                          autofix: true
+                      });
+                    })
+                    inpTel[i].addEventListener('blur', function(){
+                      if(this.value.match('_')){
+                        mask.masked.reset()
+                      }
+                    })
+                  };
                 }, 1)
               }
             }
@@ -1072,7 +1081,7 @@
         Выполненные объекты
       </div>
       <div class="section-object-items-subtitle">
-        Мы успешно реализовали более 500 объктов по всей Беларуси!
+        Мы успешно реализовали более 500 объектов по всей Беларуси!
       </div>
       <div class="section-object-carts">
         <div class="row">
@@ -1165,28 +1174,44 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-              <img src="./images/feedback-slider4.jpg" alt="alt" loading="lazy">
+              <a class="mfp-link" href="javascript:void(0)" data-href="./popups/reviews.html">
+                <img src="./images/feedback-slider4.jpg" alt="alt" loading="lazy">
+              </a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/feedback-slider5.jpg" alt="alt" loading="lazy">
+              <a class="mfp-link" href="javascript:void(0)" data-href="./popups/reviews.html">
+                <img src="./images/feedback-slider5.jpg" alt="alt" loading="lazy">
+              </a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/feedback-slider1.jpg" alt="alt" loading="lazy">
+              <a class="mfp-link" href="javascript:void(0)" data-href="./popups/reviews.html">
+                <img src="./images/feedback-slider1.jpg" alt="alt" loading="lazy">
+              </a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/feedback-slider2.jpg" alt="alt" loading="lazy">
+              <a class="mfp-link" href="javascript:void(0)" data-href="./popups/reviews.html">
+                <img src="./images/feedback-slider2.jpg" alt="alt" loading="lazy">
+              </a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/feedback-slider3.jpg" alt="alt" loading="lazy">
+              <a class="mfp-link" href="javascript:void(0)" data-href="./popups/reviews.html">
+                <img src="./images/feedback-slider3.jpg" alt="alt" loading="lazy">
+              </a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/feedback-slider6.jpg" alt="alt" loading="lazy">
+              <a class="mfp-link" href="javascript:void(0)" data-href="./popups/reviews.html">
+                <img src="./images/feedback-slider6.jpg" alt="alt" loading="lazy">
+              </a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/feedback-slider7.jpg" alt="alt" loading="lazy">
+              <a class="mfp-link" href="javascript:void(0)" data-href="./popups/reviews.html">
+                <img src="./images/feedback-slider7.jpg" alt="alt" loading="lazy">
+              </a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/feedback-slider8.jpg" alt="alt" loading="lazy">
+              <a class="mfp-link" href="javascript:void(0)" data-href="./popups/reviews.html">
+                <img src="./images/feedback-slider8.jpg" alt="alt" loading="lazy">
+              </a>
             </div>
           </div>
           <!-- If we need pagination -->
