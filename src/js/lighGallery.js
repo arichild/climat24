@@ -20,17 +20,8 @@ if(qualification) {
   });
 }
 
-let test = document.querySelector('.reviews');
+// let test = document.querySelector('.reviews');
 
-if(test) {
-  test.addEventListener('click', function() {
-    lightGallery(document.querySelector('.reviews'), {
-      // dynamic: true,
-      thumbnail: true,
-      // download: false,
-      // counter: false,
-      // hideBarsDelay: 0,
-      // controls: true,
-    })
-  })
-}
+// if(test) {
+//   test.lightGallery()
+// }
