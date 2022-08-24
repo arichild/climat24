@@ -49,7 +49,7 @@
         }
 
         @media(max-width: 576px) {
-          top: -52px;
+          top: -70px;
         }
 
         @media(max-width: 400px) {
@@ -62,6 +62,10 @@
   &-choice-sidebar-txt {
     &.industrial {
       @media(max-width: 576px) {
+        font-size: 18px;
+      }
+
+      @media(max-width: 400px) {
         font-size: 12px;
       }
     }

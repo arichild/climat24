@@ -19,3 +19,9 @@ if(qualification) {
     })
   });
 }
+
+// let test = document.querySelector('.reviews');
+
+// if(test) {
+//   test.lightGallery()
+// }

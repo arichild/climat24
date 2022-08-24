@@ -8,6 +8,64 @@
     margin-right: -10px;
   }
 
+  &-top {
+    margin-bottom: 8px;
+  }
+
+  &-lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    &-email {
+      margin-right: 5px;
+
+      img {
+        vertical-align: middle;
+        margin-right: 14px;
+
+        @media(max-width: 768px) {
+          width: 23px;
+          height: 23px;
+          margin-right: 7px;
+        }
+      }
+
+      a {
+        font-weight: 500;
+        font-size: 18px;
+        color: #000;
+
+        @media(max-width: 768px) {
+          font-size: 12px;
+        }
+
+        &:hover {
+          opacity: .35;
+        }
+      }
+    }
+
+    &-policy {
+      font-weight: 400;
+      font-size: 12px;
+      text-decoration: underline;
+
+      @media(max-width: 768px) {
+        font-size: 10px;
+      }
+
+      a {
+        color: #A5A5A6;
+
+        &:hover {
+          opacity: .35;
+        }
+      }
+    }
+  }
+
   [class*="col-"] {
     width: 100%;
     padding-left: 10px;

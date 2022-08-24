@@ -18,10 +18,15 @@
 @import "contact.scss";
 @import "object-item2.scss";
 @import "object-item3.scss";
+@import "articles.scss";
+@import "article-block.scss";
 @import "inc-footer.scss";
 
 // popups
 @import "./popups/contact.scss";
+@import "./popups/filter.scss";
+@import "./popups/check-list.scss";
+@import "./popups/reviews.scss";
 
 * {
   box-sizing: border-box;

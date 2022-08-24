@@ -12,6 +12,52 @@ const design = new Swiper('.design', {
   },
 });
 
+const feedback = new Swiper('.feedback', {
+  loop: false,
+  setWrapperSize: true,
+  autoHeight: true,
+  slidesPerView: 1,
+
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+});
+
+const articleMore = new Swiper('.more', {
+  loop: false,
+  setWrapperSize: true,
+  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 50,
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 2,
+    },
+
+    300: {
+      slidesPerView: 1,
+    }
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next.article-btn-next',
+    prevEl: '.swiper-button-prev.article-btn-prev',
+  },
+});
+
 const complexity = new Swiper('.complexity', {
   loop: false,
   setWrapperSize: true,

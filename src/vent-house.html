@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="section-info-txt vent-house">
-            <h1 class="section-info-txt-title">Системы вентиляции в доме и на даче “Под ключ” в Минске и Гомеле</h1>
+            <h1 class="section-info-txt-title">Системы вентиляции в доме и на даче “Под ключ”</h1>
             <p class="section-info-txt-subtitle">Узнай стоимость вентиляции на даче или в доме  всего за <strong>1 минуту!</strong></span></p>
             <a class="section-info-txt-btn mfp-link" href="#" data-href="./popups/price.html">
               Рассчитать
@@ -187,7 +187,7 @@
         <div class="row">
           <div class="col-md-5">
             <div class="section-solutions-item vent-house">
-              <h3>Вытяжная вентиляция в даче</h3>
+              <h3>Вытяжная вентиляция на даче</h3>
               <img src="./images/vent-house-sol5.png" alt="alt" loading="lazy">
             </div>
           </div>
@@ -285,7 +285,7 @@
                     Сервис и гарантия
                   </div>
                   <div class="section-possibility-txt-slogan">
-                    Сервисное и гарантийное обслуживание в любой точке беларуси в кратчайшие сроки
+                    Сервисное и гарантийное обслуживание в любой точке Беларуси в кратчайшие сроки
                   </div>
                 </div>
               </div>
@@ -473,15 +473,24 @@
                       }
                     })
 
-                    var tel = document.getElementById('tel-quiz');
+                    let inpTel = document.querySelectorAll('input[type=tel]');
+                    let mask;
 
-                    if (tel) {
-                      var maskOptions = {
-                        mask: '+{000}(00)000-00-00'
-                      };
-
-                      var mask = IMask(tel, maskOptions);
-                    }
+                    for(var i = 0; i < inpTel.length; i++) {
+                      inpTel[i].addEventListener('focus', function(){
+                        mask = IMask(this, {
+                            mask: '+{375} (00) 000 00 00',
+                            overwrite: true,
+                            lazy: false,
+                            autofix: true
+                        });
+                      })
+                      inpTel[i].addEventListener('blur', function(){
+                        if(this.value.match('_')){
+                          mask.masked.reset()
+                        }
+                      })
+                    };
                   }, 1)
                 }
               }
@@ -671,7 +680,7 @@
           Выполненные объекты
         </div>
         <div class="section-object-items-subtitle">
-          Мы успешно реализовали более 500 объктов по всей Беларуси!
+          Мы успешно реализовали более 500 объектов по всей Беларуси!
         </div>
         <div class="section-object-carts">
           <div class="row">
