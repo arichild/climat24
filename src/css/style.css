@@ -3266,9 +3266,13 @@ span.error { font-weight: 400; color: #FF6347; }
 
 @media (max-width: 1024px) { .footer-links a { margin-bottom: 10px; font-size: 12px; } }
 
-.privacy-content { margin-bottom: 65px; }
+.privacy-content { margin-bottom: 65px; font-size: 18px; line-height: 1.2; }
+
+@media (max-width: 576px) { .privacy-content { font-size: 10px; margin-bottom: 32px; } }
 
 .privacy-content h3 { text-align: center; margin-bottom: 14px; margin-top: 46px; }
+
+@media (max-width: 576px) { .privacy-content h3 { font-size: 12px; margin-top: 24px; margin-bottom: 7px; } }
 
 .popup-contact { padding: 15px 32px 0 32px; position: relative; max-width: 1035px; width: 100%; background-color: #fff; margin: 20px auto; }
 
